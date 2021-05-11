@@ -13,33 +13,32 @@ def savenew(win):
 
     win.destroy()
 def save(pl):
-    #temp.destroy()
+    
     data=[]
     with open('saves.json','a'): pass
     with open('saves.json','r+') as f:
         f.seek(0)
         try:
             data=json.load(f)
-            print ('I found stuff')
             i=0
             added=False
             for x in data:
-                print(list(x.keys()))
+                
                 if pl['Name'] in x:
                     data[i]={pl['Name']:pl}
-                    print('Revising old stuff')
+                    
                     added=True
             if not added:
                 data.append({pl['Name']:pl})
-                print('Adding new stuff')
+                
             
             f.seek(0)
-            #print(list(data.keys()))
+            
             json.dump(data,f)
         except:
-            print ('Nothing there!')
+            
             data.append({pl['Name']:pl})
-            print(data[0])
+            
             f.seek(0)
             json.dump(data,f)
 
@@ -69,7 +68,7 @@ def saveas(pl):
 def load(win,n):
     win.destroy()
     killchildren(main)
-    print(n)
+    
     
     with open('saves.json','rb') as f:
         data=json.load(f)
@@ -77,11 +76,11 @@ def load(win,n):
     i=0
     for x in data:
         players.append(list(x.keys()))
-        print(players[i])
+        
         if players[i]==n:
             install(x[n[0]])
         i+=1
-    print (player)
+   
     mainstats()
 
 def combat():
@@ -464,7 +463,7 @@ def install(newinfo):
 
 def change_attribute(trait,mode,value):
     options=['Unskilled','d4','d6','d8','d10','d12']
-    print(player[trait])
+    
     if mode=='modifier':
         player[trait][mode]+=value
     if mode=='size':
@@ -498,7 +497,7 @@ def change_attribute(trait,mode,value):
         player[trait]['display']='d'+str(player[trait]['size'])+'+'+str(player[trait]['modifier'])
     elif player[trait]['modifier']==0 and player[trait]['display']!=options[0]:
         player[trait]['display']='d'+str(player[trait]['size'])
-    print(player[trait])
+    
                         
     
 def attribute_update():
@@ -514,7 +513,7 @@ def attribute_update():
         i+=1
 
     i=0
-    print(allstats)
+    
     die=[None]*37
     for x in allstats:
         if i<3:
@@ -534,7 +533,7 @@ def attribute_update():
             c=10
         die[i]=tk.StringVar()
         die[i].set(allstats[i]+': '+player[allstats[i]]['display'])
-        #tk.Label(update,text=x[0]).grid(row=i+1,column=0)
+        
         tk.Label(update,textvariable=die[i]).grid(row=r,column=c)
         tk.Button(update,text='Step Down',command=lambda j=i:[change_attribute(allstats[j],'size',-2),die[j].set(allstats[j]+': '+player[allstats[j]]['display'])]).grid(row=r,column=c+1)
         tk.Button(update,text='Step Up',command=lambda j=i:[change_attribute(allstats[j],'size',2),die[j].set(allstats[j]+': '+player[allstats[j]]['display'])]).grid(row=r,column=c+2)
@@ -554,8 +553,7 @@ def fullrest():
 global main
 main=tk.Tk()
 main.title("SWADE CHaracter Sheet v4")
-#w,h=main.winfo_screenwidth(),main.winfo_screenheight()
-#main.geometry('%dx%d+0+0'%(w,h))
+
 main.state('zoomed')
 menubar=tk.Menu()
 
