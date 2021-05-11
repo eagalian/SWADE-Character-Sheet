@@ -28,6 +28,7 @@ def save(pl):
                     data[i]={pl['Name']:pl}
                     
                     added=True
+                i+=1
             if not added:
                 data.append({pl['Name']:pl})
                 
