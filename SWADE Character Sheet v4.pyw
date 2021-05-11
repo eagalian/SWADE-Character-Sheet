@@ -345,7 +345,7 @@ def newcharstats():
     attributes=[None]*5
     attributemods=[None]*5
     options=['Unskilled','d4','d6','d8','d10','d12']
-    options_dict={'Unskilled':{'display':'d4-2',
+    options_dict={'Unskilled':{'display':'Unskilled',
                                'size':4,
                                'modifier':-2},
                   'd4':{'display':'d4',
@@ -462,107 +462,89 @@ def install(newinfo):
     for x in directory:
         player[str(x)]=newinfo[str(x)]
 
-def change_attribute(row,column,value):
-    if value==-2 and pl.attributes[row][column]!=4:
-        pl.attributes[row][column]-=2
-    if value==2 and pl.attributes[row][column]!=12:
-        pl.attributes[row][column]+=2
-    string='d'+str(pl.attributes[row][1])
+def change_attribute(trait,mode,value):
+    options=['Unskilled','d4','d6','d8','d10','d12']
+    print(player[trait])
+    if mode=='modifier':
+        player[trait][mode]+=value
+    if mode=='size':
+        if value==-2 and player[trait]['display']!=options[0]:
+            i=1
+            while i<len(options):
+                if options[i]==player[trait]['display']:
+                    player[trait]['display']=options[i-1]
+                    player[trait]['size']+=value
+                    if player[trait]['display']==options[0]:
+                        player[trait]['modifier']-=2
+                    i=7
+                else:
+                    i+=1
+        elif value==2 and player[trait]['display']!=options[5]:
+            i=0
+            while i < len(options)-1:
+                if options[i]==player[trait]['display']:
+                    player[trait]['display']=options[i+1]
+                    if i==0:
+                        player[trait]['modifier']+=2
+                    
+                    else:
+                        player[trait]['size']+=value
+                    i=7
+                else:
+                    i+=1
+    if player[trait]['modifier']<0 and player[trait]['display']!=options[0]:
+        player[trait]['display']='d'+str(player[trait]['size'])+'-'+str(abs(player[trait]['modifier']))
+    elif player[trait]['modifier']>0 and player[trait]['display']!=options[0]:
+        player[trait]['display']='d'+str(player[trait]['size'])+'+'+str(player[trait]['modifier'])
+    elif player[trait]['modifier']==0 and player[trait]['display']!=options[0]:
+        player[trait]['display']='d'+str(player[trait]['size'])
+    print(player[trait])
+                        
     
-    if pl.attributes[row][2]>0:
-        string+='+'+str(pl.attributes[row][2])
-    if pl.attributes[row][2]<0:
-        string+='-'+str(abs(pl.attributes[row][2]))
-    fullstring=pl.attributes[row][0]+': '+string
-    texta[row].set(fullstring)
-    
-    return string
 def attribute_update():
     update=tk.Toplevel(main)
-    tk.Label(update, text="Attributes", font='Helvetica 20 bold').grid(row=0,column=0)
+    tk.Label(update, text="Stats Update", font='Helvetica 20 bold').grid(row=0,column=1)
     i=0
-    string=str()
-    die=[None]*5
-    for x in pl.attributes:
-        string='d'+str(x[1])
-        if x[2]>0:
-            string+='+'+str(x[2])
-        if x[2]<0:
-            string+='-'+str(abs(x[2]))
+    allstats=[None]*37
+    for x in allstats:
+        if i<5:
+            allstats[i]=attributelist[i]
+        else:
+            allstats[i]=skilllist[i-5]
+        i+=1
+
+    i=0
+    print(allstats)
+    die=[None]*37
+    for x in allstats:
+        if i<3:
+            r=1
+            c=5*i
+        elif i<5:
+            r=21
+            c=5*(i-3)
+        elif i<14:
+            r=i-3
+            c=0
+        elif i<32:
+            r=i-12
+            c=5
+        else:
+            r=i-30
+            c=10
         die[i]=tk.StringVar()
-        die[i].set(string)
-        tk.Label(update,text=x[0]).grid(row=i+1,column=0)
-        tk.Label(update,textvariable=die[i]).grid(row=i+1,column=1)
-        tk.Button(update,text='Step Down',command=lambda j=i:die[j].set(change_attribute(j,1,-2))).grid(row=i+1,column=2)
-        tk.Button(update,text='Step Up',command=lambda j=i:die[j].set(change_attribute(j,1,2))).grid(row=i+1,column=3)
+        die[i].set(allstats[i]+': '+player[allstats[i]]['display'])
+        #tk.Label(update,text=x[0]).grid(row=i+1,column=0)
+        tk.Label(update,textvariable=die[i]).grid(row=r,column=c)
+        tk.Button(update,text='Step Down',command=lambda j=i:[change_attribute(allstats[j],'size',-2),die[j].set(allstats[j]+': '+player[allstats[j]]['display'])]).grid(row=r,column=c+1)
+        tk.Button(update,text='Step Up',command=lambda j=i:[change_attribute(allstats[j],'size',2),die[j].set(allstats[j]+': '+player[allstats[j]]['display'])]).grid(row=r,column=c+2)
+        tk.Button(update,text='-1',command=lambda j=i:[change_attribute(allstats[j],'modifier',-1),die[j].set(allstats[j]+': '+player[allstats[j]]['display'])]).grid(row=r,column=c+3)
+        tk.Button(update,text='+1',command=lambda j=i:[change_attribute(allstats[j],'modifier',1),die[j].set(allstats[j]+': '+player[allstats[j]]['display'])]).grid(row=r,column=c+4)
         i+=1
     
-def change_skills(row,column,value):
- 
-    if column==1:
-        if value==-2 and pl.skills[row][column]!=4:
-            pl.skills[row][column]-=2
-            
-        if value==2 and pl.skills[row][column]!=12:
-            
-            pl.skills[row][column]+=2
-    if column==2:
-        pl.skills[row][column]+=value
-    string='d'+str(pl.skills[row][1])
     
-    if pl.skills[row][2]>0:
-        string+='+'+str(pl.skills[row][2])
-    if pl.skills[row][2]<0:
-        string+='-'+str(abs(pl.skills[row][2]))
-    fullstring=pl.skills[row][0]+': '+string
-    texts[row].set(fullstring)
+    tk.Button(update,text="Apply",command=lambda:[update.destroy(),mainstats()]).grid(row=0, column=3)
 
-def skills_update():
-    update=tk.Toplevel(main)
-    tk.Label(update, text="Skills", font='Helvetica 20 bold').grid(row=0,column=0)
-    i=0
-    string=str()
-    die=[None]*32
-    for x in pl.skills:
-
-        if i<9:
-            r=i+1
-            c=0
-        elif i<27:
-            r=i-8
-            c=3
-        else:
-            r=i-26
-            c=6
-        tk.Label(update,textvariable=texts[i]).grid(row=r,column=c)
-
-        tk.Button(update,text='Step Down',command=lambda j=i:change_skills(j,1,-2)).grid(row=r,column=c+1)
-        tk.Button(update,text='Step Up',command=lambda j=i:change_skills(j,1,2)).grid(row=r,column=c+2)
-        i+=1
-
-
-def modifier_update():
-    update=tk.Toplevel(main)
-    tk.Label(update, text="Modifiers", font='Helvetica 20 bold').grid(row=0,column=0)
-    i=0
-    string=str()
-    die=[None]*32
-    for x in pl.skills:
-
-        if i<9:
-            r=i+2
-            c=0
-        elif i<27:
-            r=i-7
-            c=3
-        else:
-            r=i-25
-            c=6
-        tk.Label(update,textvariable=texts[i]).grid(row=r,column=c)
-
-        tk.Button(update,text='Step Down',command=lambda j=i:change_skills(j,2,-1)).grid(row=r,column=c+1)
-        tk.Button(update,text='Step Up',command=lambda j=i:change_skills(j,2,1)).grid(row=r,column=c+2)
-        i+=1
 
 def fullrest():
     incap('w',0,buttons)
