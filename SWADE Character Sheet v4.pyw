@@ -130,8 +130,14 @@ def weapons(frame,weapon):
         melee=tk.Frame(frame)
         melee.grid()
         tk.Label(melee,text="Weapon Name: ").grid(row=0,column=0)
-        name=tk.Entry(melee)
-        name.grid(row=0,column=1,columnspan=10)
+        name=tk.Entry(melee,width=30)
+        name.grid(row=0,column=1,columnspan=3)
+        tk.Label(melee,text="Era: ").grid(row=0,column=6)
+        times=['Midieval','Modern','Futuristic']
+        age=tk.StringVar()
+        age.set(times[0])
+        drop0=tk.OptionMenu(melee,age,*times)
+        drop0.grid(row=0,column=7)
         tk.Label(melee,text="Damage: Str+").grid(row=1,column=0)
         dice1=['0','d4','d6','d8','d10','d12']
         diechoice=tk.StringVar()
@@ -139,47 +145,54 @@ def weapons(frame,weapon):
         drop=tk.OptionMenu(melee,diechoice,*dice1)
         drop.grid(row=1,column=1)
         tk.Label(melee,text='+').grid(row=1,column=2)
-        extra=tk.Entry(melee)
-        extra.grid(row=1,column=3,columnspan=10)
+        extra=tk.Entry(melee,width=5)
+        extra.grid(row=1,column=3)
         extra.insert(0,'0')
         tk.Label(melee,text="Min Str").grid(row=2,column=0)
         strchoice=tk.StringVar()
         strchoice.set('d4')
         tk.Label(melee,text='AP').grid(row=3,column=0)
-        ap=tk.Entry(melee)
-        
-        ap.grid(row=3,column=1,columnspan=10)
+        ap=tk.Entry(melee,width=10)
+        ap.grid(row=3,column=1)
         ap.insert(0,'0')
+        tk.Label(melee,text='Parry bonus: ').grid(row=3,column=6)
+        parry=tk.Entry(melee,width=10)
+        parry.grid(row=3,column=7)
+        parry.insert(0,'0')
         drop2=tk.OptionMenu(melee,strchoice,*dice).grid(row=2,column=1)
         tk.Label(melee,text="Weight").grid(row=4,column=0)
-        weight=tk.Entry(melee)
-        weight.grid(row=4,column=1,columnspan=10)
+        weight=tk.Entry(melee,width=10)
+        weight.grid(row=4,column=1)
         weight.insert(0,'0')
         tk.Label(melee,text='Cost').grid(row=5,column=0)
-        cost=tk.Entry(melee)
-        cost.grid(row=5,column=1,columnspan=10)
+        cost=tk.Entry(melee,width=10)
+        cost.grid(row=5,column=1)
         cost.insert(0,'0')
         tk.Label(melee,text='Notes:').grid(row=6,column=0)
         notes=tk.Text(melee)
         notes.grid(row=7,column=1,columnspan=50)
-        tk.Button(melee,text='Save',command=lambda:savegear(mode=weapon,name=name.get(),damage=[diechoice.get(),extra.get(),ap.get()],
-                                                            req=strchoice.get(),lb=weight.get(),money=cost.get(),info=notes.get(1.0,tk.END))).grid(row=0,column=10)
-global armory
-armory={'Weapons':{'Melee','Ranged','Special'},
-        'Armor':None,
-        'Gear':None,
-        'Vehicles':None}
-def savegear(mode = 'Melee',name = 'Unarmed Strike', damage = ['0','0','0'],req='none',lb='0',money='0',info='Punch the sucka!'):
-    
-    with open('armory.json','a'): pass
-    with open('armory.json','r+') as f:
+        tk.Button(melee,text='Save',command=lambda:[finished.set('Saved!'),savegear(mode=weapon,name=name.get(),era=age.get(),damage=[diechoice.get(),extra.get(),ap.get(),parry.get()],
+                                                            req=strchoice.get(),lb=weight.get(),money=cost.get(),info=notes.get(1.0,tk.END))]).grid(row=0,column=15)
+        finished=tk.StringVar()
+        finished.set('')
+        tk.Label(melee,textvariable=finished).grid(row=0,column=17)
+        tk.Button(melee,text='Clear',command=lambda:weapons(frame,weapon)).grid(row=0,column=16)
+global mainarmory
+with open('armory.json','a'): pass
+with open('armory.json','r+') as f:
+    f.seek(0)
+    try:
+        mainarmory=json.load(f)
         f.seek(0)
-        try:
-            armory=json.load(f)            
-            f.seek(0)
-        except:
-            f.seek(0)
-            json.dump(armory,f)
+    except:
+        mainarmory={'Weapons':{'Melee': {},'Ranged':{},'Special':{}},
+            'Armor':{},
+            'Gear':{},
+            'Vehicles':{}}
+        json.dump(mainarmory,f)
+
+def savegear(armory=mainarmory,mode = 'Melee',name = 'Unarmed Strike',era='Midieval', damage = ['0','0','0','0'],req='none',lb='0',money='0',info='Punch the sucka!'):
+
     if mode=='Melee':
         if damage[0]=='0':
             damage_string='Str'
@@ -192,15 +205,17 @@ def savegear(mode = 'Melee',name = 'Unarmed Strike', damage = ['0','0','0'],req=
             if damage[0] == dice[i]:
                 damage_number=4+2*i
                 i=len(dice)
-        armory['Weapons']['Melee'][name]={'display':damage_string,
+        armory['Weapons']['Melee'][name]={'era':era,
+                                          'display':damage_string,
                                           'damage':damage_number,
                                           'modifier':int(damage[1]),
                                           'AP':int(damage[2]),
+                                          'Parry':int(damage[3]),
                                           'Min Str':req,
                                           'Weight':lb+' lbs',
                                           'Cost':money,
                                           'Notes':info}
-        
+    mainarmory=armory    
     with open('armory.json','w') as f:
         f.seek(0)
         json.dump(armory,f)
@@ -244,9 +259,9 @@ def mainstats():
         buttons[i]=tk.Button(statspage,text='ROLL',command=lambda j=i:rollskills(statspage,l1[j],player[attributelist[j]]['size'],player[attributelist[j]]['size']-wounds.get()-fatigue.get()+int(isBlank(m[j].get()))))
         buttons[i].grid(row=r,column=c+2)
         i+=1
-    agiskills=tk.Frame(statspage,bd=3)
-    smartskills=tk.Frame(statspage,bd=3)
-    spiritskills=tk.Frame(statspage,bd=3)
+    agiskills=tk.Frame(statspage,bd=3,relief='sunken')
+    smartskills=tk.Frame(statspage,bd=3,relief='sunken')
+    spiritskills=tk.Frame(statspage,bd=3,relief='sunken')
     agiskills.grid(row=3,column=0,rowspan=9,columnspan=4)
     smartskills.grid(row=3,column=4,rowspan=18,columnspan=4)
     spiritskills.grid(row=3,column=8,rowspan=5,columnspan=4)
@@ -499,11 +514,7 @@ def newcharother(window):
     
 
 
-global player, attributelist, skilllist, dice
-player={}
-attributelist=['Agility','Smarts','Spirit','Strength','Vigor']
-skilllist=['Athletics','Boating','Driving','Fighting','Piloting','Riding','Shooting','Stealth','Thievery','Academics','Battle','Common Knowledge','Electronics','Gambling','Hacking','Healing','Native Language','Notice','Occult','Psionics','Repair','Research','Science','Spellcasting','Survival','Taunt','Weird Science','Faith','Focus','Intimidation','Performance','Persuasion']
-dice=['d4','d6','d8','d10','d12']
+
 
 def install(newinfo):
     directory=list(newinfo.keys())
@@ -593,6 +604,58 @@ def attribute_update():
     
     tk.Button(update,text="Apply",command=lambda:[update.destroy(),mainstats()]).grid(row=0, column=3)
 
+def equipment_tab():
+    killchildren(main)
+    equip=tk.Frame(main)
+    equip.grid(row=1,column=0)
+    tk.Label(main,text='Equipment Codex\nUse this page to view equipment stats and add them to the character sheet.',font='Helvetica').grid(row=0,column=0)
+    equipment_types=list(mainarmory.keys())
+    tk.Label(equip,text='What kind of equipment?').grid(row=1,column=0)
+    choice=tk.StringVar()
+    choice.set(equipment_types[0])
+    tk.OptionMenu(equip,choice,*equipment_types).grid(row=1,column=1)
+    subframea=tk.Frame(equip)
+    subframea.grid(row=1,column=3)
+    tk.Button(equip,text='Go',command=lambda:get_equipment(subframea,choice.get())).grid(row=1,column=2)
+
+def get_equipment(frame, mode='Weapons'):
+    for widget in frame.winfo_children():
+        widget.destroy()
+    if mode=='Weapons':
+        tk.Label(frame,text='Combat style: ').grid(row=0,column=0)
+        combat=tk.StringVar()
+        combat_styles=list(mainarmory[mode].keys())
+        combat.set(combat_styles[0])
+        tk.OptionMenu(frame,combat,*combat_styles).grid(row=0,column=1)
+        subframeb=tk.Frame(frame)
+        subframeb.grid(row=1,column=3)
+        tk.Button(frame,text='Go',command=lambda:get_weapons(subframeb,mode,combat.get())).grid(row=0,column=2)
+
+def get_weapons(frame,mode='Weapon',style='Melee'):
+    for widget in frame.winfo_children():
+        widget.destroy()
+    if mode=='Weapons' and style=='Melee':
+        tk.Label(frame,text='Melee weapons currently installed:').grid(row=0,column=0)
+        avail_weapons=list(mainarmory[mode][style].keys())
+        weapon_choice=tk.StringVar()
+        weapon_choice.set(avail_weapons[0])
+        print(avail_weapons)
+        tk.OptionMenu(frame,weapon_choice,*avail_weapons).grid(row=0,column=1)
+        subframec=tk.Frame(frame)
+        subframec.grid(row=1,column=3)
+        tk.Button(frame,text='View',command=lambda:get_weapon_info(subframec,mode,style,weapon_choice.get())).grid(row=0,column=2)
+
+def get_weapon_info (frame,mode='Weapon',style='Melee',item='Axe, Hand'):
+    for widget in frame.winfo_children():
+        widget.destroy()
+    data=mainarmory[mode][style][item]
+    keys=list(data.keys())
+    string=''
+    for i in range(len(keys)):
+        string+=keys[i]+': '+str(data[keys[i]])
+        if i<len(keys):
+            string+='\n'
+    tk.Label(frame,text=string).grid()
 
 def fullrest():
     incap('w',0,buttons)
@@ -605,6 +668,12 @@ main.title("SWADE CHaracter Sheet v4")
 
 main.state('zoomed')
 menubar=tk.Menu()
+global player, attributelist, skilllist, dice
+player={}
+attributelist=['Agility','Smarts','Spirit','Strength','Vigor']
+skilllist=['Athletics','Boating','Driving','Fighting','Piloting','Riding','Shooting','Stealth','Thievery','Academics','Battle','Common Knowledge','Electronics','Gambling','Hacking','Healing','Native Language','Notice','Occult','Psionics','Repair','Research','Science','Spellcasting','Survival','Taunt','Weird Science','Faith','Focus','Intimidation','Performance','Persuasion']
+dice=['d4','d6','d8','d10','d12']
+
 
 
 filemenu=tk.Menu(menubar)
@@ -628,7 +697,7 @@ menubar.add_cascade(label="Character Sheet",menu=csmenu)
 
 codex=tk.Menu(menubar)
 codex.add_command(label="Combat effects",command=lambda:print("I explain combat effects"))
-codex.add_command(label='Equipment',command=lambda:print('I let you access equipment data, and add it to your character sheet'))
+codex.add_command(label='Equipment',command=lambda:equipment_tab())
 codex.add_command(label='New Equipment',command=lambda:newgear())
 codex.add_command(label="Help",command=lambda:print("I explain how to use the app"))
 menubar.add_cascade(label="Codex",menu=codex)
