@@ -615,7 +615,7 @@ def equipment_tab():
     choice.set(equipment_types[0])
     tk.OptionMenu(equip,choice,*equipment_types).grid(row=1,column=1)
     subframea=tk.Frame(equip)
-    subframea.grid(row=1,column=3)
+    subframea.grid(row=2,column=0,columnspan=3)
     tk.Button(equip,text='Go',command=lambda:get_equipment(subframea,choice.get())).grid(row=1,column=2)
 
 def get_equipment(frame, mode='Weapons'):
@@ -628,7 +628,7 @@ def get_equipment(frame, mode='Weapons'):
         combat.set(combat_styles[0])
         tk.OptionMenu(frame,combat,*combat_styles).grid(row=0,column=1)
         subframeb=tk.Frame(frame)
-        subframeb.grid(row=1,column=3)
+        subframeb.grid(row=2,column=0,columnspan=3)
         tk.Button(frame,text='Go',command=lambda:get_weapons(subframeb,mode,combat.get())).grid(row=0,column=2)
 
 def get_weapons(frame,mode='Weapon',style='Melee'):
@@ -642,7 +642,7 @@ def get_weapons(frame,mode='Weapon',style='Melee'):
         print(avail_weapons)
         tk.OptionMenu(frame,weapon_choice,*avail_weapons).grid(row=0,column=1)
         subframec=tk.Frame(frame)
-        subframec.grid(row=1,column=3)
+        subframec.grid(row=2,column=0, columnspan=3)
         tk.Button(frame,text='View',command=lambda:get_weapon_info(subframec,mode,style,weapon_choice.get())).grid(row=0,column=2)
 
 def get_weapon_info (frame,mode='Weapon',style='Melee',item='Axe, Hand'):
@@ -655,7 +655,7 @@ def get_weapon_info (frame,mode='Weapon',style='Melee',item='Axe, Hand'):
         string+=keys[i]+': '+str(data[keys[i]])
         if i<len(keys):
             string+='\n'
-    tk.Label(frame,text=string).grid()
+    tk.Label(frame,text=string).grid(row=2,column=0,columnspan=3)
 
 def fullrest():
     incap('w',0,buttons)
