@@ -133,10 +133,10 @@ def weapons(frame,weapon):
         name=tk.Entry(melee)
         name.grid(row=0,column=1,columnspan=10)
         tk.Label(melee,text="Damage: Str+").grid(row=1,column=0)
-        dice=['d4','d6','d8','d10','d12']
+        dice1=['0','d4','d6','d8','d10','d12']
         diechoice=tk.StringVar()
         diechoice.set('d4')
-        drop=tk.OptionMenu(melee,diechoice,*dice)
+        drop=tk.OptionMenu(melee,diechoice,*dice1)
         drop.grid(row=1,column=1)
         tk.Label(melee,text='+').grid(row=1,column=2)
         extra=tk.Entry(melee)
@@ -145,18 +145,66 @@ def weapons(frame,weapon):
         tk.Label(melee,text="Min Str").grid(row=2,column=0)
         strchoice=tk.StringVar()
         strchoice.set('d4')
+        tk.Label(melee,text='AP').grid(row=3,column=0)
+        ap=tk.Entry(melee)
+        
+        ap.grid(row=3,column=1,columnspan=10)
+        ap.insert(0,'0')
         drop2=tk.OptionMenu(melee,strchoice,*dice).grid(row=2,column=1)
-        tk.Label(melee,text="Weight").grid(row=3,column=0)
+        tk.Label(melee,text="Weight").grid(row=4,column=0)
         weight=tk.Entry(melee)
-        weight.grid(row=3,column=1,columnspan=10)
+        weight.grid(row=4,column=1,columnspan=10)
         weight.insert(0,'0')
-        tk.Label(melee,text='Cost').grid(row=4,column=0)
+        tk.Label(melee,text='Cost').grid(row=5,column=0)
         cost=tk.Entry(melee)
-        cost.grid(row=4,column=1,columnspan=10)
+        cost.grid(row=5,column=1,columnspan=10)
         cost.insert(0,'0')
-        tk.Label(melee,text='Notes:').grid(row=5,column=0)
+        tk.Label(melee,text='Notes:').grid(row=6,column=0)
         notes=tk.Text(melee)
-        notes.grid(row=6,column=1,columnspan=50)
+        notes.grid(row=7,column=1,columnspan=50)
+        tk.Button(melee,text='Save',command=lambda:savegear(mode=weapon,name=name.get(),damage=[diechoice.get(),extra.get(),ap.get()],
+                                                            req=strchoice.get(),lb=weight.get(),money=cost.get(),info=notes.get(1.0,tk.END))).grid(row=0,column=10)
+global armory
+armory={'Weapons':{'Melee','Ranged','Special'},
+        'Armor':None,
+        'Gear':None,
+        'Vehicles':None}
+def savegear(mode = 'Melee',name = 'Unarmed Strike', damage = ['0','0','0'],req='none',lb='0',money='0',info='Punch the sucka!'):
+    
+    with open('armory.json','a'): pass
+    with open('armory.json','r+') as f:
+        f.seek(0)
+        try:
+            armory=json.load(f)            
+            f.seek(0)
+        except:
+            f.seek(0)
+            json.dump(armory,f)
+    if mode=='Melee':
+        if damage[0]=='0':
+            damage_string='Str'
+        else:
+            damage_string='Str+'+damage[0]
+        if int(damage[1])!=0:
+            damage_string+='+'+damage[1]
+        damage_number=0
+        for i in range(len(dice)):
+            if damage[0] == dice[i]:
+                damage_number=4+2*i
+                i=len(dice)
+        armory['Weapons']['Melee'][name]={'display':damage_string,
+                                          'damage':damage_number,
+                                          'modifier':int(damage[1]),
+                                          'AP':int(damage[2]),
+                                          'Min Str':req,
+                                          'Weight':lb+' lbs',
+                                          'Cost':money,
+                                          'Notes':info}
+        
+    with open('armory.json','w') as f:
+        f.seek(0)
+        json.dump(armory,f)
+        
 def mainstats():
     killchildren(main)
     statspage=tk.Frame(main)
@@ -451,11 +499,11 @@ def newcharother(window):
     
 
 
-global player, attributelist, skilllist
+global player, attributelist, skilllist, dice
 player={}
 attributelist=['Agility','Smarts','Spirit','Strength','Vigor']
 skilllist=['Athletics','Boating','Driving','Fighting','Piloting','Riding','Shooting','Stealth','Thievery','Academics','Battle','Common Knowledge','Electronics','Gambling','Hacking','Healing','Native Language','Notice','Occult','Psionics','Repair','Research','Science','Spellcasting','Survival','Taunt','Weird Science','Faith','Focus','Intimidation','Performance','Persuasion']
-
+dice=['d4','d6','d8','d10','d12']
 
 def install(newinfo):
     directory=list(newinfo.keys())
