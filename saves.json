@@ -1,1 +1,386 @@
-[{"Test 2": {"Name": "Test 2", "Agility": {"display": "d12", "size": 12, "modifier": 0}, "Smarts": {"display": "d4", "size": 4, "modifier": 0}, "Spirit": {"display": "d4", "size": 4, "modifier": 0}, "Strength": {"display": "d4", "size": 4, "modifier": 0}, "Vigor": {"display": "d4", "size": 4, "modifier": 0}, "Athletics": {"display": "Unskilled", "size": 4, "modifier": -2}, "Boating": {"display": "Unskilled", "size": 4, "modifier": -2}, "Driving": {"display": "Unskilled", "size": 4, "modifier": -2}, "Fighting": {"display": "Unskilled", "size": 4, "modifier": -2}, "Piloting": {"display": "Unskilled", "size": 4, "modifier": -2}, "Riding": {"display": "Unskilled", "size": 4, "modifier": -2}, "Shooting": {"display": "Unskilled", "size": 4, "modifier": -2}, "Stealth": {"display": "Unskilled", "size": 4, "modifier": -2}, "Thievery": {"display": "Unskilled", "size": 4, "modifier": -2}, "Academics": {"display": "Unskilled", "size": 4, "modifier": -2}, "Battle": {"display": "Unskilled", "size": 4, "modifier": -2}, "Common Knowledge": {"display": "d12", "size": 12, "modifier": 0}, "Electronics": {"display": "d10", "size": 10, "modifier": 0}, "Gambling": {"display": "Unskilled", "size": 4, "modifier": -2}, "Hacking": {"display": "Unskilled", "size": 4, "modifier": -2}, "Healing": {"display": "Unskilled", "size": 4, "modifier": -2}, "Native Language": {"display": "d10+1", "size": 10, "modifier": 1}, "Notice": {"display": "Unskilled", "size": 4, "modifier": -2}, "Occult": {"display": "Unskilled", "size": 4, "modifier": -2}, "Psionics": {"display": "d6-2", "size": 6, "modifier": -2}, "Repair": {"display": "d4", "size": 4, "modifier": 0}, "Research": {"display": "Unskilled", "size": 4, "modifier": -2}, "Science": {"display": "Unskilled", "size": 4, "modifier": -2}, "Spellcasting": {"display": "Unskilled", "size": 4, "modifier": -2}, "Survival": {"display": "Unskilled", "size": 4, "modifier": -2}, "Taunt": {"display": "Unskilled", "size": 4, "modifier": -2}, "Weird Science": {"display": "Unskilled", "size": 4, "modifier": -2}, "Faith": {"display": "Unskilled", "size": 4, "modifier": -2}, "Focus": {"display": "Unskilled", "size": 4, "modifier": -2}, "Intimidation": {"display": "Unskilled", "size": 4, "modifier": -2}, "Performance": {"display": "Unskilled", "size": 4, "modifier": -2}, "Persuasion": {"display": "Unskilled", "size": 4, "modifier": -2}, "Wounds": 0, "Fatigue": 0}}, {"Test 2": {"Name": "Test 2", "Agility": {"display": "d4", "size": 4, "modifier": 0}, "Smarts": {"display": "d4", "size": 4, "modifier": 0}, "Spirit": {"display": "d4", "size": 4, "modifier": 0}, "Strength": {"display": "d4", "size": 4, "modifier": 0}, "Vigor": {"display": "d4", "size": 4, "modifier": 0}, "Athletics": {"display": "Unskilled", "size": 4, "modifier": -2}, "Boating": {"display": "Unskilled", "size": 4, "modifier": -2}, "Driving": {"display": "Unskilled", "size": 4, "modifier": -2}, "Fighting": {"display": "Unskilled", "size": 4, "modifier": -2}, "Piloting": {"display": "Unskilled", "size": 4, "modifier": -2}, "Riding": {"display": "Unskilled", "size": 4, "modifier": -2}, "Shooting": {"display": "Unskilled", "size": 4, "modifier": -2}, "Stealth": {"display": "Unskilled", "size": 4, "modifier": -2}, "Thievery": {"display": "Unskilled", "size": 4, "modifier": -2}, "Academics": {"display": "Unskilled", "size": 4, "modifier": -2}, "Battle": {"display": "Unskilled", "size": 4, "modifier": -2}, "Common Knowledge": {"display": "Unskilled", "size": 4, "modifier": -2}, "Electronics": {"display": "Unskilled", "size": 4, "modifier": -2}, "Gambling": {"display": "Unskilled", "size": 4, "modifier": -2}, "Hacking": {"display": "Unskilled", "size": 4, "modifier": -2}, "Healing": {"display": "Unskilled", "size": 4, "modifier": -2}, "Native Language": {"display": "Unskilled", "size": 4, "modifier": -2}, "Notice": {"display": "Unskilled", "size": 4, "modifier": -2}, "Occult": {"display": "Unskilled", "size": 4, "modifier": -2}, "Psionics": {"display": "Unskilled", "size": 4, "modifier": -2}, "Repair": {"display": "Unskilled", "size": 4, "modifier": -2}, "Research": {"display": "Unskilled", "size": 4, "modifier": -2}, "Science": {"display": "Unskilled", "size": 4, "modifier": -2}, "Spellcasting": {"display": "Unskilled", "size": 4, "modifier": -2}, "Survival": {"display": "Unskilled", "size": 4, "modifier": -2}, "Taunt": {"display": "Unskilled", "size": 4, "modifier": -2}, "Weird Science": {"display": "Unskilled", "size": 4, "modifier": -2}, "Faith": {"display": "Unskilled", "size": 4, "modifier": -2}, "Focus": {"display": "Unskilled", "size": 4, "modifier": -2}, "Intimidation": {"display": "Unskilled", "size": 4, "modifier": -2}, "Performance": {"display": "Unskilled", "size": 4, "modifier": -2}, "Persuasion": {"display": "Unskilled", "size": 4, "modifier": -2}, "Wounds": 0, "Fatigue": 0}}]
+[
+    {
+        "Test 2": {
+            "Academics": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Agility": {
+                "display": "d4",
+                "modifier": 0,
+                "size": 4
+            },
+            "Athletics": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Battle": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Boating": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Common Knowledge": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Driving": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Electronics": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Faith": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Fatigue": 0,
+            "Fighting": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Focus": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Gambling": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Hacking": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Healing": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Intimidation": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Name": "Test 2",
+            "Native Language": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Notice": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Occult": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Performance": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Persuasion": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Piloting": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Psionics": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Repair": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Research": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Riding": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Science": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Shooting": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Smarts": {
+                "display": "d4",
+                "modifier": 0,
+                "size": 4
+            },
+            "Spellcasting": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Spirit": {
+                "display": "d4",
+                "modifier": 0,
+                "size": 4
+            },
+            "Stealth": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Strength": {
+                "display": "d4",
+                "modifier": 0,
+                "size": 4
+            },
+            "Survival": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Taunt": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Thievery": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Vigor": {
+                "display": "d4",
+                "modifier": 0,
+                "size": 4
+            },
+            "Weird Science": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Wounds": 0
+        }
+    },
+    {
+        "Test 2": {
+            "Academics": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Agility": {
+                "display": "d4",
+                "modifier": 0,
+                "size": 4
+            },
+            "Athletics": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Battle": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Boating": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Common Knowledge": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Driving": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Electronics": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Faith": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Fatigue": 0,
+            "Fighting": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Focus": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Gambling": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Hacking": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Healing": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Intimidation": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Name": "Test 2",
+            "Native Language": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Notice": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Occult": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Performance": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Persuasion": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Piloting": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Psionics": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Repair": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Research": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Riding": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Science": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Shooting": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Smarts": {
+                "display": "d4",
+                "modifier": 0,
+                "size": 4
+            },
+            "Spellcasting": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Spirit": {
+                "display": "d4",
+                "modifier": 0,
+                "size": 4
+            },
+            "Stealth": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Strength": {
+                "display": "d4",
+                "modifier": 0,
+                "size": 4
+            },
+            "Survival": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Taunt": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Thievery": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Vigor": {
+                "display": "d4",
+                "modifier": 0,
+                "size": 4
+            },
+            "Weird Science": {
+                "display": "Unskilled",
+                "modifier": -2,
+                "size": 4
+            },
+            "Wounds": 0
+        }
+    }
+]
