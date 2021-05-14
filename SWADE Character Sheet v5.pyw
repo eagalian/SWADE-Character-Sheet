@@ -90,7 +90,7 @@ def load(win,n):
             mainplayer=data[i]
         
    
-    print(json.dumps(mainplayer,indent=4))
+    mainstats()
 
 def combat():
     killchildren(main)
@@ -364,6 +364,7 @@ def savegear(armory=mainarmory,mode = 'Melee',name = 'Unarmed Strike',era='Midie
         armory['Weapons']['Ranged'][name]={'display':display_string,
                                           'era':era,
                                           'style':style,
+                                          'damage_display':damage_string
                                           'damage':damage_number,
                                           'modifier':int(damage[2]),
                                           'AP':int(damage[3]),
@@ -377,7 +378,7 @@ def savegear(armory=mainarmory,mode = 'Melee',name = 'Unarmed Strike',era='Midie
     mainarmory=armory    
     with open('armory.json','w') as f:
         f.seek(0)
-        json.dump(armory,f,indent=4,sort_keys=True)
+        json.dump(armory,f,indent=4)
 
     time.sleep(1)
         
@@ -385,7 +386,7 @@ def mainstats():
     killchildren(main)
     statspage=tk.Frame(main)
     statspage.grid()
-    tk.Label(statspage,text=player['Name'],font='Helvetica 30 bold',padx=10, pady=10).grid(row=0,column=0,columnspan=4)
+    tk.Label(statspage,text=mainplayer['concept']['Name'],font='Helvetica 30 bold',padx=10, pady=10).grid(row=0,column=0,columnspan=4)
     i=0
     global buttons
     buttons=[None]*37
@@ -393,18 +394,18 @@ def mainstats():
     l1=[None]*37
     stringa=str()
     wounds=tk.IntVar()
-    wounds.set(player['Wounds'])
+    wounds.set(mainplayer['stats']['Wounds'])
     fatigue=tk.IntVar()
-    fatigue.set(player['Fatigue'])
+    fatigue.set(mainplayer['stats']['Fatigue'])
     wstring=tk.StringVar()
-    wstring.set('Wounds: '+str(player['Wounds']))
+    wstring.set('Wounds: '+str(mainplayer['stats']['Wounds']))
     fstring=tk.StringVar()
-    fstring.set('Fatigue: '+str(player['Fatigue']))
+    fstring.set('Fatigue: '+str(mainplayer['stats']['Fatigue']))
     global texta
     texta=[None]*37
     for x in attributelist:
         texta[i]=tk.StringVar()
-        texta[i].set(attributelist[i]+': '+player[attributelist[i]]['display'])
+        texta[i].set(attributelist[i]+': '+mainplayer['Attributes'][attributelist[i]]['display'])
         if i < 3:
             r=2
             c=4*i
@@ -417,7 +418,7 @@ def mainstats():
         m[i].insert(0,'0')
         l1[i]=tk.Label(statspage,text='',width=20,padx=10,pady=3)
         l1[i].grid(row=r,column=c+3)
-        buttons[i]=tk.Button(statspage,text='ROLL',command=lambda j=i:rollskills(statspage,l1[j],player[attributelist[j]]['size'],player[attributelist[j]]['size']-wounds.get()-fatigue.get()+int(isBlank(m[j].get()))))
+        buttons[i]=tk.Button(statspage,text='ROLL',command=lambda j=i:rollskills(statspage,l1[j],mainplayer['Attributes'][attributelist[j]]['size'],mainplayer['Attributes'][attributelist[j]]['size']-wounds.get()-fatigue.get()+int(isBlank(m[j].get()))))
         buttons[i].grid(row=r,column=c+2)
         i+=1
     agiskills=tk.Frame(statspage,bd=3,relief='sunken')
@@ -429,7 +430,7 @@ def mainstats():
     for x in skilllist:
         k=i-5
         texta[i]=tk.StringVar()
-        texta[i].set(skilllist[k]+': '+player[skilllist[k]]['display'])
+        texta[i].set(skilllist[k]+': '+mainplayer['Skills'][skilllist[k]]['display'])
         
         if k<9:
             r=k
@@ -440,7 +441,7 @@ def mainstats():
             m[i].insert(0,'0')
             l1[i]=tk.Label(agiskills,text='',width=20,padx=10,pady=3)
             l1[i].grid(row=r,column=c+3)
-            buttons[i]=tk.Button(agiskills,text='ROLL',command=lambda j=i:rollskills(statspage,l1[j],player[skilllist[j]]['size'],player[skilllist[j]]['modifier']-wounds.get()-fatigue.get()+int(isBlank(m[j].get()))))
+            buttons[i]=tk.Button(agiskills,text='ROLL',command=lambda j=i:rollskills(statspage,l1[j],mainplayer['Skills'][skilllist[j]]['size'],mainplayer['Skills'][skilllist[j]]['modifier']-wounds.get()-fatigue.get()+int(isBlank(m[j].get()))))
             buttons[i].grid(row=r,column=c+2)
         elif k<27:
             r=k-9
@@ -451,7 +452,7 @@ def mainstats():
             m[i].insert(0,'0')
             l1[i]=tk.Label(smartskills,text='',width=20,padx=10,pady=3)
             l1[i].grid(row=r,column=c+3)
-            buttons[i]=tk.Button(smartskills,text='ROLL',command=lambda j=i:rollskills(statspage,l1[j],player[skilllist[j]]['size'],player[skilllist[j]]['modifier']-wounds.get()-fatigue.get()+int(isBlank(m[j].get()))))
+            buttons[i]=tk.Button(smartskills,text='ROLL',command=lambda j=i:rollskills(statspage,l1[j],mainplayer['Skills'][skilllist[j]]['size'],mainplayer['Skills'][skilllist[j]]['modifier']-wounds.get()-fatigue.get()+int(isBlank(m[j].get()))))
             buttons[i].grid(row=r,column=c+2)
         else:
             r=k-27
@@ -462,15 +463,15 @@ def mainstats():
             m[i].insert(0,'0')
             l1[i]=tk.Label(spiritskills,text='',width=20,padx=10,pady=3)
             l1[i].grid(row=r,column=c+3)
-            buttons[i]=tk.Button(spiritskills,text='ROLL',command=lambda j=i:rollskills(statspage,l1[j],player[skilllist[j]]['size'],player[skilllist[j]]['modifier']-wounds.get()-fatigue.get()+int(isBlank(m[j].get()))))
+            buttons[i]=tk.Button(spiritskills,text='ROLL',command=lambda j=i:rollskills(statspage,l1[j],mainplayer['Skills'][skilllist[j]]['size'],mainplayer['Skills'][skilllist[j]]['modifier']-wounds.get()-fatigue.get()+int(isBlank(m[j].get()))))
             buttons[i].grid(row=r,column=c+2)
 
         i+=1
         
     
     
-    incap('w',player['Wounds'],buttons)
-    incap('f',player['Fatigue'],buttons)
+    incap('w',mainplayer['stats']['Wounds'],buttons)
+    incap('f',mainplayer['stats']['Fatigue'],buttons)
     tk.Button(statspage,textvariable=wstring,command=lambda:[wounds.set(min(3,wounds.get()+1)),wstring.set('Wounds: '+str(wounds.get())),incap('w',wounds.get(),buttons)]).grid(row=0,column=10)
     tk.Button(statspage,text='Heal',command=lambda:[wounds.set(max(0,wounds.get()-1)),wstring.set('Wounds: '+str(wounds.get())),incap('w',wounds.get(),buttons)]).grid(row=0,column=11)
     tk.Button(statspage,textvariable=fstring,command=lambda:[fatigue.set(min(2,fatigue.get()+1)),fstring.set('Fatigue: '+str(fatigue.get())),incap('f',fatigue.get(),buttons)]).grid(row=0,column=8)
@@ -481,9 +482,9 @@ def isBlank(string):
     return 0
 def incap(mode,wounds,buttons):
     if mode=='w':
-        player['Wounds']=wounds
+        mainplayer['stats']['Wounds']=wounds
     if mode=='f':
-        player['Fatigue']=wounds
+        mainplayer['stats']['Fatigue']=wounds
     
     if wounds==3 and mode=='w':
         i=0
@@ -569,6 +570,12 @@ def newcharstats():
                        'Age':'',
                        'Description':'',
                        'Background':''},
+            'stats':{'Wounds':0,
+                     'Fatigue':0,
+                     'Run':6,
+                     'Parry':2,
+                     'Toughness':2,
+                     'Armor':0},
             'Race':{'name':'human'},
             'Hinderances':{},
             'Attributes':{},
@@ -576,7 +583,9 @@ def newcharstats():
             'Edges':{},
             'Gear':{'Inventory':{},
                     'Armor':{},
-                    'Weapons':{},
+                    'Weapons':{'Melee':{},
+                               'Ranged':{},
+                               'Special':{}},
                     'Vehicles:':{}},
             'Allies':{},
             'Advances':{}}
@@ -700,42 +709,42 @@ def install(newinfo,storage):
     for x in directory:
         storage[str(x)]=newinfo[str(x)]
 
-def change_attribute(trait,mode,value):
+def change_attribute(stattype,trait,mode,value):
     options=['Unskilled','d4','d6','d8','d10','d12']
     
     if mode=='modifier':
-        player[trait][mode]+=value
+        mainplayer[stattype][trait][mode]+=value
     if mode=='size':
-        if value==-2 and player[trait]['display']!=options[0]:
+        if value==-2 and mainplayer[stattype][trait]['display']!=options[0]:
             i=1
             while i<len(options):
-                if options[i]==player[trait]['display']:
-                    player[trait]['display']=options[i-1]
-                    player[trait]['size']+=value
-                    if player[trait]['display']==options[0]:
-                        player[trait]['modifier']-=2
+                if options[i]==mainplayer[stattype][trait]['display']:
+                    mainplayer[stattype][trait]['display']=options[i-1]
+                    mainplayer[stattype][trait]['size']+=value
+                    if mainplayer[stattype][trait]['display']==options[0]:
+                        mainplayer[stattype][trait]['modifier']-=2
                     i=7
                 else:
                     i+=1
-        elif value==2 and player[trait]['display']!=options[5]:
+        elif value==2 and mainplayer[stattype][trait]['display']!=options[5]:
             i=0
             while i < len(options)-1:
-                if options[i]==player[trait]['display']:
-                    player[trait]['display']=options[i+1]
+                if options[i]==mainplayer[stattype][trait]['display']:
+                    mainplayer[stattype][trait]['display']=options[i+1]
                     if i==0:
-                        player[trait]['modifier']+=2
+                        mainplayer[stattype][trait]['modifier']+=2
                     
                     else:
-                        player[trait]['size']+=value
+                        mainplayer[stattype][trait]['size']+=value
                     i=7
                 else:
                     i+=1
-    if player[trait]['modifier']<0 and player[trait]['display']!=options[0]:
-        player[trait]['display']='d'+str(player[trait]['size'])+'-'+str(abs(player[trait]['modifier']))
-    elif player[trait]['modifier']>0 and player[trait]['display']!=options[0]:
-        player[trait]['display']='d'+str(player[trait]['size'])+'+'+str(player[trait]['modifier'])
-    elif player[trait]['modifier']==0 and player[trait]['display']!=options[0]:
-        player[trait]['display']='d'+str(player[trait]['size'])
+    if mainplayer[stattype][trait]['modifier']<0 and mainplayer[stattype][trait]['display']!=options[0]:
+        mainplayer[stattype][trait]['display']='d'+str(mainplayer[stattype][trait]['size'])+'-'+str(abs(mainplayer[stattype][trait]['modifier']))
+    elif mainplayer[stattype][trait]['modifier']>0 and mainplayer[stattype][trait]['display']!=options[0]:
+        mainplayer[stattype][trait]['display']='d'+str(mainplayer[stattype][trait]['size'])+'+'+str(mainplayer[stattype][trait]['modifier'])
+    elif mainplayer[stattype][trait]['modifier']==0 and mainplayer[stattype][trait]['display']!=options[0]:
+        mainplayer[stattype][trait]['display']='d'+str(mainplayer[stattype][trait]['size'])
     
                         
     
@@ -752,32 +761,37 @@ def attribute_update():
         i+=1
 
     i=0
-    
+    stattype=['']*37
     die=[None]*37
     for x in allstats:
         if i<3:
             r=1
             c=5*i
+            stattype[i]='Attributes'
         elif i<5:
             r=21
             c=5*(i-3)
+            stattype[i]='Attributes'
         elif i<14:
             r=i-3
             c=0
+            stattype[i]='Skills'
         elif i<32:
             r=i-12
             c=5
+            stattype[i]='Skills'
         else:
             r=i-30
             c=10
+            stattype[i]='Skills'
         die[i]=tk.StringVar()
-        die[i].set(allstats[i]+': '+player[allstats[i]]['display'])
+        die[i].set(allstats[i]+': '+mainplayer[stattype[i]][allstats[i]]['display'])
         
         tk.Label(update,textvariable=die[i]).grid(row=r,column=c)
-        tk.Button(update,text='Step Down',command=lambda j=i:[change_attribute(allstats[j],'size',-2),die[j].set(allstats[j]+': '+player[allstats[j]]['display'])]).grid(row=r,column=c+1)
-        tk.Button(update,text='Step Up',command=lambda j=i:[change_attribute(allstats[j],'size',2),die[j].set(allstats[j]+': '+player[allstats[j]]['display'])]).grid(row=r,column=c+2)
-        tk.Button(update,text='-1',command=lambda j=i:[change_attribute(allstats[j],'modifier',-1),die[j].set(allstats[j]+': '+player[allstats[j]]['display'])]).grid(row=r,column=c+3)
-        tk.Button(update,text='+1',command=lambda j=i:[change_attribute(allstats[j],'modifier',1),die[j].set(allstats[j]+': '+player[allstats[j]]['display'])]).grid(row=r,column=c+4)
+        tk.Button(update,text='Step Down',command=lambda j=i:[change_attribute(stattype[j],allstats[j],'size',-2),die[j].set(allstats[j]+': '+mainplayer[stattype[j]][allstats[j]]['display'])]).grid(row=r,column=c+1)
+        tk.Button(update,text='Step Up',command=lambda j=i:[change_attribute(stattype[j],allstats[j],'size',2),die[j].set(allstats[j]+': '+mainplayer[stattype[j]][allstats[j]]['display'])]).grid(row=r,column=c+2)
+        tk.Button(update,text='-1',command=lambda j=i:[change_attribute(stattype[j],allstats[j],'modifier',-1),die[j].set(allstats[j]+': '+mainplayer[stattype[j]][allstats[j]]['display'])]).grid(row=r,column=c+3)
+        tk.Button(update,text='+1',command=lambda j=i:[change_attribute(stattype[j],allstats[j],'modifier',1),die[j].set(allstats[j]+': '+mainplayer[stattype[j]][allstats[j]]['display'])]).grid(row=r,column=c+4)
         i+=1
     
     
@@ -833,6 +847,7 @@ def get_weapon_info (frame,mode='Weapon',style='Melee',item='Axe, Hand'):
     keys=list(data.keys())
     string=data['display']
     tk.Label(frame,text=string).grid(row=2,column=0,columnspan=3)
+    tk.Button(frame,text='Add to inventory',command=lambda:install(data,mainplayer['Gear']['Weapons'][style])).grid(row=2,column=4)
 
 def fullrest():
     incap('w',0,buttons)
