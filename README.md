@@ -28,4 +28,5 @@ v5 is current fully functional
 * ranged weapons with rof>1, plus edges that allow multiple attacks per action need functionality
 * power point tracker widget (window?)
 * gear, armor, vehicle creator page + equipment tab
+* modify equipment creators with uuid or similar?
 
