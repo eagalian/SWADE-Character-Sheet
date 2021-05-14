@@ -5,6 +5,8 @@ import csv
 import time
 import uuid
 import random
+
+
 random.seed()
 
 
@@ -364,7 +366,7 @@ def savegear(armory=mainarmory,mode = 'Melee',name = 'Unarmed Strike',era='Midie
         armory['Weapons']['Ranged'][name]={'display':display_string,
                                           'era':era,
                                           'style':style,
-                                          'damage_display':damage_string
+                                          'damage_display':damage_string,
                                           'damage':damage_number,
                                           'modifier':int(damage[2]),
                                           'AP':int(damage[3]),
@@ -861,7 +863,14 @@ main.title("SWADE CHaracter Sheet v5")
 main.state('zoomed')
 menubar=tk.Menu()
 
+photo=tk.PhotoImage(file='SW_LOGO_FP_2018-300x200-1.gif')
 
+licenseframe=tk.Frame(main)
+licenseframe.pack()
+canvas=tk.Canvas(licenseframe,width=300,height=200)
+canvas.pack()
+canvas.create_image((150,100),image=photo)
+tk.Label(licenseframe,text="This game references the Savage Worlds game system, available from Pinnacle Entertainment Group at \nwww.peginc.com. Savage Worlds and all associated logos and trademarks are \ncopyrights of Pinnacle Entertainment Group. Used with permission. \nPinnacle makes no representation or warranty as to the quality, viability, or suitability \nfor purpose of this product.").pack()
 
 
 filemenu=tk.Menu(menubar)
