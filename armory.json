@@ -5,6 +5,23 @@
     "Weapons": {
         "Melee": {},
         "Ranged": {},
-        "Special": {}
+        "Special": {
+            "test": {
+                "display": "test\nWeapon Type: Cannons\nEra: Midieval\n Damage 1d4 AP 0\nRange: 4/8/16\nShots: 10\nBlast Radius: Cone\nRate of Fire: 1\nStr Req: d4\nWeight: 0 lbs\nCost: 0\nNotes: \n",
+                "era": "Midieval",
+                "style": "Cannons",
+                "damage_display": "1d4 AP 0",
+                "damage": 0,
+                "modifier": 0,
+                "AP": 0,
+                "Blast Radius": "Cone",
+                "Range": "4/8/16",
+                "Rate of Fire": "1",
+                "Min Str": "d4",
+                "Weight": 0.0,
+                "Cost": "0",
+                "Notes": "\n"
+            }
+        }
     }
 }

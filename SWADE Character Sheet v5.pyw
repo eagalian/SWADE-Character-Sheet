@@ -194,9 +194,9 @@ def weapons(frame,weapon):
         cost.grid(row=5,column=1)
         cost.insert(0,'0')
         
-        tk.Label(melee,text='Notes:').grid(row=6,column=0)
+        tk.Label(melee,text='Notes:').grid(row=7,column=0)
         notes=tk.Text(melee,width=40,height=5)
-        notes.grid(row=7,column=1,columnspan=50)
+        notes.grid(row=8,column=1,columnspan=7)
         
         tk.Button(melee,text='Save',command=lambda:[finished.set('Saved!'),savegear(mode=weapon,name=name.get(),era=age.get(),damage=[strdie.get(),ndice.get()+diechoice.get(),extra.get(),ap.get(),parry.get()],
                                                             req=strchoice.get(),lb=weight.get(),money=cost.get(),info=notes.get(1.0,tk.END)), finished.set('')]).grid(row=0,column=15)
@@ -242,6 +242,7 @@ def weapons(frame,weapon):
         extra=tk.Entry(ranged,width=5)
         extra.grid(row=1,column=5)
         extra.insert(0,'0')
+        
         baserange=[3,4,5,10,12,15,20,24,30,50]
         rangezones=[[1,2,4]]*len(baserange)
         rangestring=['']*len(baserange)
@@ -259,15 +260,22 @@ def weapons(frame,weapon):
         tk.Label(ranged,text='Range Markings: ').grid(row=2,column=0)
         tk.OptionMenu(ranged,choice2,*range_options).grid(row=2,column=1)
 
+        tk.Label(ranged,text='Shots').grid(row=3,column=6)
+        shots=tk.Entry(ranged,width=10)
+        shots.grid(row=3,column=7)
+        shots.insert(0,'10')
+
         tk.Label(ranged,text='Rate of Fire: ').grid(row=2,column=6)
-        RoF=tk.Entry(ranged)
+        RoF=tk.Entry(ranged,width=10)
         RoF.grid(row=2,column=7)
+        RoF.insert(0,'1')
 
         tk.Label(ranged,text="Min Str").grid(row=3,column=0)
         strchoice=tk.StringVar()
         strchoice.set('d4')
         drop2=tk.OptionMenu(ranged,strchoice,*dice)
         drop2.grid(row=3,column=1)
+
         
         tk.Label(ranged,text='AP').grid(row=4,column=0)
         ap=tk.Entry(ranged,width=10)
@@ -292,9 +300,9 @@ def weapons(frame,weapon):
         
         tk.Label(ranged,text='Notes:').grid(row=7,column=0)
         notes=tk.Text(ranged,width=40,height=5)
-        notes.grid(row=8,column=1,columnspan=50)
+        notes.grid(row=8,column=1,columnspan=7)
         
-        tk.Button(ranged,text='Save',command=lambda:[savegear(mode=weapon,name=name.get(),era=age.get(),style=choice1.get(),rate=RoF.get(),range_marks=choice2.get(),
+        tk.Button(ranged,text='Save',command=lambda:[savegear(mode=weapon,name=name.get(),era=age.get(),ammo=shots.get(),style=choice1.get(),rate=RoF.get(),range_marks=choice2.get(),
                                                                                     damage=[strdie.get(),ndice.get()+diechoice.get(),extra.get(),ap.get(),parry.get()],
                                                                                     req=strchoice.get(),lb=weight.get(),money=cost.get(),info=notes.get(1.0,tk.END)),
                                                                                     finished.set('Saved '+name.get())]).grid(row=0,column=15)
@@ -302,6 +310,112 @@ def weapons(frame,weapon):
         finished.set('')
         tk.Label(ranged,textvariable=finished).grid(row=0,column=17)
         tk.Button(ranged,text='Clear',command=lambda:weapons(frame,weapon)).grid(row=0,column=16)
+    if weapon=='Special':
+        special=tk.Frame(frame)
+        special.grid()
+        tk.Label(special,text="Weapon Name: ").grid(row=0,column=0)
+        name=tk.Entry(special,width=30)
+        name.grid(row=0,column=1,columnspan=3)
+        range_styles=['Select one...','Cannons','Catapults','Flamethrowers','Grenades','Mines','Missiles','Rocket Launchers and Torpedos']
+        tk.Label(special,text='Weapon Styles:').grid(row=0,column=6)
+        choice1=tk.StringVar()
+        choice1.set(range_styles[0])
+        tk.OptionMenu(special,choice1,*range_styles).grid(row=0,column=7)
+            
+        
+        tk.Label(special,text="Era: ").grid(row=0,column=8)
+        times=['Midieval','Modern','Futuristic']
+        age=tk.StringVar()
+        age.set(times[0])
+        drop0=tk.OptionMenu(special,age,*times)
+        drop0.grid(row=0,column=9)
+        
+        tk.Label(special,text="Damage:").grid(row=1,column=0)
+        strdie=tk.IntVar()
+        c1=tk.Checkbutton(special,text='Str?',variable=strdie,onvalue=1,offvalue=0)
+        c1.grid(row=1,column=1)
+        ndice=tk.Entry(special,width=5)
+        ndice.grid(row=1,column=2)
+        ndice.insert(0,'1')
+        dice1=['0','d4','d6','d8','d10','d12']
+        diechoice=tk.StringVar()
+        diechoice.set('d4')
+        drop=tk.OptionMenu(special,diechoice,*dice1)
+        drop.grid(row=1,column=3)
+        tk.Label(special,text='+').grid(row=1,column=4)
+        extra=tk.Entry(special,width=5)
+        extra.grid(row=1,column=5)
+        extra.insert(0,'0')
+        
+        baserange=[3,4,5,10,12,15,20,24,30,50]
+        rangezones=[[1,2,4]]*len(baserange)
+        rangestring=['']*len(baserange)
+        for i in range(len(rangezones)):
+            rangezones[i]=[x*baserange[i] for x in rangezones[i]]
+            for j in range(len(rangezones[i])):
+                rangestring[i]+=str(rangezones[i][j])
+                if j<len(rangezones[i])-1:
+                    rangestring[i]+='/'
+        range_options=['Select one...']
+        for i in range(len(rangezones)):
+            range_options.append(rangestring[i])
+        choice2=tk.StringVar()
+        choice2.set(range_options[0])
+        tk.Label(special,text='Range Markings: ').grid(row=2,column=0)
+        tk.OptionMenu(special,choice2,*range_options).grid(row=2,column=1)
+
+        tk.Label(special,text='Shots').grid(row=3,column=6)
+        shots=tk.Entry(special,width=10)
+        shots.grid(row=3,column=7)
+        shots.insert(0,'10')
+
+        tk.Label(special,text='Rate of Fire: ').grid(row=2,column=6)
+        RoF=tk.Entry(special,width=10)
+        RoF.grid(row=2,column=7)
+        RoF.insert(0,'1')
+
+        tk.Label(special,text="Min Str").grid(row=3,column=0)
+        strchoice=tk.StringVar()
+        strchoice.set('d4')
+        drop2=tk.OptionMenu(special,strchoice,*dice)
+        drop2.grid(row=3,column=1)
+
+        
+        tk.Label(special,text='AP').grid(row=4,column=0)
+        ap=tk.Entry(special,width=10)
+        ap.grid(row=4,column=1)
+        ap.insert(0,'0')
+        
+        tk.Label(special,text='Blast Radius ').grid(row=4,column=6)
+        blast_size=['Select one...','Cone','SBR','MBR','LBR']
+        choice3=tk.StringVar()
+        choice3.set(blast_size[0])
+        tk.OptionMenu(special,choice3,*blast_size).grid(row=4,column=7)
+
+        
+        
+        tk.Label(special,text="Weight").grid(row=5,column=0)
+        weight=tk.Entry(special,width=10)
+        weight.grid(row=5,column=1)
+        weight.insert(0,'0')
+        
+        tk.Label(special,text='Cost').grid(row=6,column=0)
+        cost=tk.Entry(special,width=10)
+        cost.grid(row=6,column=1)
+        cost.insert(0,'0')
+        
+        tk.Label(special,text='Notes:').grid(row=7,column=0)
+        notes=tk.Text(special,width=40,height=5)
+        notes.grid(row=8,column=1,columnspan=7)
+        
+        tk.Button(special,text='Save',command=lambda:[savegear(mode=weapon,name=name.get(),era=age.get(),ammo=shots.get(),style=choice1.get(),rate=RoF.get(),range_marks=choice2.get(),
+                                                                                    damage=[strdie.get(),ndice.get()+diechoice.get(),extra.get(),ap.get(),'0'],blast_radius=choice3.get(),
+                                                                                    req=strchoice.get(),lb=weight.get(),money=cost.get(),info=notes.get(1.0,tk.END)),
+                                                                                    finished.set('Saved '+name.get())]).grid(row=0,column=15)
+        finished=tk.StringVar()
+        finished.set('')
+        tk.Label(special,textvariable=finished).grid(row=0,column=17)
+        tk.Button(special,text='Clear',command=lambda:weapons(frame,weapon)).grid(row=0,column=16)
         
         
 global mainarmory
@@ -318,7 +432,7 @@ with open('armory.json','r+') as f:
             'Vehicles':{}}
         json.dump(mainarmory,f,indent=4,sort_keys=True)
 
-def savegear(armory=mainarmory,mode = 'Melee',name = 'Unarmed Strike',era='Midieval', style='Pistol',rate='1',range_marks='3/6/12',
+def savegear(armory=mainarmory,mode = 'Melee',name = 'Unarmed Strike',era='Midieval', style='Pistol',rate='1',blast_radius='None',ammo='50',range_marks='3/6/12',
              damage = ['0','0','0','0','0'],req='none',lb='0',money='0',info='Punch the sucka!'):
 
     if mode=='Melee':
@@ -362,7 +476,7 @@ def savegear(armory=mainarmory,mode = 'Melee',name = 'Unarmed Strike',era='Midie
             if damage[0] == dice[i]:
                 damage_number=4+2*i
                 i=len(dice)
-        display_string=name+'\nWeapon Type: '+style+'\nEra: '+era+'\n Damage '+damage_string+'\nRange: '+range_marks+'\nRate of Fire: '+rate+'\nStr Req: '+req+'\nWeight: '+lb+' lbs\nCost: '+money+'\nNotes: '+info
+        display_string=name+'\nWeapon Type: '+style+'\nEra: '+era+'\n Damage '+damage_string+'\nRange: '+range_marks+'\nShots: '+ammo+'\nRate of Fire: '+rate+'\nStr Req: '+req+'\nWeight: '+lb+' lbs\nCost: '+money+'\nNotes: '+info
         armory['Weapons']['Ranged'][name]={'display':display_string,
                                           'era':era,
                                           'style':style,
@@ -371,6 +485,37 @@ def savegear(armory=mainarmory,mode = 'Melee',name = 'Unarmed Strike',era='Midie
                                           'modifier':int(damage[2]),
                                           'AP':int(damage[3]),
                                           'Parry':int(damage[4]),
+                                          'Range':range_marks,
+                                          'Rate of Fire':rate,
+                                          'Min Str':req,
+                                          'Weight':float(lb),
+                                          'Cost':money,
+                                          'Notes':info}
+    if mode=='Special':
+        if damage[0]==1:
+            damage_string='Str'
+            if damage[1]!=0:
+                damage_string+='+'+damage[1]
+        else:
+            damage_string=damage[1]
+        if int(damage[2])!=0:
+            damage_string+='+'+damage[2]
+        if damage[3]!=0:
+            damage_string+=' AP '+damage[4]
+        damage_number=0
+        for i in range(len(dice)):
+            if damage[0] == dice[i]:
+                damage_number=4+2*i
+                i=len(dice)
+        display_string=name+'\nWeapon Type: '+style+'\nEra: '+era+'\n Damage '+damage_string+'\nRange: '+range_marks+'\nShots: '+ammo+'\nBlast Radius: '+blast_radius+'\nRate of Fire: '+rate+'\nStr Req: '+req+'\nWeight: '+lb+' lbs\nCost: '+money+'\nNotes: '+info
+        armory['Weapons']['Special'][name]={'display':display_string,
+                                          'era':era,
+                                          'style':style,
+                                          'damage_display':damage_string,
+                                          'damage':damage_number,
+                                          'modifier':int(damage[2]),
+                                          'AP':int(damage[3]),
+                                          'Blast Radius':blast_radius, 
                                           'Range':range_marks,
                                           'Rate of Fire':rate,
                                           'Min Str':req,
@@ -833,6 +978,8 @@ def get_weapons(frame,mode='Weapon',style='Melee'):
         tk.Label(frame,text='Melee weapons currently installed:').grid(row=0,column=0)
     if mode=='Weapons' and style=='Ranged':
         tk.Label(frame,text='Ranged weapons currently installed:').grid(row=0,column=0)
+    if mode=='Special' and style=='Ranged':
+        tk.Label(frame,text='Special weapons currently installed:').grid(row=0,column=0)
     avail_weapons=list(mainarmory[mode][style].keys())
     weapon_choice=tk.StringVar()
     weapon_choice.set(avail_weapons[0])
@@ -866,11 +1013,11 @@ menubar=tk.Menu()
 photo=tk.PhotoImage(file='SW_LOGO_FP_2018-300x200-1.gif')
 
 licenseframe=tk.Frame(main)
-licenseframe.pack()
+licenseframe.grid()
 canvas=tk.Canvas(licenseframe,width=300,height=200)
-canvas.pack()
+canvas.grid()
 canvas.create_image((150,100),image=photo)
-tk.Label(licenseframe,text="This game references the Savage Worlds game system, available from Pinnacle Entertainment Group at \nwww.peginc.com. Savage Worlds and all associated logos and trademarks are \ncopyrights of Pinnacle Entertainment Group. Used with permission. \nPinnacle makes no representation or warranty as to the quality, viability, or suitability \nfor purpose of this product.").pack()
+tk.Label(licenseframe,text="This game references the Savage Worlds game system, available from Pinnacle Entertainment Group at \nwww.peginc.com. Savage Worlds and all associated logos and trademarks are \ncopyrights of Pinnacle Entertainment Group. Used with permission. \nPinnacle makes no representation or warranty as to the quality, viability, or suitability \nfor purpose of this product.").grid()
 
 
 filemenu=tk.Menu(menubar)
