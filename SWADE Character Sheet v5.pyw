@@ -119,11 +119,38 @@ def equipinfo(frame,mode):
     for widget in frame.winfo_children():
         widget.destroy()
     if mode=='Gear':
-        tk.Label(frame,text="Gear hasn't been made yet").grid(row=0,column=0)
+        tk.Label(frame,text='Name: ').grid(row=0,column=0)
+        name=tk.Entry(frame,width=30)
+        name.grid(row=0,column=1)
+        tk.Label(frame,text='Item Category: ').grid(row=0,column=2)
+        categories=['Select an option...','Animals and Tack','Adventuring Gear','Clothing','Computers and Electronics',
+                    'Firearms Accessories','Food','Personal Defense','Surveillance','Ammunition']
+        choice=tk.StringVar()
+        choice.set(categories[0])
+        tk.OptionMenu(frame,choice,*categories).grid(row=0,column=3)
+
+        tk.Label(frame,text='Cost: ').grid(row=1,column=0)
+        cost=tk.Entry(frame,width=10)
+        cost.grid(row=1,column=1)
+        cost.insert(0,'0')
+
+        tk.Label(frame,text='Weight: ').grid(row=1,column=2)
+        weight=tk.Entry(frame,width=10)
+        weight.grid(row=1,column=3)
+        weight.insert(0,'0')
+
+        tk.Label(frame,text='Notes: ').grid(row=2,column=0)
+        notes=tk.Text(frame,width=40,height=5)
+        notes.grid(row=3,column=1,columnspan=3)
+        tk.Button(frame,text='Save',command=lambda:[finished.set('Saved!'),savegear(mode='Gear',name=name.get(),style=choice.get(),money=cost.get(),lb=weight.get(),info=notes.get(1.0,tk.END)), finished.set('Saved '+name.get())]).grid(row=0,column=15)
+        finished=tk.StringVar()
+        finished.set('')
+        tk.Label(frame,textvariable=finished).grid(row=0,column=17)
+        tk.Button(frame,text='Clear',command=lambda:weapons(frame,weapon)).grid(row=0,column=16)          
     if mode=='Armor':
         tk.Label(frame,text="Armor hasn't been made yet").grid(row=0,column=0)
     if mode=='Weapons':
-        tk.Label(frame,text="Melee, Ranged, or Special? \n(special includes things like cannons, \ngrenades, and siege equipment)").grid(row=0,column=0)
+        tk.Label(frame,text="Melee, Ranged, or Special? \n(melee includes shields,\nspecial includes things like cannons, \ngrenades, and siege equipment)").grid(row=0,column=0)
         weapontypes=['Melee','Ranged','Special']
         weaponchoice=tk.StringVar()
         weaponchoice.set('Melee')
@@ -199,7 +226,7 @@ def weapons(frame,weapon):
         notes.grid(row=8,column=1,columnspan=7)
         
         tk.Button(melee,text='Save',command=lambda:[finished.set('Saved!'),savegear(mode=weapon,name=name.get(),era=age.get(),damage=[strdie.get(),ndice.get()+diechoice.get(),extra.get(),ap.get(),parry.get()],
-                                                            req=strchoice.get(),lb=weight.get(),money=cost.get(),info=notes.get(1.0,tk.END)), finished.set('')]).grid(row=0,column=15)
+                                                            req=strchoice.get(),lb=weight.get(),money=cost.get(),info=notes.get(1.0,tk.END)), finished.set('Saved '+name.get())]).grid(row=0,column=15)
         finished=tk.StringVar()
         finished.set('')
         tk.Label(melee,textvariable=finished).grid(row=0,column=17)
@@ -434,7 +461,21 @@ with open('armory.json','r+') as f:
 
 def savegear(armory=mainarmory,mode = 'Melee',name = 'Unarmed Strike',era='Midieval', style='Pistol',rate='1',blast_radius='None',ammo='50',range_marks='3/6/12',
              damage = ['0','0','0','0','0'],req='none',lb='0',money='0',info='Punch the sucka!'):
+    if mode=='Gear':
+        display_string=name+'\nCategory: '+style+'\nWeight'+lb+'lbs\nCost: '+money+'\nNotes: '+info
+        gear_keys=list(armory['Gear'].keys())
+        check=False
+        for x in gear_keys:
+            if style in x:
+                check=True
+        if not check:
+            armory['Gear'][style]={}
+        armory['Gear'][style][name]={'display':display_string,
+                                             'Weight':float(lb),
+                                             'Cost':money,
+                                             'Notes':info}        
 
+                                             
     if mode=='Melee':
         if damage[0]==1:
             damage_string='Str'
@@ -961,24 +1002,33 @@ def equipment_tab():
 def get_equipment(frame, mode='Weapons'):
     for widget in frame.winfo_children():
         widget.destroy()
-    if mode=='Weapons':
-        tk.Label(frame,text='Combat style: ').grid(row=0,column=0)
-        combat=tk.StringVar()
-        combat_styles=list(mainarmory[mode].keys())
-        combat.set(combat_styles[0])
-        tk.OptionMenu(frame,combat,*combat_styles).grid(row=0,column=1)
-        subframeb=tk.Frame(frame)
-        subframeb.grid(row=2,column=0,columnspan=3)
-        tk.Button(frame,text='Go',command=lambda:get_weapons(subframeb,mode,combat.get())).grid(row=0,column=2)
+    
+    tk.Label(frame,text='What are you looking for?').grid(row=0,column=0)
+    
+    
+        
+    combat=tk.StringVar()
+    combat_styles=list(mainarmory[mode].keys())
+    combat.set(combat_styles[0])
+    tk.OptionMenu(frame,combat,*combat_styles).grid(row=0,column=1)
+    subframeb=tk.Frame(frame)
+    subframeb.grid(row=2,column=0,columnspan=3)
+    tk.Button(frame,text='Go',command=lambda:get_weapons(subframeb,mode,combat.get())).grid(row=0,column=2)
 
 def get_weapons(frame,mode='Weapon',style='Melee'):
     for widget in frame.winfo_children():
         widget.destroy()
+    if mode=='Gear':
+        tk.Label(frame,text=style+' currently installed:').grid(row=0,column=0)
+    if mode=='Armor':
+        tk.Label(frame,text=style+' currently installed:\n(Shields are counted as Melee Weapons)').grid(row=0,column=0)
+    if mode=='Vehicles':
+        tk.Label(frame,text=style+' currently installed:\n(Horses and other living mounts are counted as Gear)').grid(row=0,column=0)
     if mode=='Weapons' and style=='Melee':
         tk.Label(frame,text='Melee weapons currently installed:').grid(row=0,column=0)
     if mode=='Weapons' and style=='Ranged':
         tk.Label(frame,text='Ranged weapons currently installed:').grid(row=0,column=0)
-    if mode=='Special' and style=='Ranged':
+    if mode=='Weapons' and style=='Special':
         tk.Label(frame,text='Special weapons currently installed:').grid(row=0,column=0)
     avail_weapons=list(mainarmory[mode][style].keys())
     weapon_choice=tk.StringVar()
@@ -996,7 +1046,14 @@ def get_weapon_info (frame,mode='Weapon',style='Melee',item='Axe, Hand'):
     keys=list(data.keys())
     string=data['display']
     tk.Label(frame,text=string).grid(row=2,column=0,columnspan=3)
-    tk.Button(frame,text='Add to inventory',command=lambda:install(data,mainplayer['Gear']['Weapons'][style])).grid(row=2,column=4)
+    if mode=='Weapon':
+        tk.Button(frame,text='Add to inventory',command=lambda:install(data,mainplayer['Gear']['Weapons'][style])).grid(row=2,column=4)
+    if mode=='Gear':
+        tk.Button(frame,text='Add to inventory',command=lambda:install(data,mainplayer['Gear']['Inventory'])).grid(row=2,column=4)
+    if mode=='Armor':
+        tk.Button(frame,text='Add to inventory',command=lambda:install(data,mainplayer['Gear']['Armor'])).grid(row=2,column=4)
+    if mode=='Vehicles':
+        tk.Button(frame,text='Add to inventory',command=lambda:install(data,mainplayer['Vehicles'])).grid(row=2,column=4)
 
 def fullrest():
     incap('w',0,buttons)
