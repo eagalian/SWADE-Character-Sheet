@@ -1,0 +1,301 @@
+[
+    {
+        "id": "c5cf0649-e053-47bc-ad47-b74caec532cb",
+        "concept": {
+            "Name": "test1",
+            "Gender": "",
+            "Age": "",
+            "Description": "",
+            "Background": ""
+        },
+        "stats": {
+            "Wounds": 0,
+            "Fatigue": 0,
+            "Run": 6,
+            "Parry": 2,
+            "Toughness": 2,
+            "Armor": 0,
+            "Max PP": 0,
+            "PP=": 0
+        },
+        "Race": {
+            "name": "human"
+        },
+        "Hinderances": {},
+        "Attributes": {
+            "Agility": {
+                "display": "d4",
+                "size": 4,
+                "modifier": 0
+            },
+            "Smarts": {
+                "display": "d4",
+                "size": 4,
+                "modifier": 0
+            },
+            "Spirit": {
+                "display": "d4",
+                "size": 4,
+                "modifier": 0
+            },
+            "Strength": {
+                "display": "d4",
+                "size": 4,
+                "modifier": 0
+            },
+            "Vigor": {
+                "display": "d4",
+                "size": 4,
+                "modifier": 0
+            }
+        },
+        "Skills": {
+            "Athletics": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Boating": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Driving": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Fighting": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Piloting": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Riding": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Shooting": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Stealth": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Thievery": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Academics": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Battle": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Common Knowledge": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Electronics": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Gambling": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Hacking": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Healing": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Native Language": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Notice": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Occult": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Psionics": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Repair": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Research": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Science": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Spellcasting": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Survival": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Taunt": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Weird Science": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Faith": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Focus": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Intimidation": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Performance": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Persuasion": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            }
+        },
+        "Edges": {},
+        "Gear": {
+            "Inventory": {
+                "Bedroll": {
+                    "display": "Bedroll\nCategory: Select an option...\nWeight10lbs\nCost: 5\nNotes: a place to lay your weary head\n",
+                    "Weight": 10.0,
+                    "Cost": "5",
+                    "Notes": "a place to lay your weary head\n"
+                },
+                "a": {
+                    "display": "a\nCategory: Select an option...\nWeight0lbs\nCost: 0\nNotes: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n",
+                    "Weight": 0.0,
+                    "Cost": "0",
+                    "Notes": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\n"
+                },
+                "test1": {
+                    "display": "test1\nCategory: Select an option...\nWeight0lbs\nCost: 0\nNotes: \n",
+                    "Weight": 0.0,
+                    "Cost": "0",
+                    "Notes": "\n"
+                },
+                "test2": {
+                    "display": "test2\nCategory: Select an option...\nWeight0lbs\nCost: 0\nNotes: \n",
+                    "Weight": 0.0,
+                    "Cost": "0",
+                    "Notes": "\n"
+                },
+                "test3": {
+                    "display": "test3\nCategory: Select an option...\nWeight0lbs\nCost: 0\nNotes: \n",
+                    "Weight": 0.0,
+                    "Cost": "0",
+                    "Notes": "\n"
+                },
+                "test4": {
+                    "display": "test4\nCategory: Select an option...\nWeight0lbs\nCost: 0\nNotes: \n",
+                    "Weight": 0.0,
+                    "Cost": "0",
+                    "Notes": "\n"
+                },
+                "test5": {
+                    "display": "test5\nCategory: Select an option...\nWeight0lbs\nCost: 0\nNotes: \n",
+                    "Weight": 0.0,
+                    "Cost": "0",
+                    "Notes": "\n"
+                },
+                "test12": {
+                    "display": "test12\nCategory: Select an option...\nWeight0lbs\nCost: 0\nNotes: \n",
+                    "Weight": 0.0,
+                    "Cost": "0",
+                    "Notes": "\n"
+                },
+                "test13": {
+                    "display": "test13\nCategory: Select an option...\nWeight0lbs\nCost: 0\nNotes: \n",
+                    "Weight": 0.0,
+                    "Cost": "0",
+                    "Notes": "\n"
+                },
+                "test14": {
+                    "display": "test14\nCategory: Select an option...\nWeight0lbs\nCost: 0\nNotes: \n",
+                    "Weight": 0.0,
+                    "Cost": "0",
+                    "Notes": "\n"
+                },
+                "test15": {
+                    "display": "test15\nCategory: Select an option...\nWeight0lbs\nCost: 0\nNotes: \n",
+                    "Weight": 0.0,
+                    "Cost": "0",
+                    "Notes": "\n"
+                },
+                "test16": {
+                    "display": "test16\nCategory: Select an option...\nWeight0lbs\nCost: 0\nNotes: \n",
+                    "Weight": 0.0,
+                    "Cost": "0",
+                    "Notes": "\n"
+                }
+            },
+            "Armor": {},
+            "Weapons": {
+                "Melee": {},
+                "Ranged": {},
+                "Special": {}
+            },
+            "Vehicles:": {}
+        },
+        "Allies": {},
+        "Advances": {}
+    }
+]
