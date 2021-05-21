@@ -287,7 +287,306 @@
                     "Notes": "\n"
                 }
             },
-            "Armor": {},
+            "Armor": {
+                "Test2": {
+                    "display": "Test2\nEra: Midieval\nArmor Value: 7\nMin Str: none\nWeight: 0\nCost: 0\nNotes: asdfa\n",
+                    "type": "Thick Leather/Tough Hide",
+                    "era": "Midieval",
+                    "armor": "7",
+                    "head": false,
+                    "face": false,
+                    "torso": true,
+                    "legs": true,
+                    "feet": true,
+                    "Min Str": "none",
+                    "Weight": 0.0,
+                    "Cost": "0",
+                    "Notes": "asdfa\n",
+                    "Source": "Homebrew"
+                }
+            },
+            "Weapons": {
+                "Melee": {},
+                "Ranged": {},
+                "Special": {}
+            },
+            "Vehicles:": {}
+        },
+        "Allies": {},
+        "Advances": {}
+    },
+    {
+        "id": "504fc52e-985c-404a-acfe-d9c6bca60711",
+        "concept": {
+            "Name": "Test 2",
+            "Gender": "",
+            "Age": "",
+            "Description": "",
+            "Background": ""
+        },
+        "stats": {
+            "Wounds": 0,
+            "Fatigue": 0,
+            "Run": 6,
+            "Parry": 3.0,
+            "Toughness": 2.0,
+            "Armor": [
+                [
+                    50,
+                    "head"
+                ],
+                [
+                    50,
+                    "face"
+                ],
+                [
+                    50,
+                    "torso"
+                ],
+                [
+                    50,
+                    "legs"
+                ],
+                [
+                    50,
+                    "feet"
+                ]
+            ],
+            "Max PP": 0,
+            "PP=": 0
+        },
+        "Race": {
+            "name": "human"
+        },
+        "Hinderances": {},
+        "Attributes": {
+            "Agility": {
+                "display": "d4",
+                "size": 4,
+                "modifier": 0
+            },
+            "Smarts": {
+                "display": "d4",
+                "size": 4,
+                "modifier": 0
+            },
+            "Spirit": {
+                "display": "d4",
+                "size": 4,
+                "modifier": 0
+            },
+            "Strength": {
+                "display": "d4",
+                "size": 4,
+                "modifier": 0
+            },
+            "Vigor": {
+                "display": "d4",
+                "size": 4,
+                "modifier": 0
+            }
+        },
+        "Skills": {
+            "Athletics": {
+                "display": "d8",
+                "size": 8,
+                "modifier": 0
+            },
+            "Boating": {
+                "display": "d4",
+                "size": 4,
+                "modifier": 0
+            },
+            "Driving": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Fighting": {
+                "display": "d6",
+                "size": 6,
+                "modifier": 0
+            },
+            "Piloting": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Riding": {
+                "display": "d4",
+                "size": 4,
+                "modifier": 0
+            },
+            "Shooting": {
+                "display": "d4",
+                "size": 4,
+                "modifier": 0
+            },
+            "Stealth": {
+                "display": "d8",
+                "size": 8,
+                "modifier": 0
+            },
+            "Thievery": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Academics": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Battle": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Common Knowledge": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Electronics": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Gambling": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Hacking": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Healing": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Native Language": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Notice": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Occult": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Psionics": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Repair": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Research": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Science": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Spellcasting": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Survival": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Taunt": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Weird Science": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Faith": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Focus": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Intimidation": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Performance": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            },
+            "Persuasion": {
+                "display": "Unskilled",
+                "size": 4,
+                "modifier": -2
+            }
+        },
+        "Edges": {},
+        "Gear": {
+            "Inventory": {},
+            "Armor": {
+                "new armor": {
+                    "display": "new armor\nEra: Modern\nArmor Value: 0\nMin Str: none\nWeight: 0\nCost: 0\nNotes: \n",
+                    "equipped": false,
+                    "type": "Plate Mail",
+                    "era": "Modern",
+                    "armor": "0",
+                    "head": false,
+                    "face": true,
+                    "torso": true,
+                    "legs": false,
+                    "feet": false,
+                    "Min Str": "none",
+                    "Weight": 0.0,
+                    "Cost": "0",
+                    "Notes": "\n",
+                    "Source": "Homebrew"
+                },
+                "some actual armor": {
+                    "display": "some actual armor\nEra: Midieval\nArmor Value: 50\nMin Str: none\nWeight: 1\nCost: 30\nNotes: wheee\n",
+                    "equipped": true,
+                    "type": "Military (Futuristic)",
+                    "era": "Midieval",
+                    "armor": "50",
+                    "head": true,
+                    "face": true,
+                    "torso": true,
+                    "legs": true,
+                    "feet": true,
+                    "Min Str": "none",
+                    "Weight": 1.0,
+                    "Cost": "30",
+                    "Notes": "wheee\n",
+                    "Source": "Homebrew"
+                }
+            },
             "Weapons": {
                 "Melee": {},
                 "Ranged": {},

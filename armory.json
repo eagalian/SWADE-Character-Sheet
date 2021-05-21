@@ -1,6 +1,21 @@
 {
     "Weapons": {
-        "Melee": {},
+        "Melee": {
+            "new weapon": {
+                "display": "new weapon\nEra: Midieval\n Damage Str+3d4\nStr Req: d4\nWeight: 2 lbs\nCost: 50\nNotes: asdfasdfasdfasdfasdfasdfasdfasdfasdf\n",
+                "equipped": false,
+                "era": "Midieval",
+                "damage": 0,
+                "modifier": 0,
+                "AP": 5,
+                "Parry": 0,
+                "Min Str": "d4",
+                "Weight": 2.0,
+                "Cost": "50",
+                "Notes": "asdfasdfasdfasdfasdfasdfasdfasdfasdf\n",
+                "Source": "Homebrew"
+            }
+        },
         "Ranged": {},
         "Special": {}
     },
@@ -34,6 +49,62 @@
                 "Weight": 0.0,
                 "Cost": "0",
                 "Notes": "asdf\n",
+                "Source": "Homebrew"
+            }
+        },
+        "Thick Leather/Tough Hide": {
+            "Test2": {
+                "display": "Test2\nEra: Midieval\nArmor Value: 7\nMin Str: none\nWeight: 0\nCost: 0\nNotes: asdfa\n",
+                "type": "Thick Leather/Tough Hide",
+                "era": "Midieval",
+                "armor": "7",
+                "head": false,
+                "face": false,
+                "torso": true,
+                "legs": true,
+                "feet": true,
+                "Min Str": "none",
+                "Weight": 0.0,
+                "Cost": "0",
+                "Notes": "asdfa\n",
+                "Source": "Homebrew"
+            }
+        },
+        "Plate Mail": {
+            "new armor": {
+                "display": "new armor\nEra: Modern\nArmor Value: 0\nMin Str: none\nWeight: 0\nCost: 0\nNotes: \n",
+                "equipped": false,
+                "type": "Plate Mail",
+                "era": "Modern",
+                "armor": "0",
+                "head": false,
+                "face": true,
+                "torso": true,
+                "legs": false,
+                "feet": false,
+                "Min Str": "none",
+                "Weight": 0.0,
+                "Cost": "0",
+                "Notes": "\n",
+                "Source": "Homebrew"
+            }
+        },
+        "Military (Futuristic)": {
+            "some actual armor": {
+                "display": "some actual armor\nEra: Midieval\nArmor Value: 50\nMin Str: none\nWeight: 1\nCost: 30\nNotes: wheee\n",
+                "equipped": false,
+                "type": "Military (Futuristic)",
+                "era": "Midieval",
+                "armor": "50",
+                "head": true,
+                "face": true,
+                "torso": true,
+                "legs": true,
+                "feet": true,
+                "Min Str": "none",
+                "Weight": 1.0,
+                "Cost": "30",
+                "Notes": "wheee\n",
                 "Source": "Homebrew"
             }
         }
