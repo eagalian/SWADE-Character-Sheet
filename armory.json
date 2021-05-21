@@ -1,27 +1,114 @@
 {
-    "Armor": {},
-    "Gear": {},
-    "Vehicles": {},
     "Weapons": {
-        "Melee": {},
-        "Ranged": {},
-        "Special": {
-            "test": {
-                "display": "test\nWeapon Type: Cannons\nEra: Midieval\n Damage 1d4 AP 0\nRange: 4/8/16\nShots: 10\nBlast Radius: Cone\nRate of Fire: 1\nStr Req: d4\nWeight: 0 lbs\nCost: 0\nNotes: \n",
+        "Melee": {
+            "new weapon": {
+                "display": "new weapon\nEra: Midieval\n Damage Str+3d4\nStr Req: d4\nWeight: 2 lbs\nCost: 50\nNotes: asdfasdfasdfasdfasdfasdfasdfasdfasdf\n",
+                "equipped": false,
                 "era": "Midieval",
-                "style": "Cannons",
-                "damage_display": "1d4 AP 0",
                 "damage": 0,
                 "modifier": 0,
-                "AP": 0,
-                "Blast Radius": "Cone",
-                "Range": "4/8/16",
-                "Rate of Fire": "1",
+                "AP": 5,
+                "Parry": 0,
                 "Min Str": "d4",
+                "Weight": 2.0,
+                "Cost": "50",
+                "Notes": "asdfasdfasdfasdfasdfasdfasdfasdfasdf\n",
+                "Source": "Homebrew"
+            }
+        },
+        "Ranged": {},
+        "Special": {}
+    },
+    "Armor": {
+        "test": {
+            "display": "test\nEra: Midieval\nArmor Value: 3\nMin Str: none\nWeight: 0\nCost: 0\nNotes: f\n",
+            "era": "Midieval",
+            "armor": "3",
+            "head": false,
+            "face": true,
+            "torso": false,
+            "legs": false,
+            "feet": false,
+            "Min Str": "none",
+            "Weight": 0.0,
+            "Cost": "0",
+            "Notes": "f\n",
+            "Source": "Homebrew"
+        },
+        "Midieval": {
+            "Yolo": {
+                "display": "Yolo\nEra: Midieval\nArmor Value: 3\nMin Str: none\nWeight: 0\nCost: 0\nNotes: asdf\n",
+                "era": "Midieval",
+                "armor": "3",
+                "head": true,
+                "face": true,
+                "torso": false,
+                "legs": false,
+                "feet": false,
+                "Min Str": "none",
                 "Weight": 0.0,
                 "Cost": "0",
-                "Notes": "\n"
+                "Notes": "asdf\n",
+                "Source": "Homebrew"
+            }
+        },
+        "Thick Leather/Tough Hide": {
+            "Test2": {
+                "display": "Test2\nEra: Midieval\nArmor Value: 7\nMin Str: none\nWeight: 0\nCost: 0\nNotes: asdfa\n",
+                "type": "Thick Leather/Tough Hide",
+                "era": "Midieval",
+                "armor": "7",
+                "head": false,
+                "face": false,
+                "torso": true,
+                "legs": true,
+                "feet": true,
+                "Min Str": "none",
+                "Weight": 0.0,
+                "Cost": "0",
+                "Notes": "asdfa\n",
+                "Source": "Homebrew"
+            }
+        },
+        "Plate Mail": {
+            "new armor": {
+                "display": "new armor\nEra: Modern\nArmor Value: 0\nMin Str: none\nWeight: 0\nCost: 0\nNotes: \n",
+                "equipped": false,
+                "type": "Plate Mail",
+                "era": "Modern",
+                "armor": "0",
+                "head": false,
+                "face": true,
+                "torso": true,
+                "legs": false,
+                "feet": false,
+                "Min Str": "none",
+                "Weight": 0.0,
+                "Cost": "0",
+                "Notes": "\n",
+                "Source": "Homebrew"
+            }
+        },
+        "Military (Futuristic)": {
+            "some actual armor": {
+                "display": "some actual armor\nEra: Midieval\nArmor Value: 50\nMin Str: none\nWeight: 1\nCost: 30\nNotes: wheee\n",
+                "equipped": false,
+                "type": "Military (Futuristic)",
+                "era": "Midieval",
+                "armor": "50",
+                "head": true,
+                "face": true,
+                "torso": true,
+                "legs": true,
+                "feet": true,
+                "Min Str": "none",
+                "Weight": 1.0,
+                "Cost": "30",
+                "Notes": "wheee\n",
+                "Source": "Homebrew"
             }
         }
-    }
+    },
+    "Gear": {},
+    "Vehicles": {}
 }
