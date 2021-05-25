@@ -33,14 +33,14 @@ def save(pl):
             
             added=0
             for i in range(len(data)):
-                print('Checking #'+str(i))
+                
                 if pl['id'] in data[i]['id']:
                     data[i]=pl
-                    print('Overwriting')
+                    
                     added=1
                 i+=1
             if added==0:
-                print('Adding')
+                
                 data.append(pl)
                 
             
@@ -781,7 +781,7 @@ def mainstats():
     for x in keys:
         cp_strings.append(tk.StringVar())
         cp_strings[i].set(mainplayer['stats'][x])
-        print (x,mainplayer['stats'][x])
+        
         i+=1
         tk.Label(combatpage,text=x).grid(row=i,column=0)
         tk.Label(combatpage,textvariable=cp_strings[i-1]).grid(row=i,column=1)
@@ -822,7 +822,7 @@ def mainstats():
     def onFrameConfigure(canvas):
         canvas.configure(scrollregion=canvas.bbox("all"))
     def onCanvasConfigure(canvas,identifier):
-        print('hello')
+        
         canvas.itemconfigure(identifier,width=canvas.winfo_width())
     gear_canvas.bind('<Configure>',lambda event,canvas=canvas:onCanvasConfigure(gear_canvas,gear_id))
     gear_subframe.bind('<Configure>',lambda event,canvas=canvas:onFrameConfigure(gear_canvas))
@@ -835,7 +835,15 @@ def mainstats():
     tk.Label(gear_subframe,text='Weight').grid(row=0,column=1)
     tk.Label(gear_subframe,text='Cost').grid(row=0,column=2)
     tk.Label(gear_subframe,text='Notes').grid(row=0,column=3)
-    print(getgear)
+    def sellitem(frame,player,equipment_type,item):
+        pop_up=tk.Toplevel(main)
+        tk.Label(pop_up,text=f'Are you sure you want to sell{item}?').pack()
+        def remove(pl,eq,it):
+            del pl['Gear'][eq][it]
+            stat_checker(player)
+        tk.Button(pop_up,text='Yes',command=lambda:[remove(player,equipment_type,item),pop_up.destroy(),frame.destroy(),armorpage(armor)]).pack()
+        tk.Button(pop_up,text='No',command=lambda:pop_up.destroy()).pack()
+    
     if len(getgear)>0:
         for i in range(len(getgear)):
             tk.Label(gear_subframe,text=getgear[i]).grid(row=i+1,column=0)
@@ -843,46 +851,47 @@ def mainstats():
             tk.Label(gear_subframe,text=mainplayer['Gear']['Inventory'][getgear[i]]['Cost']).grid(row=i+1,column=2)
             tk.Label(gear_subframe,text=mainplayer['Gear']['Inventory'][getgear[i]]['Notes'],wraplength=250).grid(row=i+1,column=3)
 
-    
-    armor.grid_columnconfigure(0,weight=1)
-    armor.grid_rowconfigure(1,weight=1)
-    tk.Label(armor,text='Armor',font='helvetica',bd=3).grid(row=0,column=0)
-    armor_canvas=tk.Canvas(armor, borderwidth=0)
-    armor_subframe=tk.Frame(armor_canvas,bd=1,relief='sunken')
-    armor_scroll=tk.Scrollbar(armor,orient='vertical',command=armor_canvas.yview)
-    armor_canvas.configure(yscrollcommand=armor_scroll.set)
-    armor_scroll.grid(row=1,column=1,sticky='nesw')
-    armor_canvas.grid(row=1,column=0,sticky='nesw')
-    armor_id=armor_canvas.create_window((0,0), window=armor_subframe)
-    #armor_subframe.pack(fill='both',expand=1)
-    armor_canvas.bind('<Configure>',lambda event,canvas=canvas:onCanvasConfigure(armor_canvas,armor_id))
-    armor_subframe.bind('<Configure>',lambda event,canvas=canvas:onFrameConfigure(armor_canvas))
-    armor_subframe.grid_columnconfigure(0,weight=1)
-    armor_subframe.grid_columnconfigure(1,weight=1)
-    armor_subframe.grid_columnconfigure(2,weight=1)
-    armor_subframe.grid_columnconfigure(3,weight=4)
-    getarmor=list(mainplayer['Gear']['Armor'].keys())
-    tk.Label(armor_subframe,text='Item').grid(row=0,column=0)
-    tk.Label(armor_subframe,text='Weight').grid(row=0,column=1)
-    tk.Label(armor_subframe,text='Cost').grid(row=0,column=2)
-    tk.Label(armor_subframe,text='Notes').grid(row=0,column=3)
-    #print(getarmor)
-    if len(getarmor)>0:
-        equiptext=[]
-        for i in range(len(getarmor)):
-            equiptext.append(tk.StringVar())
-            if mainplayer['Gear']['Armor'][getarmor[i]]['equipped']:
-                equiptext[i].set('Unequip')
-            else:
-                equiptext[i].set('Equip')
-            for x in equiptext:
-                print(x.get())
-            tk.Label(armor_subframe,text=getarmor[i]).grid(row=i+1,column=0)
-            tk.Label(armor_subframe,text=mainplayer['Gear']['Armor'][getarmor[i]]['Weight']).grid(row=i+1,column=1)
-            tk.Label(armor_subframe,text=mainplayer['Gear']['Armor'][getarmor[i]]['Cost']).grid(row=i+1,column=2)
-            tk.Label(armor_subframe,text=mainplayer['Gear']['Armor'][getarmor[i]]['Notes'],wraplength=250).grid(row=i+1,column=3)
-            tk.Button(armor_subframe,textvariable=equiptext[i],command= lambda j=i:[equiptext[j].set(equipunequip(mainplayer,'Armor',getarmor[j])),stat_checker(mainplayer),cp_strings[5].set(mainplayer['stats']['Armor'])]).grid(row=i+1,column=4)
-
+    def armorpage(armor):
+        armor.grid_columnconfigure(0,weight=1)
+        armor.grid_rowconfigure(1,weight=1)
+        tk.Label(armor,text='Armor',font='helvetica',bd=3).grid(row=0,column=0)
+        armor_canvas=tk.Canvas(armor, borderwidth=0)
+        armor_subframe=tk.Frame(armor_canvas,bd=1,relief='sunken')
+        armor_scroll=tk.Scrollbar(armor,orient='vertical',command=armor_canvas.yview)
+        armor_canvas.configure(yscrollcommand=armor_scroll.set)
+        armor_scroll.grid(row=1,column=1,sticky='nesw')
+        armor_canvas.grid(row=1,column=0,sticky='nesw')
+        armor_id=armor_canvas.create_window((0,0), window=armor_subframe)
+        #armor_subframe.pack(fill='both',expand=1)
+        armor_canvas.bind('<Configure>',lambda event,canvas=canvas:onCanvasConfigure(armor_canvas,armor_id))
+        armor_subframe.bind('<Configure>',lambda event,canvas=canvas:onFrameConfigure(armor_canvas))
+        armor_subframe.grid_columnconfigure(0,weight=1)
+        armor_subframe.grid_columnconfigure(1,weight=1)
+        armor_subframe.grid_columnconfigure(2,weight=1)
+        armor_subframe.grid_columnconfigure(3,weight=4)
+        getarmor=list(mainplayer['Gear']['Armor'].keys())
+        tk.Label(armor_subframe,text='Item').grid(row=0,column=0)
+        tk.Label(armor_subframe,text='Weight').grid(row=0,column=1)
+        tk.Label(armor_subframe,text='Cost').grid(row=0,column=2)
+        tk.Label(armor_subframe,text='Notes').grid(row=0,column=3)
+        
+        if len(getarmor)>0:
+            equiptext=[]
+            for i in range(len(getarmor)):
+                equiptext.append(tk.StringVar())
+                if mainplayer['Gear']['Armor'][getarmor[i]]['equipped']:
+                    equiptext[i].set('Unequip')
+                else:
+                    equiptext[i].set('Equip')
+                for x in equiptext:
+                    
+                    tk.Label(armor_subframe,text=getarmor[i]).grid(row=i+1,column=0)
+                    tk.Label(armor_subframe,text=mainplayer['Gear']['Armor'][getarmor[i]]['Weight']).grid(row=i+1,column=1)
+                    tk.Label(armor_subframe,text=mainplayer['Gear']['Armor'][getarmor[i]]['Cost']).grid(row=i+1,column=2)
+                    tk.Label(armor_subframe,text=mainplayer['Gear']['Armor'][getarmor[i]]['Notes'],wraplength=250).grid(row=i+1,column=3)
+                    tk.Button(armor_subframe,textvariable=equiptext[i],command= lambda j=i:[equiptext[j].set(equipunequip(mainplayer,'Armor',getarmor[j])),stat_checker(mainplayer),cp_strings[5].set(mainplayer['stats']['Armor'])]).grid(row=i+1,column=4)
+                    tk.Button(armor_subframe,text='Sell',command=lambda j=i:[sellitem(armor_subframe,mainplayer,'Armor',getarmor[j])]).grid(row=i+1,column=5)
+    armorpage(armor)
     weapons.grid_columnconfigure(0,weight=1)
     weapons.grid_rowconfigure(1,weight=1)
     tk.Label(weapons,text='Weapons',font='helvetica',bd=3).grid(row=0,column=0)
@@ -905,7 +914,7 @@ def mainstats():
     tk.Label(weapons_subframe,text='Weight').grid(row=0,column=1)
     tk.Label(weapons_subframe,text='Cost').grid(row=0,column=2)
     tk.Label(weapons_subframe,text='Notes').grid(row=0,column=3)
-    print(getweapon)
+  
     if len(getweapon)>0:
         for i in range(len(getweapon)):
             tk.Label(weapons_subframe,text=getweapon[i]).grid(row=i+1,column=0)
@@ -935,7 +944,7 @@ def mainstats():
     tk.Label(vehicles_subframe,text='Weight').grid(row=0,column=1)
     tk.Label(vehicles_subframe,text='Cost').grid(row=0,column=2)
     tk.Label(vehicles_subframe,text='Notes').grid(row=0,column=3)
-    print(getcar)
+    
     if len(getcar)>0:
         for i in range(len(getcar)):
             tk.Label(vehicles_subframe,text=getcar[i]).grid(row=i+1,column=0)
@@ -991,7 +1000,7 @@ def loadsaves():
     with open('saves.json',mode='r') as saves:
         saves.seek(0)
         savedata=json.load(saves)
-    print(len(savedata))
+   
     players=[['','']]*len(savedata)
     for i in range(len(savedata)):
         players[i]=[savedata[i]['id'],savedata[i]['concept']['Name']]
@@ -1015,14 +1024,14 @@ def dexp(d,exp):
 def roll_damage(command):
     results=[0]*len(command)
     for i in range(len(command)):
-        print(f'Rolling {command[i][0]}d{command[i][1]}')
+        
         for j in range(command[i][0]):
             results[i]+=dexp(command[i][1],0)[0]
-            print(results)
+            
     total=0
     for i in range(len(results)):
         total+=results[i]
-    print(total)
+    return total
     
 def rollskills(window,output,d,m):
     
@@ -1046,10 +1055,24 @@ def rollskills(window,output,d,m):
         
     output.configure(text=roll)
     output.update()
-        
-    
-    
 
+           
+    
+def import_from_csv(fname):
+    "Imports data from csv as a dictionary. Assumes that the first row are the keys, and each row underneath are the values that correspond to that key"
+    with open(fname, mode='r') as infile:
+        infile.seek(0)
+        reader = csv.reader(infile)
+        keys=next(reader)
+        dictionary={}
+        item=0
+        for rows in reader:
+                temp={'id':str(uuid.uuid4())}
+                for i in range(len(keys)):
+                        temp[keys[i]]=rows[i]
+                dictionary[item]=temp
+                item+=1
+    return dictionary
 
         
 
@@ -1144,7 +1167,7 @@ def newcharstats():
         tk.Label(creation,textvariable=a[i]).grid(row=r,column=c+1)
         
         
-        tk.Button(creation,text='-',command=lambda j=i:[print(player),attributes[j].set(max(4,attributes[j].get()-2)),
+        tk.Button(creation,text='-',command=lambda j=i:[attributes[j].set(max(4,attributes[j].get()-2)),
                                                         install({attributelist[j]:options_dict[options[int(attributes[j].get()/2)-1]]},player['Attributes']),
                                                         a[j].set(str(options[int(attributes[j].get()/2)-1]))]).grid(row=r,column=c+2)
         tk.Button(creation,text='+',command=lambda j=i:[attributes[j].set(min(12,attributes[j].get()+2)),
@@ -1185,7 +1208,7 @@ def newcharstats():
                                                         s[j].set(str(options[int(baseskills[j].get()/2)-1]))]).grid(row=r,column=c+3)     
         i+=1
 
-    print(player)
+    
     tk.Button(creation,text="Next",command=lambda:[install({'Name':name.get()},player['concept']),newcharother(creation,player)]).grid(row=23,column=9)
 
 def newcharother(window,player):
@@ -1343,7 +1366,7 @@ def get_weapons(frame,mode='Weapon',style='Melee'):
     avail_weapons=list(mainarmory[mode][style].keys())
     weapon_choice=tk.StringVar()
     weapon_choice.set(avail_weapons[0])
-    print(avail_weapons)
+    
     tk.OptionMenu(frame,weapon_choice,*avail_weapons).grid(row=0,column=1)
     subframec=tk.Frame(frame)
     subframec.grid(row=2,column=0, columnspan=3)
@@ -1376,7 +1399,7 @@ def stat_checker(player):
     armor_key=list(player['Gear']['Armor'])
     equipped_armor=[[0,'head'],[0,'face'],[0,'torso'],[0,'legs'],[0,'feet']]
     armor_is_heavy=False
-    if armor_key!=0:
+    if len(armor_key)!=0:
         for i in range(len(armor_key)):
             if player['Gear']['Armor'][armor_key[i]]['head'] and player['Gear']['Armor'][armor_key[i]]['equipped']:
                 equipped_armor[0][0]+=int(player['Gear']['Armor'][armor_key[i]]['armor'])
@@ -1396,6 +1419,21 @@ def stat_checker(player):
     for i in range(len(natural_armor)):
         total_armor[i][0]+=natural_armor[i]
     player['stats']['Armor']=total_armor
+    #check for new edges
+    edges_key=list(player['Edges'])
+    if len(edges_key)!=0:
+        for i in range(len(edges_key)):
+            pass
+            #if edges_key=={edge}
+                #change attributes as necessary
+
+    #adjust for race
+    race=player['Race']['name']
+    #code for what to do with each race
+
+    #hinderances
+
+    
 
 def equipunequip(player,equipment_type,item):
     player['Gear'][equipment_type][item]['equipped']=not player['Gear'][equipment_type][item]['equipped']
@@ -1403,6 +1441,10 @@ def equipunequip(player,equipment_type,item):
         return 'Unequip'
     else:
         return 'Equip'
+
+
+
+
     
 
 global main
