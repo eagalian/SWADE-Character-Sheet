@@ -1490,8 +1490,11 @@ menubar.add_cascade(label="Character Sheet",menu=csmenu)
 
 codex=tk.Menu(menubar)
 codex.add_command(label="Combat effects",command=lambda:print("I explain combat effects"))
+codex.add_command(label='Races,Hinderances,Edges',command=lambda:print('I explain the different races, hinderances, and edges available'))
+codex.add_command(label='Arcane Backgrounds and Powers',command=lambda:print('I contain all possible arcane backgrounds and associated powers'))
+codex.add_command(label='Rules',command=lambda:print('Rules lawyers love me'))
 codex.add_command(label='Equipment',command=lambda:equipment_tab())
-codex.add_command(label='New Equipment',command=lambda:newgear())
+codex.add_command(label='Add New Codex Entries',command=lambda:newgear())
 codex.add_command(label="Help",command=lambda:print("I explain how to use the app"))
 menubar.add_cascade(label="Codex",menu=codex)
 
