@@ -676,8 +676,31 @@ def mainstats():
     inventory=tk.Frame(tabcontrol)
     journal=tk.Frame(tabcontrol)
     advances=tk.Frame(tabcontrol)
-#Settings Page    
-    
+#Settings Page
+    savage_armory=tk.IntVar()
+    def loadarmory(fname,value):
+        if value==1:
+            with open('armory.json','r+') as f:
+                try:
+                    with open(fname+'.json','r') as file:
+                        temp=json.load(file)
+                        
+                        for x in list(temp.keys()):
+                            mainarmory[x]=temp[x]
+                except:
+                    try:
+                        
+                        temp=import_armory_from_csv(fname+'.csv')
+                        
+                        for x in list(temp.keys()):
+                            
+                            mainarmory[x]=temp[x]
+                    except:
+                        print(f'{fname} does not exist as a .json or .csv - Please check that these files exist')
+                        return None
+        
+    tk.Checkbutton(settings,text='Savage Worlds Armory', variable=savage_armory,offvalue=0, onvalue=1,command= lambda:[print('doing stuff'),loadarmory('savage-worlds-core-armory',savage_armory.get()),print(mainarmory[0])]).pack()
+                   
 #Attributes Page
     statspage.grid(sticky='nesw')
     tk.Label(statspage,text=mainplayer['concept']['Name'],font='Helvetica 30 bold',padx=10, pady=10).grid(row=0,column=0,columnspan=4)
@@ -1058,20 +1081,37 @@ def rollskills(window,output,d,m):
 
            
     
-def import_from_csv(fname):
-    "Imports data from csv as a dictionary. Assumes that the first row are the keys, and each row underneath are the values that correspond to that key"
+def import_armory_from_csv(fname):
+    "Imports armory data from csv as a dictionary. Assumes that the first row are the keys, and each row underneath are the values that correspond to that key"
     with open(fname, mode='r') as infile:
         infile.seek(0)
-        reader = csv.reader(infile)
+        reader = csv.reader(infile, delimiter='\t')
         keys=next(reader)
         dictionary={}
         item=0
         for rows in reader:
-                temp={'id':str(uuid.uuid4())}
-                for i in range(len(keys)):
-                        temp[keys[i]]=rows[i]
-                dictionary[item]=temp
-                item+=1
+            temp={'id':str(uuid.uuid4())}
+            for i in range(len(keys)):
+                if keys[i]=='notes':
+                    temp[keys[i]]=rows[i]
+                elif rows[i]!='':
+                    if keys[i]=='weight' or keys[i]=='cost':
+                        temp[keys[i]]=float(rows[i])
+                    
+                    
+                    else:
+                        try:
+                            temp[keys[i]]=int(rows[i])
+                        except:
+                            if rows[i]=='FALSE':
+                                temp[keys[i]]=False
+                            elif rows[i]=='TRUE':
+                                    
+                                temp[keys[i]]=True
+                            else:
+                                temp[keys[i]]=rows[i]
+            dictionary[item]=temp
+            item+=1
     return dictionary
 
         
@@ -1490,11 +1530,8 @@ menubar.add_cascade(label="Character Sheet",menu=csmenu)
 
 codex=tk.Menu(menubar)
 codex.add_command(label="Combat effects",command=lambda:print("I explain combat effects"))
-codex.add_command(label='Races,Hinderances,Edges',command=lambda:print('I explain the different races, hinderances, and edges available'))
-codex.add_command(label='Arcane Backgrounds and Powers',command=lambda:print('I contain all possible arcane backgrounds and associated powers'))
-codex.add_command(label='Rules',command=lambda:print('Rules lawyers love me'))
 codex.add_command(label='Equipment',command=lambda:equipment_tab())
-codex.add_command(label='Add New Codex Entries',command=lambda:newgear())
+codex.add_command(label='New Equipment',command=lambda:newgear())
 codex.add_command(label="Help",command=lambda:print("I explain how to use the app"))
 menubar.add_cascade(label="Codex",menu=codex)
 

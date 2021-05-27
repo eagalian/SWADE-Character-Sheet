@@ -1,0 +1,168 @@
+name	item type	source	equipped	quantity	era	armor value	type	subtype	stacks	head	face	torso	arms 	legs	horse	min str	weight	cost	notes	hands	hardness	cover	str	damage die num	damage die	damage mod	ap	parry	range	rof	blast radius	shots	shots (max)
+Horse	gear	SWADE	FALSE	1			Animals & Tack										1000	300	weight does not count against encumberance														
+War Horse	gear	SWADE	FALSE	1			Animals & Tack										1200	700	weight does not count against encumberance														
+Saddle	gear	SWADE	FALSE	1			Animals & Tack										10	10															
+Elaborate Saddle	gear	SWADE	FALSE	1			Animals & Tack										10	50															
+Backpack	gear	SWADE	FALSE	1			Adventuring Gear										2	50															
+Bedroll	gear	SWADE	FALSE	1			Adventuring Gear										4	25															
+Blanket	gear	SWADE	FALSE	1			Adventuring Gear										4	10															
+Camera (disposable)	gear	SWADE	FALSE	1			Adventuring Gear										1	10															
+Camera (regular)	gear	SWADE	FALSE	1			Adventuring Gear										2	75															
+Camera (digital)	gear	SWADE	FALSE	1			Adventuring Gear										1	300															
+candle	gear	SWADE	FALSE	1			Adventuring Gear										1	1	"one hour, 2"" radius)"														
+Canteen/Watersin	gear	SWADE	FALSE	1			Adventuring Gear										1	5															
+Crowbar	gear	SWADE	FALSE	1			Adventuring Gear										2	10															
+First Aid Kit	gear	SWADE	FALSE	1			Adventuring Gear										1	10	"three uses, see Healing on page 96"														
+Flashlight	gear	SWADE	FALSE	1			Adventuring Gear										3	20	"10"" beam"	1													
+Flask (ceramic)	gear	SWADE	FALSE	1			Adventuring Gear										1	5															
+Flint and Steel	gear	SWADE	FALSE	1			Adventuring Gear										1	3															
+Goggles	gear	SWADE	FALSE	1			Adventuring Gear										1	20															
+Hammer	gear	SWADE	FALSE	1			Adventuring Gear										1	10															
+Handcuffs/manacles	gear	SWADE	FALSE	1			Adventuring Gear										2	15															
+Lantern	gear	SWADE	FALSE	1			Adventuring Gear										3	25	"4 hours, 4"" radius"	1													
+Lighter	gear	SWADE	FALSE	1			Adventuring Gear										0	2															
+Medic Kit	gear	SWADE	FALSE	1			Adventuring Gear										4	100	"Five uses, +1 to Healing skill rolls;$25 refill"														
+Oil	gear	SWADE	FALSE	1			Adventuring Gear										1	2	for lantern; one int														
+Quiver	gear	SWADE	FALSE	1			Adventuring Gear										2	25	holds 20 arrows/bolts														
+"Rope, hemp"	gear	SWADE	FALSE	1			Adventuring Gear										15	10	"10""/20 yards"														
+"Rope, nylon"	gear	SWADE	FALSE	1			Adventuring Gear										3	10	"10""/20 yards"														
+Shovel	gear	SWADE	FALSE	1			Adventuring Gear										5	5															
+Soap	gear	SWADE	FALSE	1			Adventuring Gear										0.2	1															
+Tool Kit	gear	SWADE	FALSE	1			Adventuring Gear										5	200															
+Torch	gear	SWADE	FALSE	1			Adventuring Gear										1	5	"one hour, 4"" radius"														
+Umbrella	gear	SWADE	FALSE	1			Adventuring Gear										2	5															
+Whistle	gear	SWADE	FALSE	1			Adventuring Gear										0	2															
+Whetstone	gear	SWADE	FALSE	1			Adventuring Gear										1	5															
+"Boots, Hiking"	gear	SWADE	FALSE	1			Clothing										2	100															
+Camouflage Fatigues	gear	SWADE	FALSE	1			Clothing										3	20															
+"Clothing, Casual"	gear	SWADE	FALSE	1			Clothing										2	20															
+"Clothing, Formal"	gear	SWADE	FALSE	1			Clothing										3	200															
+Winter Gear	gear	SWADE	FALSE	1			Clothing										3	200	cloak/parka														
+Winter Boots	gear	SWADE	FALSE	1			Clothing										1	100															
+Desktop	gear	SWADE	FALSE	1			Computers & Electronics										20	800															
+GPS	gear	SWADE	FALSE	1			Computers & Electronics										1	250															
+Hand held computer	gear	SWADE	FALSE	1			Computers & Electronics										1	250															
+Laptop	gear	SWADE	FALSE	1			Computers & Electronics										5	1200															
+Bipod/Tripod	gear	SWADE	FALSE	1			Firearms Accessories										2	100	Takes an action to deploy. Negates Recoil and Min Str penalties														
+Laser/Red Dot Sight	gear	SWADE	FALSE	1			Firearms Accessories										1	150	+1 to Shooting at short and medium range'														
+Rifle Scope	gear	SWADE	FALSE	1			Firearms Accessories										2	100	Cancels 2 additional points of penalties when Aiming. See page 97														
+Fast Food Meal	gear	SWADE	FALSE	1			Food										1	8															
+Good Meal	gear	SWADE	FALSE	1			Food										0	15	adjust depending on restaurant														
+MRE	gear	SWADE	FALSE	1			Food										1	10															
+Trail Rations	gear	SWADE	FALSE	1			Food										5	10	"5 meals, keeps 1 week"														
+Peper Spray	gear	SWADE	FALSE	1			Personal Defense										0.5	15	"Use Shooting (or Fighting if engaged). No Range penalty, but max range is 2"" (about 10 feet), shots 5, victim must make Vigor Roll at -2 or be Stunned (page 106)"	1									10			5	5
+Stun Gun	gear	SWADE	FALSE	1			Personal Defense										0.5	15	Uses Shooting. Range 1/2/4. Shots 3 before needing to be recharged for at least 2 hours. Victims must make a Vigor roll at -2 or be Stunned (page 106)	1									1/2/4			3	3
+"""Bug"" (Micro Transmitter)"	gear	SWADE	FALSE	1			Surveillance										0	30	12 hours of continuous use														
+Button Camera	gear	SWADE	FALSE	1			Surveillance										0	50	12 hours of continuous use														
+Cellular Interceptor	gear	SWADE	FALSE	1			Surveillance										5	650															
+Lineman's Telephone	gear	SWADE	FALSE	1			Surveillance										2	150	Repair roll to tap into a phone line														
+Night Vision Goggles	gear	SWADE	FALSE	1			Surveillance										3	500	"No penalty for dim or dark Illumination (see page 102). For double the price goggles are ""active"" and ignore all Illumination penalties"														
+Parabolic Microphone	gear	SWADE	FALSE	1			Surveillance										4	750	Hear whispers upt to 200 yards distance														
+Telephone Tap	gear	SWADE	FALSE	1			Surveillance										0	250															
+Transmitter Detector	gear	SWADE	FALSE	1			Surveillance										1	525															
+Arrows/Bolts	gear	SWADE	FALSE	1			Ammunition										0.2	0.5	"Arrows for bows, bolts for crossbows"														
+Bullets (.22 to .32)	gear	SWADE	FALSE	1			Ammunition										0.02	0.2															
+Bullets (9mm to .45 caliber)	gear	SWADE	FALSE	1			Ammunition										0.04	0.4															
+Bullets (.50 caliber and larger rounds)	gear	SWADE	FALSE	1			Ammunition										0.3	1															
+Laser Battery (pistol)	gear	SWADE	FALSE	1			Ammunition										0.25	20	one full magazine for Laser Pistol														
+Laser Battery (rifle/smg)	gear	SWADE	FALSE	1			Ammunition										0.5	20	one full magazine for Laser Rifle/SMG														
+Laser Battery (gatling)	gear	SWADE	FALSE	1			Ammunition										4	50	one full magazine for Lazer Gatling gun														
+Shot (w/powder)	gear	SWADE	FALSE	1			Ammunition										0.05	0.1	For black powder weapons														
+Shotgun Shell	gear	SWADE	FALSE	1			Ammunition										0.06	0.6	Standard Buckshot														
+Shotgun Slug	gear	SWADE	FALSE	1			Ammunition										0.06	0.8	See page 105														
+Sling Stones	gear	SWADE	FALSE	1			Ammunition										0.05	0.1															
+Jacket	armor	SWADE	FALSE	1	Medieval	1	Cloth/Light Leather		FALSE	FALSE	FALSE	TRUE	TRUE	FALSE		d4	5	20	"Heavy winter clothing, supple leather armor, soft hides"														
+Robes	armor	SWADE	FALSE	1	Medieval	1	Cloth/Light Leather		FALSE	FALSE	FALSE	TRUE	TRUE	TRUE		d4	8	30	"Heavy winter clothing, supple leather armor, soft hides"														
+Leggings	armor	SWADE	FALSE	1	Medieval	1	Cloth/Light Leather		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d4	5	20	"Heavy winter clothing, supple leather armor, soft hides"														
+Cap	armor	SWADE	FALSE	1	Medieval	1	Cloth/Light Leather		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d4	1	5	"Heavy winter clothing, supple leather armor, soft hides"														
+Jacket	armor	SWADE	FALSE	1	Medieval	2	Thick Leather/Tough Hides		FALSE	FALSE	FALSE	TRUE	TRUE	FALSE		d6	8	80	"Boiled leather, cuir bouilli, alligator hides"														
+Leggings	armor	SWADE	FALSE	1	Medieval	2	Thick Leather/Tough Hides		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d6	7	40	"Boiled leather, cuir bouilli, alligator hides"														
+Cap	armor	SWADE	FALSE	1	Medieval	2	Thick Leather/Tough Hides		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d6	1	25	"Boiled leather, cuir bouilli, alligator hides"														
+Chain Shirt	armor	SWADE	FALSE	1	Medieval	3	Chain Mail		FALSE	FALSE	FALSE	TRUE	TRUE	FALSE		d8	25	300	"Chain, splint, metal scale, ring mail, samurai armor"														
+Chain Leggings	armor	SWADE	FALSE	1	Medieval	3	Chain Mail		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d8	10	150	"Chain, splint, metal scale, ring mail, samurai armor"														
+Chain Hood or Helm	armor	SWADE	FALSE	1	Medieval	3	Chain Mail		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d8	4	25	"Chain, splint, metal scale, ring mail, samurai armor"														
+Bronze Barding	armor	SWADE	FALSE	1	Medieval	3	Bronze Armor (Pre-Iron Age Settings)		FALSE						TRUE	d10	50	1500	Typically only found in ancient times or pre-iron civilizations														
+Bronze Corsolet	armor	SWADE	FALSE	1	Medieval	3	Bronze Armor (Pre-Iron Age Settings)		FALSE	FALSE	FALSE	TRUE	FALSE	FALSE		d8	13	80	Typically only found in ancient times or pre-iron civilizations														
+Bronze Vambraces	armor	SWADE	FALSE	1	Medieval	3	Bronze Armor (Pre-Iron Age Settings)		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE		d8	5	40	Typically only found in ancient times or pre-iron civilizations														
+Bronze Greaves	armor	SWADE	FALSE	1	Medieval	3	Bronze Armor (Pre-Iron Age Settings)		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d8	6	50	Typically only found in ancient times or pre-iron civilizations														
+Bronze Helmet	armor	SWADE	FALSE	1	Medieval	3	Bronze Armor (Pre-Iron Age Settings)		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d8	6	25	Typically only found in ancient times or pre-iron civilizations														
+Plate Barding	armor	SWADE	FALSE	1	Medieval	4	Plate Mail		FALSE						TRUE	d10	50	1500	Heavy steel armor made with plates of metal														
+Corselet	armor	SWADE	FALSE	1	Medieval	4	Plate Mail		FALSE	FALSE	FALSE	TRUE	FALSE	FALSE		d10	30	500	Heavy steel armor made with plates of metal														
+Vambraces	armor	SWADE	FALSE	1	Medieval	4	Plate Mail		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE		d10	10	200	Heavy steel armor made with plates of metal														
+Greaves	armor	SWADE	FALSE	1	Medieval	4	Plate Mail		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d10	10	200	Heavy steel armor made with plates of metal														
+Heavy Helm	armor	SWADE	FALSE	1	Medieval	4	Plate Mail		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d10	4	100	Heavy steel armor made with plates of metal														
+Heavy Helm (enclosed)	armor	SWADE	FALSE	1	Medieval	4	Plate Mail		FALSE	TRUE	TRUE	FALSE	FALSE	FALSE		d10	8	200	"Heavy steel armor made with plates of metal, -1 to vision based notice rolls"														
+Thick Coat/Leather Jacket	armor	SWADE	FALSE	1	Modern	1	Cloth/Leather		FALSE	FALSE	FALSE	TRUE	TRUE	FALSE		d4	5	100	"Heavy winter clothing, leather jacket or pants, chaps"														
+Leather Riding Chaps	armor	SWADE	FALSE	1	Modern	1	Cloth/Leather		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d4	4	70	"Heavy winter clothing, leather jacket or pants, chaps"														
+Kevlar Riding Jacket	armor	SWADE	FALSE	1	Modern	2	Cloth/Leather		FALSE	FALSE	FALSE	TRUE	TRUE	FALSE		d4	8	350															
+Kevlar Riding Jeans	armor	SWADE	FALSE	1	Modern	2	Cloth/Leather		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d4	4	175															
+Bike helmet	armor	SWADE	FALSE	1	Modern	2	Cloth/Leather		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d4	1	50															
+Motorcycle Helmet	armor	SWADE	FALSE	1	Modern	3	Cloth/Leather		FALSE	TRUE	TRUE	FALSE	FALSE	FALSE		d4	3	100															
+Flak Jacket	armor	SWADE	FALSE	1	Modern	2	Body Armor		FALSE	FALSE	FALSE	TRUE	FALSE	FALSE		d6	10	40	vietnam-era														
+Kevlar Vest	armor	SWADE	FALSE	1	Modern	2	Body Armor		FALSE	FALSE	FALSE	TRUE	FALSE	FALSE		d6	5	200	reduces damage from bullets by 4														
+Kevlar vest with ceramic inserts	armor	SWADE	FALSE	1	Modern	4	Body Armor		FALSE	FALSE	FALSE	TRUE	FALSE	FALSE		d8	17	500	reduces damage from bullets by 4														
+Kevlar Helmet	armor	SWADE	FALSE	1	Modern	4	Body Armor		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d8	5	80	reduces damage from bullets by 4														
+Bombproof Suit	armor	SWADE	FALSE	1	Modern	10	Body Armor		FALSE	TRUE	TRUE	TRUE	TRUE	TRUE		d12	80	25000	"Bombproof suits are not built for flexibility except in the hands, which are uncovered. Agility and related skills that require more than manual dexterity cannot exceed d6 while wearing the suit, and Pace is reduced by 2 (in addition to min Str penalties)"														
+Energy Skin	armor	SWADE	FALSE	1	Futuristic		Upgrade		TRUE								0	0	"Any Futuristic can be treated with this to diffuse energy, reducing damage from lasers by 4. This costs 50% of the armor treated and is very shiny, subtracting 2 from stealth rolls based on vision"														
+Body Armor	armor	SWADE	FALSE	1	Futuristic	4	Light/Civilian Armor		TRUE	FALSE	FALSE	TRUE	TRUE	TRUE		d4	4	200	"Light armored clothing made from complex polymers or advanced ballistic weave, blocks 4 points of damage from bullets"														
+Infantry Battle Suit	armor	SWADE	FALSE	1	Futuristic	6	Military Armor		TRUE	FALSE	FALSE	TRUE	TRUE	TRUE		d6	12	800	"A full suit of armor with boots and gloves, blocks 4 points of damage from bullets"														
+Battle Helmet	armor	SWADE	FALSE	1	Futuristic	6	Military Armor		TRUE	TRUE	TRUE	FALSE	FALSE	FALSE		d6	2	100															
+Small Shield	armor	SWADE	FALSE	1	Medieval	2	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d4	4	50			10	0						-1					
+Medium Shield	armor	SWADE	FALSE	1	Medieval	2	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d6	8	100			10	2						-2					
+Large Shield	armor	SWADE	FALSE	1	Medieval	2	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d8	12	200			10	4						-3					
+Riot Shield	armor	SWADE	FALSE	1	Modern	2	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d4	5	80			12	4						-3					
+Ballistic Shield	armor	SWADE	FALSE	1	Modern	2	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d6	9	250	reduces damage from bullets by 4		12	4						-3					
+"Polymer Shield, Small"	armor	SWADE	FALSE	1	Futuristic	4	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d4	2	200			10							-1					
+"Polymer Shield, Medium"	armor	SWADE	FALSE	1	Futuristic	4	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d4	4	300			10	2						-2					
+"Polymer Shield, Large"	armor	SWADE	FALSE	1	Futuristic	4	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d6	6	400			10	4						-3					
+"Axe, Hand"	weapon	SWADE	FALSE	1	Medieval		Melee									d6	2	100		1			TRUE	1	6								
+"Axe, Battle"	weapon	SWADE	FALSE	1	Medieval		Melee									d8	4	300		1			TRUE	1	8								
+"Axe, Great"	weapon	SWADE	FALSE	1	Medieval		Melee									d10	7	400	two hands	2			TRUE	1	10		2	-1					
+"Club, Light"	weapon	SWADE	FALSE	1	Medieval		Melee									d4	2	25	a sign of low status or thuggery	1			TRUE	1	4								
+"Club, Heavy"	weapon	SWADE	FALSE	1	Medieval		Melee									d6	5	50	a sign of low status or thuggery	1			TRUE	1	6								
+Dagger/Knife	weapon	SWADE	FALSE	1	Medieval		Melee									d4	1	25	can also be thrown	1			TRUE	1	4				3/6/12	1			
+Flail	weapon	SWADE	FALSE	1	Medieval		Melee									d6	3	200	ignores shield bonus	1			TRUE	1	6								
+Halberd	weapon	SWADE	FALSE	1	Medieval		Melee									d8	6	200	"reach 1, two hands"	2			TRUE	1	8								
+Katana	weapon	SWADE	FALSE	1	Medieval		Melee									d6	3	1000	two hands	2			TRUE	1	6	1							
+Lance	weapon	SWADE	FALSE	1	Medieval		Melee									d8	6	300	"ap 2 when charging, reach 2, only usable in mounted combat"	1			TRUE	1	8		2						
+Mace	weapon	SWADE	FALSE	1	Medieval		Melee									d6	4	100		1			TRUE	1	6								
+Maul	weapon	SWADE	FALSE	1	Medieval		Melee									d10	18	400	"two hands, +2 damage against objects (page 98)"	2			TRUE	1	10								
+Rapier	weapon	SWADE	FALSE	1	Medieval		Melee									d4	2	150		1			TRUE	1	4			1					
+Pike	weapon	SWADE	FALSE	1	Medieval		Melee									d8	18	400	"reach 2, two hands"	2			TRUE	1	8								
+Spear	weapon	SWADE	FALSE	1	Medieval		Melee									d6	3	100	"reach 1, parry +1 if used two handed, can be thrown"	2			TRUE	1	6			1	3/6/12	1			
+Staff	weapon	SWADE	FALSE	1	Medieval		Melee									d4	4	10	"reach 1, two hands"	2			TRUE	1	4			1					
+"Sword, Great"	weapon	SWADE	FALSE	1	Medieval		Melee									d10	6	400	two hands	2			TRUE	1	10								
+"Sword, Long"	weapon	SWADE	FALSE	1	Medieval		Melee									d8	3	300	basic swords and scimitars	1			TRUE	1	8								
+"Sword, Short"	weapon	SWADE	FALSE	1	Medieval		Melee									d6	2	100	includes cavalry sabers	1			TRUE	1	6								
+Warhammer	weapon	SWADE	FALSE	1	Medieval		Melee									d6	2	250	spiked	1			TRUE	1	6		1						
+Bangstick	weapon	SWADE	FALSE	1	Modern		Melee									d6	2	5	A shotgun shell on a stick used in Melee; must be reloaded with a fresh shell (one action)	1				3	6								
+Bayonet	weapon	SWADE	FALSE	1	Modern		Melee									d4	1	25	"str+d6 and Parry +1 attached to rifle, reach 1, two hands"	2			TRUE	1	4								
+Billy Club/Baton	weapon	SWADE	FALSE	1	Modern		Melee									d4	1	10	often carried by law enforcement	1			TRUE	1	4								
+Brass Knuckles	weapon	SWADE	FALSE	1	Modern		Melee									d4	1	20	do not count as weapon for unarmed defender (page 109)	1			TRUE	1	4								
+Chainsaw	weapon	SWADE	FALSE	1	Modern		Melee									d6	20	200	critical failure hits the user	2				2	6	4							
+Switchblade	weapon	SWADE	FALSE	1	Modern		Melee									d4	0.5	10	-2 to be noticed if hidden	1			TRUE	1	4								
+Survival Knife	weapon	SWADE	FALSE	1	Modern		Melee									d4	1	50	basic tools in handle add +1 to survival rolls	1			TRUE	1	4								
+Molecular Knife	weapon	SWADE	FALSE	1	Futuristic		Melee									d4	0.5	250	cannot be thrown	1			TRUE	1	4	2	2						
+Molecular Sword	weapon	SWADE	FALSE	1	Futuristic		Melee									d6	2	500		1			TRUE	1	8	4							
+Laser Sword	weapon	SWADE	FALSE	1	Futuristic		Melee									d4	2	1000		1			TRUE	1	6	8	12						
+"Axe, Throwing"	weapon	SWADE	FALSE	1	Medieval		Ranged	low tech								d6	3	100		1			TRUE	1	6				3/6/12	1		1	1
+Bow	weapon	SWADE	FALSE	1	Medieval		Ranged 	low tech								d6	3	250		2				2	6				12/24/48	1		1	1
+Crossbow (hand drawn)	weapon	SWADE	FALSE	1	Medieval		Ranged	low tech								d6	5	250	hand drawn	2				2	6		2		10/20/40	1		1	1
+"Crossbow, Heavy"	weapon	SWADE	FALSE	1	Medieval		Ranged	low tech								d6	8	400	requires a windlass to load. Reload 2	2				2	8		2		15/30/60	1		1	1
+Long Bow	weapon	SWADE	FALSE	1	Medieval		Ranged	low tech								d8	3	300		2				2	6		1		15/30/60	1		1	1
+Net (weighted)	weapon	SWADE	FALSE	1	Medieval		Ranged	low tech								d4	8	50	"A successful hit means the target is Engtangled (see page 98). Hardness 10, and vulnerable only to cutting attacks"	2									3/6/12	1			
+Sling 	weapon	SWADE	FALSE	1	Medieval		Ranged	low tech								d4	1	10	"Throwing, not shooting"	1			TRUE	1	4				4/8/16	1		1	1
+Compound Bow	weapon	SWADE	FALSE	1	Modern		Ranged	low tech								d6	3	200		2			TRUE	1	8		1		12/24/48	1		1	1
+Crossbow	weapon	SWADE	FALSE		Modern		Ranged	low tech								d6	7	300		2				2	6		1		15/30/60	1		1	1
+Flintlock Pistol	weapon	SWADE	FALSE		Modern		Ranged	Black Powder								d4	3	150	Reload 3	1				2	6	1			5/10/20	1		1	1
+Brown Bess or Similar Muskets	weapon	SWADE	FALSE		Modern		Ranged	Black Powder								d6	15	300	Reload 3	2				2	8				10/20/40	1		1	1
+Blunderbuss	weapon	SWADE	FALSE		Modern		Ranged	Black Powder								d6	12	300	"Treat as Shotgun, see page 105 Reload 3"	2				2	8				10/20/40	1		1	1
+Kentuky Rifle	weapon	SWADE	FALSE		Modern		Ranged	Black Powder								d6	8	300	Reload 4. 	2				2	8		2		15/30/60	1		1	1
+Springfield Model 1861	weapon	SWADE	FALSE		Modern		Ranged	Black Powder								d6	11	250	Reload 3	2				2	8				15/30/60	1		1	1
+Derringer (.41)	weapon	SWADE	FALSE		Modern		Ranged	Revolver								d4	1	100	-2 to be noticed if hidden	1				2	4				3/6/12	1		2	2
+Police Revolver(.38)	weapon	SWADE	FALSE		Modern		Ranged	Revolver								d4	2	150		1				2	6				10/20/40	1		6	6
+Colt Peacemaker (.45)	weapon	SWADE	FALSE		Modern		Ranged	Revolver								d4	4	200		1				2	6	1			12/24/48	1		6	6
+Smith & Wesson (.357)	weapon	SWADE	FALSE		Modern		Ranged	Revolver								d4	5	250		1				2	6	1	1		12/24/48	1		6	6
+Colt 1911 (.45)	weapon	SWADE	FALSE		Modern		Ranged	Semi-Automatic								d4	4	200		1				2	6	1	1		12/24/48	1		7	7
+Desert Eagle (.50)	weapon	SWADE	FALSE		Modern		Ranged	Semi-Automatic								d6	8	300		1				2	8		1		15/30/60	1		7	7
+Glock (9mm)	weapon	SWADE	FALSE		Modern		Ranged	Semi-Automatic								d4	3	200		1				2	6		1		12/24/48	1		17	17
