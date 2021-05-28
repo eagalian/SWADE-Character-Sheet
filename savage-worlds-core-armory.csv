@@ -1,168 +1,287 @@
-name	item type	source	equipped	quantity	era	armor value	type	subtype	stacks	head	face	torso	arms 	legs	horse	min str	weight	cost	notes	hands	hardness	cover	str	damage die num	damage die	damage mod	ap	parry	range	rof	blast radius	shots	shots (max)
-Horse	gear	SWADE	FALSE	1			Animals & Tack										1000	300	weight does not count against encumberance														
-War Horse	gear	SWADE	FALSE	1			Animals & Tack										1200	700	weight does not count against encumberance														
-Saddle	gear	SWADE	FALSE	1			Animals & Tack										10	10															
-Elaborate Saddle	gear	SWADE	FALSE	1			Animals & Tack										10	50															
-Backpack	gear	SWADE	FALSE	1			Adventuring Gear										2	50															
-Bedroll	gear	SWADE	FALSE	1			Adventuring Gear										4	25															
-Blanket	gear	SWADE	FALSE	1			Adventuring Gear										4	10															
-Camera (disposable)	gear	SWADE	FALSE	1			Adventuring Gear										1	10															
-Camera (regular)	gear	SWADE	FALSE	1			Adventuring Gear										2	75															
-Camera (digital)	gear	SWADE	FALSE	1			Adventuring Gear										1	300															
-candle	gear	SWADE	FALSE	1			Adventuring Gear										1	1	"one hour, 2"" radius)"														
-Canteen/Watersin	gear	SWADE	FALSE	1			Adventuring Gear										1	5															
-Crowbar	gear	SWADE	FALSE	1			Adventuring Gear										2	10															
-First Aid Kit	gear	SWADE	FALSE	1			Adventuring Gear										1	10	"three uses, see Healing on page 96"														
-Flashlight	gear	SWADE	FALSE	1			Adventuring Gear										3	20	"10"" beam"	1													
-Flask (ceramic)	gear	SWADE	FALSE	1			Adventuring Gear										1	5															
-Flint and Steel	gear	SWADE	FALSE	1			Adventuring Gear										1	3															
-Goggles	gear	SWADE	FALSE	1			Adventuring Gear										1	20															
-Hammer	gear	SWADE	FALSE	1			Adventuring Gear										1	10															
-Handcuffs/manacles	gear	SWADE	FALSE	1			Adventuring Gear										2	15															
-Lantern	gear	SWADE	FALSE	1			Adventuring Gear										3	25	"4 hours, 4"" radius"	1													
-Lighter	gear	SWADE	FALSE	1			Adventuring Gear										0	2															
-Medic Kit	gear	SWADE	FALSE	1			Adventuring Gear										4	100	"Five uses, +1 to Healing skill rolls;$25 refill"														
-Oil	gear	SWADE	FALSE	1			Adventuring Gear										1	2	for lantern; one int														
-Quiver	gear	SWADE	FALSE	1			Adventuring Gear										2	25	holds 20 arrows/bolts														
-"Rope, hemp"	gear	SWADE	FALSE	1			Adventuring Gear										15	10	"10""/20 yards"														
-"Rope, nylon"	gear	SWADE	FALSE	1			Adventuring Gear										3	10	"10""/20 yards"														
-Shovel	gear	SWADE	FALSE	1			Adventuring Gear										5	5															
-Soap	gear	SWADE	FALSE	1			Adventuring Gear										0.2	1															
-Tool Kit	gear	SWADE	FALSE	1			Adventuring Gear										5	200															
-Torch	gear	SWADE	FALSE	1			Adventuring Gear										1	5	"one hour, 4"" radius"														
-Umbrella	gear	SWADE	FALSE	1			Adventuring Gear										2	5															
-Whistle	gear	SWADE	FALSE	1			Adventuring Gear										0	2															
-Whetstone	gear	SWADE	FALSE	1			Adventuring Gear										1	5															
-"Boots, Hiking"	gear	SWADE	FALSE	1			Clothing										2	100															
-Camouflage Fatigues	gear	SWADE	FALSE	1			Clothing										3	20															
-"Clothing, Casual"	gear	SWADE	FALSE	1			Clothing										2	20															
-"Clothing, Formal"	gear	SWADE	FALSE	1			Clothing										3	200															
-Winter Gear	gear	SWADE	FALSE	1			Clothing										3	200	cloak/parka														
-Winter Boots	gear	SWADE	FALSE	1			Clothing										1	100															
-Desktop	gear	SWADE	FALSE	1			Computers & Electronics										20	800															
-GPS	gear	SWADE	FALSE	1			Computers & Electronics										1	250															
-Hand held computer	gear	SWADE	FALSE	1			Computers & Electronics										1	250															
-Laptop	gear	SWADE	FALSE	1			Computers & Electronics										5	1200															
-Bipod/Tripod	gear	SWADE	FALSE	1			Firearms Accessories										2	100	Takes an action to deploy. Negates Recoil and Min Str penalties														
-Laser/Red Dot Sight	gear	SWADE	FALSE	1			Firearms Accessories										1	150	+1 to Shooting at short and medium range'														
-Rifle Scope	gear	SWADE	FALSE	1			Firearms Accessories										2	100	Cancels 2 additional points of penalties when Aiming. See page 97														
-Fast Food Meal	gear	SWADE	FALSE	1			Food										1	8															
-Good Meal	gear	SWADE	FALSE	1			Food										0	15	adjust depending on restaurant														
-MRE	gear	SWADE	FALSE	1			Food										1	10															
-Trail Rations	gear	SWADE	FALSE	1			Food										5	10	"5 meals, keeps 1 week"														
-Peper Spray	gear	SWADE	FALSE	1			Personal Defense										0.5	15	"Use Shooting (or Fighting if engaged). No Range penalty, but max range is 2"" (about 10 feet), shots 5, victim must make Vigor Roll at -2 or be Stunned (page 106)"	1									10			5	5
-Stun Gun	gear	SWADE	FALSE	1			Personal Defense										0.5	15	Uses Shooting. Range 1/2/4. Shots 3 before needing to be recharged for at least 2 hours. Victims must make a Vigor roll at -2 or be Stunned (page 106)	1									1/2/4			3	3
-"""Bug"" (Micro Transmitter)"	gear	SWADE	FALSE	1			Surveillance										0	30	12 hours of continuous use														
-Button Camera	gear	SWADE	FALSE	1			Surveillance										0	50	12 hours of continuous use														
-Cellular Interceptor	gear	SWADE	FALSE	1			Surveillance										5	650															
-Lineman's Telephone	gear	SWADE	FALSE	1			Surveillance										2	150	Repair roll to tap into a phone line														
-Night Vision Goggles	gear	SWADE	FALSE	1			Surveillance										3	500	"No penalty for dim or dark Illumination (see page 102). For double the price goggles are ""active"" and ignore all Illumination penalties"														
-Parabolic Microphone	gear	SWADE	FALSE	1			Surveillance										4	750	Hear whispers upt to 200 yards distance														
-Telephone Tap	gear	SWADE	FALSE	1			Surveillance										0	250															
-Transmitter Detector	gear	SWADE	FALSE	1			Surveillance										1	525															
-Arrows/Bolts	gear	SWADE	FALSE	1			Ammunition										0.2	0.5	"Arrows for bows, bolts for crossbows"														
-Bullets (.22 to .32)	gear	SWADE	FALSE	1			Ammunition										0.02	0.2															
-Bullets (9mm to .45 caliber)	gear	SWADE	FALSE	1			Ammunition										0.04	0.4															
-Bullets (.50 caliber and larger rounds)	gear	SWADE	FALSE	1			Ammunition										0.3	1															
-Laser Battery (pistol)	gear	SWADE	FALSE	1			Ammunition										0.25	20	one full magazine for Laser Pistol														
-Laser Battery (rifle/smg)	gear	SWADE	FALSE	1			Ammunition										0.5	20	one full magazine for Laser Rifle/SMG														
-Laser Battery (gatling)	gear	SWADE	FALSE	1			Ammunition										4	50	one full magazine for Lazer Gatling gun														
-Shot (w/powder)	gear	SWADE	FALSE	1			Ammunition										0.05	0.1	For black powder weapons														
-Shotgun Shell	gear	SWADE	FALSE	1			Ammunition										0.06	0.6	Standard Buckshot														
-Shotgun Slug	gear	SWADE	FALSE	1			Ammunition										0.06	0.8	See page 105														
-Sling Stones	gear	SWADE	FALSE	1			Ammunition										0.05	0.1															
-Jacket	armor	SWADE	FALSE	1	Medieval	1	Cloth/Light Leather		FALSE	FALSE	FALSE	TRUE	TRUE	FALSE		d4	5	20	"Heavy winter clothing, supple leather armor, soft hides"														
-Robes	armor	SWADE	FALSE	1	Medieval	1	Cloth/Light Leather		FALSE	FALSE	FALSE	TRUE	TRUE	TRUE		d4	8	30	"Heavy winter clothing, supple leather armor, soft hides"														
-Leggings	armor	SWADE	FALSE	1	Medieval	1	Cloth/Light Leather		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d4	5	20	"Heavy winter clothing, supple leather armor, soft hides"														
-Cap	armor	SWADE	FALSE	1	Medieval	1	Cloth/Light Leather		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d4	1	5	"Heavy winter clothing, supple leather armor, soft hides"														
-Jacket	armor	SWADE	FALSE	1	Medieval	2	Thick Leather/Tough Hides		FALSE	FALSE	FALSE	TRUE	TRUE	FALSE		d6	8	80	"Boiled leather, cuir bouilli, alligator hides"														
-Leggings	armor	SWADE	FALSE	1	Medieval	2	Thick Leather/Tough Hides		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d6	7	40	"Boiled leather, cuir bouilli, alligator hides"														
-Cap	armor	SWADE	FALSE	1	Medieval	2	Thick Leather/Tough Hides		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d6	1	25	"Boiled leather, cuir bouilli, alligator hides"														
-Chain Shirt	armor	SWADE	FALSE	1	Medieval	3	Chain Mail		FALSE	FALSE	FALSE	TRUE	TRUE	FALSE		d8	25	300	"Chain, splint, metal scale, ring mail, samurai armor"														
-Chain Leggings	armor	SWADE	FALSE	1	Medieval	3	Chain Mail		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d8	10	150	"Chain, splint, metal scale, ring mail, samurai armor"														
-Chain Hood or Helm	armor	SWADE	FALSE	1	Medieval	3	Chain Mail		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d8	4	25	"Chain, splint, metal scale, ring mail, samurai armor"														
-Bronze Barding	armor	SWADE	FALSE	1	Medieval	3	Bronze Armor (Pre-Iron Age Settings)		FALSE						TRUE	d10	50	1500	Typically only found in ancient times or pre-iron civilizations														
-Bronze Corsolet	armor	SWADE	FALSE	1	Medieval	3	Bronze Armor (Pre-Iron Age Settings)		FALSE	FALSE	FALSE	TRUE	FALSE	FALSE		d8	13	80	Typically only found in ancient times or pre-iron civilizations														
-Bronze Vambraces	armor	SWADE	FALSE	1	Medieval	3	Bronze Armor (Pre-Iron Age Settings)		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE		d8	5	40	Typically only found in ancient times or pre-iron civilizations														
-Bronze Greaves	armor	SWADE	FALSE	1	Medieval	3	Bronze Armor (Pre-Iron Age Settings)		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d8	6	50	Typically only found in ancient times or pre-iron civilizations														
-Bronze Helmet	armor	SWADE	FALSE	1	Medieval	3	Bronze Armor (Pre-Iron Age Settings)		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d8	6	25	Typically only found in ancient times or pre-iron civilizations														
-Plate Barding	armor	SWADE	FALSE	1	Medieval	4	Plate Mail		FALSE						TRUE	d10	50	1500	Heavy steel armor made with plates of metal														
-Corselet	armor	SWADE	FALSE	1	Medieval	4	Plate Mail		FALSE	FALSE	FALSE	TRUE	FALSE	FALSE		d10	30	500	Heavy steel armor made with plates of metal														
-Vambraces	armor	SWADE	FALSE	1	Medieval	4	Plate Mail		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE		d10	10	200	Heavy steel armor made with plates of metal														
-Greaves	armor	SWADE	FALSE	1	Medieval	4	Plate Mail		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d10	10	200	Heavy steel armor made with plates of metal														
-Heavy Helm	armor	SWADE	FALSE	1	Medieval	4	Plate Mail		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d10	4	100	Heavy steel armor made with plates of metal														
-Heavy Helm (enclosed)	armor	SWADE	FALSE	1	Medieval	4	Plate Mail		FALSE	TRUE	TRUE	FALSE	FALSE	FALSE		d10	8	200	"Heavy steel armor made with plates of metal, -1 to vision based notice rolls"														
-Thick Coat/Leather Jacket	armor	SWADE	FALSE	1	Modern	1	Cloth/Leather		FALSE	FALSE	FALSE	TRUE	TRUE	FALSE		d4	5	100	"Heavy winter clothing, leather jacket or pants, chaps"														
-Leather Riding Chaps	armor	SWADE	FALSE	1	Modern	1	Cloth/Leather		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d4	4	70	"Heavy winter clothing, leather jacket or pants, chaps"														
-Kevlar Riding Jacket	armor	SWADE	FALSE	1	Modern	2	Cloth/Leather		FALSE	FALSE	FALSE	TRUE	TRUE	FALSE		d4	8	350															
-Kevlar Riding Jeans	armor	SWADE	FALSE	1	Modern	2	Cloth/Leather		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		d4	4	175															
-Bike helmet	armor	SWADE	FALSE	1	Modern	2	Cloth/Leather		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d4	1	50															
-Motorcycle Helmet	armor	SWADE	FALSE	1	Modern	3	Cloth/Leather		FALSE	TRUE	TRUE	FALSE	FALSE	FALSE		d4	3	100															
-Flak Jacket	armor	SWADE	FALSE	1	Modern	2	Body Armor		FALSE	FALSE	FALSE	TRUE	FALSE	FALSE		d6	10	40	vietnam-era														
-Kevlar Vest	armor	SWADE	FALSE	1	Modern	2	Body Armor		FALSE	FALSE	FALSE	TRUE	FALSE	FALSE		d6	5	200	reduces damage from bullets by 4														
-Kevlar vest with ceramic inserts	armor	SWADE	FALSE	1	Modern	4	Body Armor		FALSE	FALSE	FALSE	TRUE	FALSE	FALSE		d8	17	500	reduces damage from bullets by 4														
-Kevlar Helmet	armor	SWADE	FALSE	1	Modern	4	Body Armor		FALSE	TRUE	FALSE	FALSE	FALSE	FALSE		d8	5	80	reduces damage from bullets by 4														
-Bombproof Suit	armor	SWADE	FALSE	1	Modern	10	Body Armor		FALSE	TRUE	TRUE	TRUE	TRUE	TRUE		d12	80	25000	"Bombproof suits are not built for flexibility except in the hands, which are uncovered. Agility and related skills that require more than manual dexterity cannot exceed d6 while wearing the suit, and Pace is reduced by 2 (in addition to min Str penalties)"														
-Energy Skin	armor	SWADE	FALSE	1	Futuristic		Upgrade		TRUE								0	0	"Any Futuristic can be treated with this to diffuse energy, reducing damage from lasers by 4. This costs 50% of the armor treated and is very shiny, subtracting 2 from stealth rolls based on vision"														
-Body Armor	armor	SWADE	FALSE	1	Futuristic	4	Light/Civilian Armor		TRUE	FALSE	FALSE	TRUE	TRUE	TRUE		d4	4	200	"Light armored clothing made from complex polymers or advanced ballistic weave, blocks 4 points of damage from bullets"														
-Infantry Battle Suit	armor	SWADE	FALSE	1	Futuristic	6	Military Armor		TRUE	FALSE	FALSE	TRUE	TRUE	TRUE		d6	12	800	"A full suit of armor with boots and gloves, blocks 4 points of damage from bullets"														
-Battle Helmet	armor	SWADE	FALSE	1	Futuristic	6	Military Armor		TRUE	TRUE	TRUE	FALSE	FALSE	FALSE		d6	2	100															
-Small Shield	armor	SWADE	FALSE	1	Medieval	2	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d4	4	50			10	0						-1					
-Medium Shield	armor	SWADE	FALSE	1	Medieval	2	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d6	8	100			10	2						-2					
-Large Shield	armor	SWADE	FALSE	1	Medieval	2	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d8	12	200			10	4						-3					
-Riot Shield	armor	SWADE	FALSE	1	Modern	2	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d4	5	80			12	4						-3					
-Ballistic Shield	armor	SWADE	FALSE	1	Modern	2	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d6	9	250	reduces damage from bullets by 4		12	4						-3					
-"Polymer Shield, Small"	armor	SWADE	FALSE	1	Futuristic	4	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d4	2	200			10							-1					
-"Polymer Shield, Medium"	armor	SWADE	FALSE	1	Futuristic	4	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d4	4	300			10	2						-2					
-"Polymer Shield, Large"	armor	SWADE	FALSE	1	Futuristic	4	Shields		TRUE	FALSE	FALSE	TRUE	FALSE	FALSE		d6	6	400			10	4						-3					
-"Axe, Hand"	weapon	SWADE	FALSE	1	Medieval		Melee									d6	2	100		1			TRUE	1	6								
-"Axe, Battle"	weapon	SWADE	FALSE	1	Medieval		Melee									d8	4	300		1			TRUE	1	8								
-"Axe, Great"	weapon	SWADE	FALSE	1	Medieval		Melee									d10	7	400	two hands	2			TRUE	1	10		2	-1					
-"Club, Light"	weapon	SWADE	FALSE	1	Medieval		Melee									d4	2	25	a sign of low status or thuggery	1			TRUE	1	4								
-"Club, Heavy"	weapon	SWADE	FALSE	1	Medieval		Melee									d6	5	50	a sign of low status or thuggery	1			TRUE	1	6								
-Dagger/Knife	weapon	SWADE	FALSE	1	Medieval		Melee									d4	1	25	can also be thrown	1			TRUE	1	4				3/6/12	1			
-Flail	weapon	SWADE	FALSE	1	Medieval		Melee									d6	3	200	ignores shield bonus	1			TRUE	1	6								
-Halberd	weapon	SWADE	FALSE	1	Medieval		Melee									d8	6	200	"reach 1, two hands"	2			TRUE	1	8								
-Katana	weapon	SWADE	FALSE	1	Medieval		Melee									d6	3	1000	two hands	2			TRUE	1	6	1							
-Lance	weapon	SWADE	FALSE	1	Medieval		Melee									d8	6	300	"ap 2 when charging, reach 2, only usable in mounted combat"	1			TRUE	1	8		2						
-Mace	weapon	SWADE	FALSE	1	Medieval		Melee									d6	4	100		1			TRUE	1	6								
-Maul	weapon	SWADE	FALSE	1	Medieval		Melee									d10	18	400	"two hands, +2 damage against objects (page 98)"	2			TRUE	1	10								
-Rapier	weapon	SWADE	FALSE	1	Medieval		Melee									d4	2	150		1			TRUE	1	4			1					
-Pike	weapon	SWADE	FALSE	1	Medieval		Melee									d8	18	400	"reach 2, two hands"	2			TRUE	1	8								
-Spear	weapon	SWADE	FALSE	1	Medieval		Melee									d6	3	100	"reach 1, parry +1 if used two handed, can be thrown"	2			TRUE	1	6			1	3/6/12	1			
-Staff	weapon	SWADE	FALSE	1	Medieval		Melee									d4	4	10	"reach 1, two hands"	2			TRUE	1	4			1					
-"Sword, Great"	weapon	SWADE	FALSE	1	Medieval		Melee									d10	6	400	two hands	2			TRUE	1	10								
-"Sword, Long"	weapon	SWADE	FALSE	1	Medieval		Melee									d8	3	300	basic swords and scimitars	1			TRUE	1	8								
-"Sword, Short"	weapon	SWADE	FALSE	1	Medieval		Melee									d6	2	100	includes cavalry sabers	1			TRUE	1	6								
-Warhammer	weapon	SWADE	FALSE	1	Medieval		Melee									d6	2	250	spiked	1			TRUE	1	6		1						
-Bangstick	weapon	SWADE	FALSE	1	Modern		Melee									d6	2	5	A shotgun shell on a stick used in Melee; must be reloaded with a fresh shell (one action)	1				3	6								
-Bayonet	weapon	SWADE	FALSE	1	Modern		Melee									d4	1	25	"str+d6 and Parry +1 attached to rifle, reach 1, two hands"	2			TRUE	1	4								
-Billy Club/Baton	weapon	SWADE	FALSE	1	Modern		Melee									d4	1	10	often carried by law enforcement	1			TRUE	1	4								
-Brass Knuckles	weapon	SWADE	FALSE	1	Modern		Melee									d4	1	20	do not count as weapon for unarmed defender (page 109)	1			TRUE	1	4								
-Chainsaw	weapon	SWADE	FALSE	1	Modern		Melee									d6	20	200	critical failure hits the user	2				2	6	4							
-Switchblade	weapon	SWADE	FALSE	1	Modern		Melee									d4	0.5	10	-2 to be noticed if hidden	1			TRUE	1	4								
-Survival Knife	weapon	SWADE	FALSE	1	Modern		Melee									d4	1	50	basic tools in handle add +1 to survival rolls	1			TRUE	1	4								
-Molecular Knife	weapon	SWADE	FALSE	1	Futuristic		Melee									d4	0.5	250	cannot be thrown	1			TRUE	1	4	2	2						
-Molecular Sword	weapon	SWADE	FALSE	1	Futuristic		Melee									d6	2	500		1			TRUE	1	8	4							
-Laser Sword	weapon	SWADE	FALSE	1	Futuristic		Melee									d4	2	1000		1			TRUE	1	6	8	12						
-"Axe, Throwing"	weapon	SWADE	FALSE	1	Medieval		Ranged	low tech								d6	3	100		1			TRUE	1	6				3/6/12	1		1	1
-Bow	weapon	SWADE	FALSE	1	Medieval		Ranged 	low tech								d6	3	250		2				2	6				12/24/48	1		1	1
-Crossbow (hand drawn)	weapon	SWADE	FALSE	1	Medieval		Ranged	low tech								d6	5	250	hand drawn	2				2	6		2		10/20/40	1		1	1
-"Crossbow, Heavy"	weapon	SWADE	FALSE	1	Medieval		Ranged	low tech								d6	8	400	requires a windlass to load. Reload 2	2				2	8		2		15/30/60	1		1	1
-Long Bow	weapon	SWADE	FALSE	1	Medieval		Ranged	low tech								d8	3	300		2				2	6		1		15/30/60	1		1	1
-Net (weighted)	weapon	SWADE	FALSE	1	Medieval		Ranged	low tech								d4	8	50	"A successful hit means the target is Engtangled (see page 98). Hardness 10, and vulnerable only to cutting attacks"	2									3/6/12	1			
-Sling 	weapon	SWADE	FALSE	1	Medieval		Ranged	low tech								d4	1	10	"Throwing, not shooting"	1			TRUE	1	4				4/8/16	1		1	1
-Compound Bow	weapon	SWADE	FALSE	1	Modern		Ranged	low tech								d6	3	200		2			TRUE	1	8		1		12/24/48	1		1	1
-Crossbow	weapon	SWADE	FALSE		Modern		Ranged	low tech								d6	7	300		2				2	6		1		15/30/60	1		1	1
-Flintlock Pistol	weapon	SWADE	FALSE		Modern		Ranged	Black Powder								d4	3	150	Reload 3	1				2	6	1			5/10/20	1		1	1
-Brown Bess or Similar Muskets	weapon	SWADE	FALSE		Modern		Ranged	Black Powder								d6	15	300	Reload 3	2				2	8				10/20/40	1		1	1
-Blunderbuss	weapon	SWADE	FALSE		Modern		Ranged	Black Powder								d6	12	300	"Treat as Shotgun, see page 105 Reload 3"	2				2	8				10/20/40	1		1	1
-Kentuky Rifle	weapon	SWADE	FALSE		Modern		Ranged	Black Powder								d6	8	300	Reload 4. 	2				2	8		2		15/30/60	1		1	1
-Springfield Model 1861	weapon	SWADE	FALSE		Modern		Ranged	Black Powder								d6	11	250	Reload 3	2				2	8				15/30/60	1		1	1
-Derringer (.41)	weapon	SWADE	FALSE		Modern		Ranged	Revolver								d4	1	100	-2 to be noticed if hidden	1				2	4				3/6/12	1		2	2
-Police Revolver(.38)	weapon	SWADE	FALSE		Modern		Ranged	Revolver								d4	2	150		1				2	6				10/20/40	1		6	6
-Colt Peacemaker (.45)	weapon	SWADE	FALSE		Modern		Ranged	Revolver								d4	4	200		1				2	6	1			12/24/48	1		6	6
-Smith & Wesson (.357)	weapon	SWADE	FALSE		Modern		Ranged	Revolver								d4	5	250		1				2	6	1	1		12/24/48	1		6	6
-Colt 1911 (.45)	weapon	SWADE	FALSE		Modern		Ranged	Semi-Automatic								d4	4	200		1				2	6	1	1		12/24/48	1		7	7
-Desert Eagle (.50)	weapon	SWADE	FALSE		Modern		Ranged	Semi-Automatic								d6	8	300		1				2	8		1		15/30/60	1		7	7
-Glock (9mm)	weapon	SWADE	FALSE		Modern		Ranged	Semi-Automatic								d4	3	200		1				2	6		1		12/24/48	1		17	17
+﻿name,item type,source,equipped,quantity,era,type,subtype,size,handling,mph,toughness,crew,stacks,armor value,head,face,torso,arms ,legs,horse,min str,weight,cost,notes,hands,hardness,cover,str,primary,damage die num,damage die,damage mod,ap,secondary,damage die num,damage die,damage mod,ap,parry,close,mid,far,rof,blast radius,shots,shots (max)
+Horse,gear,SWADE,FALSE,1,,Animals & Tack,,,,,,,,,,,,,,,,1000,300,weight does not count against encumbrance,,,,,,,,,,,,,,,,,,,,,,
+War Horse,gear,SWADE,FALSE,1,,Animals & Tack,,,,,,,,,,,,,,,,1200,700,weight does not count against encumbrance,,,,,,,,,,,,,,,,,,,,,,
+Saddle,gear,SWADE,FALSE,1,,Animals & Tack,,,,,,,,,,,,,,,,10,10,,,,,,,,,,,,,,,,,,,,,,,
+Elaborate Saddle,gear,SWADE,FALSE,1,,Animals & Tack,,,,,,,,,,,,,,,,10,50,,,,,,,,,,,,,,,,,,,,,,,
+Backpack,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,2,50,,,,,,,,,,,,,,,,,,,,,,,
+Bedroll,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,4,25,,,,,,,,,,,,,,,,,,,,,,,
+Blanket,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,4,10,,,,,,,,,,,,,,,,,,,,,,,
+Camera (disposable),gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,1,10,,,,,,,,,,,,,,,,,,,,,,,
+Camera (regular),gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,2,75,,,,,,,,,,,,,,,,,,,,,,,
+Camera (digital),gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,1,300,,,,,,,,,,,,,,,,,,,,,,,
+candle,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,1,1,"one hour, 2"" radius)",,,,,,,,,,,,,,,,,,,,,,
+Canteen/Waterskin,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,1,5,,,,,,,,,,,,,,,,,,,,,,,
+Crowbar,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,2,10,,,,,,,,,,,,,,,,,,,,,,,
+First Aid Kit,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,1,10,"three uses, see Healing on page 96",,,,,,,,,,,,,,,,,,,,,,
+Flashlight,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,3,20,"10"" beam",1,,,,,,,,,,,,,,,,,,,,,
+Flask (ceramic),gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,1,5,,,,,,,,,,,,,,,,,,,,,,,
+Flint and Steel,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,1,3,,,,,,,,,,,,,,,,,,,,,,,
+Goggles,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,1,20,,,,,,,,,,,,,,,,,,,,,,,
+Hammer,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,1,10,,,,,,,,,,,,,,,,,,,,,,,
+Handcuffs/manacles,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,2,15,,,,,,,,,,,,,,,,,,,,,,,
+Lantern,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,3,25,"4 hours, 4"" radius",1,,,,,,,,,,,,,,,,,,,,,
+Lighter,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,0,2,,,,,,,,,,,,,,,,,,,,,,,
+Medic Kit,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,4,100,"Five uses, +1 to Healing skill rolls;$25 refill",,,,,,,,,,,,,,,,,,,,,,
+Oil,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,1,2,for lantern; one int,,,,,,,,,,,,,,,,,,,,,,
+Quiver,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,2,25,holds 20 arrows/bolts,,,,,,,,,,,,,,,,,,,,,,
+"Rope, hemp",gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,15,10,"10""/20 yards",,,,,,,,,,,,,,,,,,,,,,
+"Rope, nylon",gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,3,10,"10""/20 yards",,,,,,,,,,,,,,,,,,,,,,
+Shovel,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,5,5,,,,,,,,,,,,,,,,,,,,,,,
+Soap,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,0.2,1,,,,,,,,,,,,,,,,,,,,,,,
+Tool Kit,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,5,200,,,,,,,,,,,,,,,,,,,,,,,
+Torch,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,1,5,"one hour, 4"" radius",,,,,,,,,,,,,,,,,,,,,,
+Umbrella,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,2,5,,,,,,,,,,,,,,,,,,,,,,,
+Whistle,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,0,2,,,,,,,,,,,,,,,,,,,,,,,
+Whetstone,gear,SWADE,FALSE,1,,Adventuring Gear,,,,,,,,,,,,,,,,1,5,,,,,,,,,,,,,,,,,,,,,,,
+"Boots, Hiking",gear,SWADE,FALSE,1,,Clothing,,,,,,,,,,,,,,,,2,100,,,,,,,,,,,,,,,,,,,,,,,
+Camouflage Fatigues,gear,SWADE,FALSE,1,,Clothing,,,,,,,,,,,,,,,,3,20,,,,,,,,,,,,,,,,,,,,,,,
+"Clothing, Casual",gear,SWADE,FALSE,1,,Clothing,,,,,,,,,,,,,,,,2,20,,,,,,,,,,,,,,,,,,,,,,,
+"Clothing, Formal",gear,SWADE,FALSE,1,,Clothing,,,,,,,,,,,,,,,,3,200,,,,,,,,,,,,,,,,,,,,,,,
+Winter Gear,gear,SWADE,FALSE,1,,Clothing,,,,,,,,,,,,,,,,3,200,cloak/parka,,,,,,,,,,,,,,,,,,,,,,
+Winter Boots,gear,SWADE,FALSE,1,,Clothing,,,,,,,,,,,,,,,,1,100,,,,,,,,,,,,,,,,,,,,,,,
+Desktop,gear,SWADE,FALSE,1,,Computers & Electronics,,,,,,,,,,,,,,,,20,800,,,,,,,,,,,,,,,,,,,,,,,
+GPS,gear,SWADE,FALSE,1,,Computers & Electronics,,,,,,,,,,,,,,,,1,250,,,,,,,,,,,,,,,,,,,,,,,
+Hand held computer,gear,SWADE,FALSE,1,,Computers & Electronics,,,,,,,,,,,,,,,,1,250,,,,,,,,,,,,,,,,,,,,,,,
+Laptop,gear,SWADE,FALSE,1,,Computers & Electronics,,,,,,,,,,,,,,,,5,1200,,,,,,,,,,,,,,,,,,,,,,,
+Bipod/Tripod,gear,SWADE,FALSE,1,,Firearms Accessories,,,,,,,,,,,,,,,,2,100,Takes an action to deploy. Negates Recoil and Min Str penalties,,,,,,,,,,,,,,,,,,,,,,
+Laser/Red Dot Sight,gear,SWADE,FALSE,1,,Firearms Accessories,,,,,,,,,,,,,,,,1,150,+1 to Shooting at short and medium range',,,,,,,,,,,,,,,,,,,,,,
+Rifle Scope,gear,SWADE,FALSE,1,,Firearms Accessories,,,,,,,,,,,,,,,,2,100,Cancels 2 additional points of penalties when Aiming. See page 97,,,,,,,,,,,,,,,,,,,,,,
+Fast Food Meal,gear,SWADE,FALSE,1,,Food,,,,,,,,,,,,,,,,1,8,,,,,,,,,,,,,,,,,,,,,,,
+Good Meal,gear,SWADE,FALSE,1,,Food,,,,,,,,,,,,,,,,0,15,adjust depending on restaurant,,,,,,,,,,,,,,,,,,,,,,
+MRE,gear,SWADE,FALSE,1,,Food,,,,,,,,,,,,,,,,1,10,,,,,,,,,,,,,,,,,,,,,,,
+Trail Rations,gear,SWADE,FALSE,1,,Food,,,,,,,,,,,,,,,,5,10,"5 meals, keeps 1 week",,,,,,,,,,,,,,,,,,,,,,
+Pepper Spray,gear,SWADE,FALSE,1,,Personal Defense,,,,,,,,,,,,,,,,0.5,15,"Use Shooting (or Fighting if engaged). No Range penalty, but max range is 2"" (about 10 feet), shots 5, victim must make Vigor Roll at -2 or be Stunned (page 106)",1,,,,,,,,,,,,,,,10,,,,,5,5
+Stun Gun,gear,SWADE,FALSE,1,,Personal Defense,,,,,,,,,,,,,,,,0.5,15,Uses Shooting. Range 1/2/4. Shots 3 before needing to be recharged for at least 2 hours. Victims must make a Vigor roll at -2 or be Stunned (page 106),1,,,,,,,,,,,,,,,3,6,12,,,3,3
+"""Bug"" (Micro Transmitter)",gear,SWADE,FALSE,1,,Surveillance,,,,,,,,,,,,,,,,0,30,12 hours of continuous use,,,,,,,,,,,,,,,,,,,,,,
+Button Camera,gear,SWADE,FALSE,1,,Surveillance,,,,,,,,,,,,,,,,0,50,12 hours of continuous use,,,,,,,,,,,,,,,,,,,,,,
+Cellular Interceptor,gear,SWADE,FALSE,1,,Surveillance,,,,,,,,,,,,,,,,5,650,,,,,,,,,,,,,,,,,,,,,,,
+Lineman's Telephone,gear,SWADE,FALSE,1,,Surveillance,,,,,,,,,,,,,,,,2,150,Repair roll to tap into a phone line,,,,,,,,,,,,,,,,,,,,,,
+Night Vision Goggles,gear,SWADE,FALSE,1,,Surveillance,,,,,,,,,,,,,,,,3,500,"No penalty for dim or dark Illumination (see page 102). For double the price goggles are ""active"" and ignore all Illumination penalties",,,,,,,,,,,,,,,,,,,,,,
+Parabolic Microphone,gear,SWADE,FALSE,1,,Surveillance,,,,,,,,,,,,,,,,4,750,Hear whispers up to 200 yards distance,,,,,,,,,,,,,,,,,,,,,,
+Telephone Tap,gear,SWADE,FALSE,1,,Surveillance,,,,,,,,,,,,,,,,0,250,,,,,,,,,,,,,,,,,,,,,,,
+Transmitter Detector,gear,SWADE,FALSE,1,,Surveillance,,,,,,,,,,,,,,,,1,525,,,,,,,,,,,,,,,,,,,,,,,
+Arrows/Bolts,gear,SWADE,FALSE,1,,Ammunition,,,,,,,,,,,,,,,,0.2,0.5,"Arrows for bows, bolts for crossbows",,,,,,,,,,,,,,,,,,,,,,
+Bullets (.22 to .32),gear,SWADE,FALSE,1,,Ammunition,,,,,,,,,,,,,,,,0.02,0.2,,,,,,,,,,,,,,,,,,,,,,,
+Bullets (9mm to .45 caliber),gear,SWADE,FALSE,1,,Ammunition,,,,,,,,,,,,,,,,0.04,0.4,,,,,,,,,,,,,,,,,,,,,,,
+Bullets (.50 caliber and larger rounds),gear,SWADE,FALSE,1,,Ammunition,,,,,,,,,,,,,,,,0.3,1,,,,,,,,,,,,,,,,,,,,,,,
+Laser Battery (pistol),gear,SWADE,FALSE,1,,Ammunition,,,,,,,,,,,,,,,,0.25,20,one full magazine for Laser Pistol,,,,,,,,,,,,,,,,,,,,,,
+Laser Battery (rifle/smg),gear,SWADE,FALSE,1,,Ammunition,,,,,,,,,,,,,,,,0.5,20,one full magazine for Laser Rifle/SMG,,,,,,,,,,,,,,,,,,,,,,
+Laser Battery (Gatling),gear,SWADE,FALSE,1,,Ammunition,,,,,,,,,,,,,,,,4,50,one full magazine for Laser Gatling gun,,,,,,,,,,,,,,,,,,,,,,
+Shot (w/powder),gear,SWADE,FALSE,1,,Ammunition,,,,,,,,,,,,,,,,0.05,0.1,For black powder weapons,,,,,,,,,,,,,,,,,,,,,,
+Shotgun Shell,gear,SWADE,FALSE,1,,Ammunition,,,,,,,,,,,,,,,,0.06,0.6,Standard Buckshot,,,,,,,,,,,,,,,,,,,,,,
+Shotgun Slug,gear,SWADE,FALSE,1,,Ammunition,,,,,,,,,,,,,,,,0.06,0.8,See page 105,,,,,,,,,,,,,,,,,,,,,,
+Sling Stones,gear,SWADE,FALSE,1,,Ammunition,,,,,,,,,,,,,,,,0.05,0.1,,,,,,,,,,,,,,,,,,,,,,,
+Jacket,armor,SWADE,FALSE,1,Medieval,Cloth/Light Leather,,,,,,,FALSE,1,FALSE,FALSE,TRUE,TRUE,FALSE,,d4,5,20,"Heavy winter clothing, supple leather armor, soft hides",,,,,,,,,,,,,,,,,,,,,,
+Robes,armor,SWADE,FALSE,1,Medieval,Cloth/Light Leather,,,,,,,FALSE,1,FALSE,FALSE,TRUE,TRUE,TRUE,,d4,8,30,"Heavy winter clothing, supple leather armor, soft hides",,,,,,,,,,,,,,,,,,,,,,
+Leggings,armor,SWADE,FALSE,1,Medieval,Cloth/Light Leather,,,,,,,FALSE,1,FALSE,FALSE,FALSE,FALSE,TRUE,,d4,5,20,"Heavy winter clothing, supple leather armor, soft hides",,,,,,,,,,,,,,,,,,,,,,
+Cap,armor,SWADE,FALSE,1,Medieval,Cloth/Light Leather,,,,,,,FALSE,1,TRUE,FALSE,FALSE,FALSE,FALSE,,d4,1,5,"Heavy winter clothing, supple leather armor, soft hides",,,,,,,,,,,,,,,,,,,,,,
+Jacket,armor,SWADE,FALSE,1,Medieval,Thick Leather/Tough Hides,,,,,,,FALSE,2,FALSE,FALSE,TRUE,TRUE,FALSE,,d6,8,80,"Boiled leather, cuir bouilli, alligator hides",,,,,,,,,,,,,,,,,,,,,,
+Leggings,armor,SWADE,FALSE,1,Medieval,Thick Leather/Tough Hides,,,,,,,FALSE,2,FALSE,FALSE,FALSE,FALSE,TRUE,,d6,7,40,"Boiled leather, cuir bouilli, alligator hides",,,,,,,,,,,,,,,,,,,,,,
+Cap,armor,SWADE,FALSE,1,Medieval,Thick Leather/Tough Hides,,,,,,,FALSE,2,TRUE,FALSE,FALSE,FALSE,FALSE,,d6,1,25,"Boiled leather, cuir bouilli, alligator hides",,,,,,,,,,,,,,,,,,,,,,
+Chain Shirt,armor,SWADE,FALSE,1,Medieval,Chain Mail,,,,,,,FALSE,3,FALSE,FALSE,TRUE,TRUE,FALSE,,d8,25,300,"Chain, splint, metal scale, ring mail, samurai armor",,,,,,,,,,,,,,,,,,,,,,
+Chain Leggings,armor,SWADE,FALSE,1,Medieval,Chain Mail,,,,,,,FALSE,3,FALSE,FALSE,FALSE,FALSE,TRUE,,d8,10,150,"Chain, splint, metal scale, ring mail, samurai armor",,,,,,,,,,,,,,,,,,,,,,
+Chain Hood or Helm,armor,SWADE,FALSE,1,Medieval,Chain Mail,,,,,,,FALSE,3,TRUE,FALSE,FALSE,FALSE,FALSE,,d8,4,25,"Chain, splint, metal scale, ring mail, samurai armor",,,,,,,,,,,,,,,,,,,,,,
+Bronze Barding,armor,SWADE,FALSE,1,Medieval,Bronze Armor (Pre-Iron Age Settings),,,,,,,FALSE,3,,,,,,TRUE,d10,50,1500,Typically only found in ancient times or pre-iron civilizations,,,,,,,,,,,,,,,,,,,,,,
+Bronze Corselet,armor,SWADE,FALSE,1,Medieval,Bronze Armor (Pre-Iron Age Settings),,,,,,,FALSE,3,FALSE,FALSE,TRUE,FALSE,FALSE,,d8,13,80,Typically only found in ancient times or pre-iron civilizations,,,,,,,,,,,,,,,,,,,,,,
+Bronze Vambraces,armor,SWADE,FALSE,1,Medieval,Bronze Armor (Pre-Iron Age Settings),,,,,,,FALSE,3,FALSE,FALSE,FALSE,TRUE,FALSE,,d8,5,40,Typically only found in ancient times or pre-iron civilizations,,,,,,,,,,,,,,,,,,,,,,
+Bronze Greaves,armor,SWADE,FALSE,1,Medieval,Bronze Armor (Pre-Iron Age Settings),,,,,,,FALSE,3,FALSE,FALSE,FALSE,FALSE,TRUE,,d8,6,50,Typically only found in ancient times or pre-iron civilizations,,,,,,,,,,,,,,,,,,,,,,
+Bronze Helmet,armor,SWADE,FALSE,1,Medieval,Bronze Armor (Pre-Iron Age Settings),,,,,,,FALSE,3,TRUE,FALSE,FALSE,FALSE,FALSE,,d8,6,25,Typically only found in ancient times or pre-iron civilizations,,,,,,,,,,,,,,,,,,,,,,
+Plate Barding,armor,SWADE,FALSE,1,Medieval,Plate Mail,,,,,,,FALSE,4,,,,,,TRUE,d10,50,1500,Heavy steel armor made with plates of metal,,,,,,,,,,,,,,,,,,,,,,
+Corselet,armor,SWADE,FALSE,1,Medieval,Plate Mail,,,,,,,FALSE,4,FALSE,FALSE,TRUE,FALSE,FALSE,,d10,30,500,Heavy steel armor made with plates of metal,,,,,,,,,,,,,,,,,,,,,,
+Vambraces,armor,SWADE,FALSE,1,Medieval,Plate Mail,,,,,,,FALSE,4,FALSE,FALSE,FALSE,TRUE,FALSE,,d10,10,200,Heavy steel armor made with plates of metal,,,,,,,,,,,,,,,,,,,,,,
+Greaves,armor,SWADE,FALSE,1,Medieval,Plate Mail,,,,,,,FALSE,4,FALSE,FALSE,FALSE,FALSE,TRUE,,d10,10,200,Heavy steel armor made with plates of metal,,,,,,,,,,,,,,,,,,,,,,
+Heavy Helm,armor,SWADE,FALSE,1,Medieval,Plate Mail,,,,,,,FALSE,4,TRUE,FALSE,FALSE,FALSE,FALSE,,d10,4,100,Heavy steel armor made with plates of metal,,,,,,,,,,,,,,,,,,,,,,
+Heavy Helm (enclosed),armor,SWADE,FALSE,1,Medieval,Plate Mail,,,,,,,FALSE,4,TRUE,TRUE,FALSE,FALSE,FALSE,,d10,8,200,"Heavy steel armor made with plates of metal, -1 to vision based notice rolls",,,,,,,,,,,,,,,,,,,,,,
+Thick Coat/Leather Jacket,armor,SWADE,FALSE,1,Modern,Cloth/Leather,,,,,,,FALSE,1,FALSE,FALSE,TRUE,TRUE,FALSE,,d4,5,100,"Heavy winter clothing, leather jacket or pants, chaps",,,,,,,,,,,,,,,,,,,,,,
+Leather Riding Chaps,armor,SWADE,FALSE,1,Modern,Cloth/Leather,,,,,,,FALSE,1,FALSE,FALSE,FALSE,FALSE,TRUE,,d4,4,70,"Heavy winter clothing, leather jacket or pants, chaps",,,,,,,,,,,,,,,,,,,,,,
+Kevlar Riding Jacket,armor,SWADE,FALSE,1,Modern,Cloth/Leather,,,,,,,FALSE,2,FALSE,FALSE,TRUE,TRUE,FALSE,,d4,8,350,,,,,,,,,,,,,,,,,,,,,,,
+Kevlar Riding Jeans,armor,SWADE,FALSE,1,Modern,Cloth/Leather,,,,,,,FALSE,2,FALSE,FALSE,FALSE,FALSE,TRUE,,d4,4,175,,,,,,,,,,,,,,,,,,,,,,,
+Bike helmet,armor,SWADE,FALSE,1,Modern,Cloth/Leather,,,,,,,FALSE,2,TRUE,FALSE,FALSE,FALSE,FALSE,,d4,1,50,,,,,,,,,,,,,,,,,,,,,,,
+Motorcycle Helmet,armor,SWADE,FALSE,1,Modern,Cloth/Leather,,,,,,,FALSE,3,TRUE,TRUE,FALSE,FALSE,FALSE,,d4,3,100,,,,,,,,,,,,,,,,,,,,,,,
+Flak Jacket,armor,SWADE,FALSE,1,Modern,Body Armor,,,,,,,FALSE,2,FALSE,FALSE,TRUE,FALSE,FALSE,,d6,10,40,Vietnam-era,,,,,,,,,,,,,,,,,,,,,,
+Kevlar Vest,armor,SWADE,FALSE,1,Modern,Body Armor,,,,,,,FALSE,2,FALSE,FALSE,TRUE,FALSE,FALSE,,d6,5,200,reduces damage from bullets by 4,,,,,,,,,,,,,,,,,,,,,,
+Kevlar vest with ceramic inserts,armor,SWADE,FALSE,1,Modern,Body Armor,,,,,,,FALSE,4,FALSE,FALSE,TRUE,FALSE,FALSE,,d8,17,500,reduces damage from bullets by 4,,,,,,,,,,,,,,,,,,,,,,
+Kevlar Helmet,armor,SWADE,FALSE,1,Modern,Body Armor,,,,,,,FALSE,4,TRUE,FALSE,FALSE,FALSE,FALSE,,d8,5,80,reduces damage from bullets by 4,,,,,,,,,,,,,,,,,,,,,,
+Bombproof Suit,armor,SWADE,FALSE,1,Modern,Body Armor,,,,,,,FALSE,10,TRUE,TRUE,TRUE,TRUE,TRUE,,d12,80,25000,"Bombproof suits are not built for flexibility except in the hands, which are uncovered. Agility and related skills that require more than manual dexterity cannot exceed d6 while wearing the suit, and Pace is reduced by 2 (in addition to min Str penalties)",,,,,,,,,,,,,,,,,,,,,,
+Energy Skin,armor,SWADE,FALSE,1,Futuristic,Upgrade,,,,,,,TRUE,,,,,,,,,0,0,"Any Futuristic can be treated with this to diffuse energy, reducing damage from lasers by 4. This costs 50% of the armor treated and is very shiny, subtracting 2 from stealth rolls based on vision",,,,,,,,,,,,,,,,,,,,,,
+Body Armor,armor,SWADE,FALSE,1,Futuristic,Light/Civilian Armor,,,,,,,TRUE,4,FALSE,FALSE,TRUE,TRUE,TRUE,,d4,4,200,"Light armored clothing made from complex polymers or advanced ballistic weave, blocks 4 points of damage from bullets",,,,,,,,,,,,,,,,,,,,,,
+Infantry Battle Suit,armor,SWADE,FALSE,1,Futuristic,Military Armor,,,,,,,TRUE,6,FALSE,FALSE,TRUE,TRUE,TRUE,,d6,12,800,"A full suit of armor with boots and gloves, blocks 4 points of damage from bullets",,,,,,,,,,,,,,,,,,,,,,
+Battle Helmet,armor,SWADE,FALSE,1,Futuristic,Military Armor,,,,,,,TRUE,6,TRUE,TRUE,FALSE,FALSE,FALSE,,d6,2,100,,,,,,,,,,,,,,,,,,,,,,,
+Small Shield,armor,SWADE,FALSE,1,Medieval,Shields,,,,,,,TRUE,2,FALSE,FALSE,TRUE,FALSE,FALSE,,d4,4,50,,,10,0,,,,,,,,,,,,-1,,,,,,,
+Medium Shield,armor,SWADE,FALSE,1,Medieval,Shields,,,,,,,TRUE,2,FALSE,FALSE,TRUE,FALSE,FALSE,,d6,8,100,,,10,2,,,,,,,,,,,,-2,,,,,,,
+Large Shield,armor,SWADE,FALSE,1,Medieval,Shields,,,,,,,TRUE,2,FALSE,FALSE,TRUE,FALSE,FALSE,,d8,12,200,,,10,4,,,,,,,,,,,,-3,,,,,,,
+Riot Shield,armor,SWADE,FALSE,1,Modern,Shields,,,,,,,TRUE,2,FALSE,FALSE,TRUE,FALSE,FALSE,,d4,5,80,,,12,4,,,,,,,,,,,,-3,,,,,,,
+Ballistic Shield,armor,SWADE,FALSE,1,Modern,Shields,,,,,,,TRUE,2,FALSE,FALSE,TRUE,FALSE,FALSE,,d6,9,250,reduces damage from bullets by 4,,12,4,,,,,,,,,,,,-3,,,,,,,
+"Polymer Shield, Small",armor,SWADE,FALSE,1,Futuristic,Shields,,,,,,,TRUE,4,FALSE,FALSE,TRUE,FALSE,FALSE,,d4,2,200,,,10,,,,,,,,,,,,,-1,,,,,,,
+"Polymer Shield, Medium",armor,SWADE,FALSE,1,Futuristic,Shields,,,,,,,TRUE,4,FALSE,FALSE,TRUE,FALSE,FALSE,,d4,4,300,,,10,2,,,,,,,,,,,,-2,,,,,,,
+"Polymer Shield, Large",armor,SWADE,FALSE,1,Futuristic,Shields,,,,,,,TRUE,4,FALSE,FALSE,TRUE,FALSE,FALSE,,d6,6,400,,,10,4,,,,,,,,,,,,-3,,,,,,,
+"Axe, Hand",weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d6,2,100,,1,,,TRUE,,1,6,,,,,,,,,,,,,,,
+"Axe, Battle",weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d8,4,300,,1,,,TRUE,,1,8,,,,,,,,,,,,,,,
+"Axe, Great",weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d10,7,400,two hands,2,,,TRUE,,1,10,,2,,,,,,-1,,,,,,,
+"Club, Light",weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d4,2,25,a sign of low status or thuggery,1,,,TRUE,,1,4,,,,,,,,,,,,,,,
+"Club, Heavy",weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d6,5,50,a sign of low status or thuggery,1,,,TRUE,,1,6,,,,,,,,,,,,,,,
+Dagger/Knife,weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d4,1,25,can also be thrown,1,,,TRUE,,1,4,,,,,,,,,3,6,12,1,,,
+Flail,weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d6,3,200,ignores shield bonus,1,,,TRUE,,1,6,,,,,,,,,,,,,,,
+Halberd,weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d8,6,200,"reach 1, two hands",2,,,TRUE,,1,8,,,,,,,,,,,,,,,
+Katana,weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d6,3,1000,two hands,2,,,TRUE,,1,6,1,,,,,,,,,,,,,,
+Lance,weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d8,6,300,"ap 2 when charging, reach 2, only usable in mounted combat",1,,,TRUE,,1,8,,2,,,,,,,,,,,,,
+Mace,weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d6,4,100,,1,,,TRUE,,1,6,,,,,,,,,,,,,,,
+Maul,weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d10,18,400,"two hands, +2 damage against objects (page 98)",2,,,TRUE,,1,10,,,,,,,,,,,,,,,
+Rapier,weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d4,2,150,,1,,,TRUE,,1,4,,,,,,,,1,,,,,,,
+Pike,weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d8,18,400,"reach 2, two hands",2,,,TRUE,,1,8,,,,,,,,,,,,,,,
+Spear,weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d6,3,100,"reach 1, parry +1 if used two handed, can be thrown",2,,,TRUE,,1,6,,,,,,,,1,3,6,12,1,,,
+Staff,weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d4,4,10,"reach 1, two hands",2,,,TRUE,,1,4,,,,,,,,1,,,,,,,
+"Sword, Great",weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d10,6,400,two hands,2,,,TRUE,,1,10,,,,,,,,,,,,,,,
+"Sword, Long",weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d8,3,300,basic swords and scimitars,1,,,TRUE,,1,8,,,,,,,,,,,,,,,
+"Sword, Short",weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d6,2,100,includes cavalry sabers,1,,,TRUE,,1,6,,,,,,,,,,,,,,,
+Warhammer,weapon,SWADE,FALSE,1,Medieval,Melee,,,,,,,,,,,,,,,d6,2,250,spiked,1,,,TRUE,,1,6,,1,,,,,,,,,,,,,
+Bang stick,weapon,SWADE,FALSE,1,Modern,Melee,,,,,,,,,,,,,,,d6,2,5,A shotgun shell on a stick used in Melee; must be reloaded with a fresh shell (one action),1,,,,,3,6,,,,,,,,,,,,,,,
+Bayonet,weapon,SWADE,FALSE,1,Modern,Melee,,,,,,,,,,,,,,,d4,1,25,"str+d6 and Parry +1 attached to rifle, reach 1, two hands",2,,,TRUE,,1,4,,,,,,,,,,,,,,,
+Billy Club/Baton,weapon,SWADE,FALSE,1,Modern,Melee,,,,,,,,,,,,,,,d4,1,10,often carried by law enforcement,1,,,TRUE,,1,4,,,,,,,,,,,,,,,
+Brass Knuckles,weapon,SWADE,FALSE,1,Modern,Melee,,,,,,,,,,,,,,,d4,1,20,do not count as weapon for unarmed defender (page 109),1,,,TRUE,,1,4,,,,,,,,,,,,,,,
+Chainsaw,weapon,SWADE,FALSE,1,Modern,Melee,,,,,,,,,,,,,,,d6,20,200,critical failure hits the user,2,,,,,2,6,4,,,,,,,,,,,,,,
+Switchblade,weapon,SWADE,FALSE,1,Modern,Melee,,,,,,,,,,,,,,,d4,0.5,10,-2 to be noticed if hidden,1,,,TRUE,,1,4,,,,,,,,,,,,,,,
+Survival Knife,weapon,SWADE,FALSE,1,Modern,Melee,,,,,,,,,,,,,,,d4,1,50,basic tools in handle add +1 to survival rolls,1,,,TRUE,,1,4,,,,,,,,,,,,,,,
+Molecular Knife,weapon,SWADE,FALSE,1,Futuristic,Melee,,,,,,,,,,,,,,,d4,0.5,250,cannot be thrown,1,,,TRUE,,1,4,2,2,,,,,,,,,,,,,
+Molecular Sword,weapon,SWADE,FALSE,1,Futuristic,Melee,,,,,,,,,,,,,,,d6,2,500,,1,,,TRUE,,1,8,4,,,,,,,,,,,,,,
+Laser Sword,weapon,SWADE,FALSE,1,Futuristic,Melee,,,,,,,,,,,,,,,d4,2,1000,,1,,,TRUE,,1,6,8,12,,,,,,,,,,,,,
+"Axe, Throwing",weapon,SWADE,FALSE,1,Medieval,Ranged,low tech,,,,,,,,,,,,,,d6,3,100,,1,,,TRUE,,1,6,,,,,,,,,3,6,12,1,,1,1
+Bow,weapon,SWADE,FALSE,1,Medieval,Ranged ,low tech,,,,,,,,,,,,,,d6,3,250,,2,,,,,2,6,,,,,,,,,12,24,48,1,,1,1
+Crossbow (hand drawn),weapon,SWADE,FALSE,1,Medieval,Ranged,low tech,,,,,,,,,,,,,,d6,5,250,hand drawn,2,,,,,2,6,,2,,,,,,,10,20,40,1,,1,1
+"Crossbow, Heavy",weapon,SWADE,FALSE,1,Medieval,Ranged,low tech,,,,,,,,,,,,,,d6,8,400,requires a windlass to load. Reload 2,2,,,,,2,8,,2,,,,,,,15,30,60,1,,1,1
+Long Bow,weapon,SWADE,FALSE,1,Medieval,Ranged,low tech,,,,,,,,,,,,,,d8,3,300,,2,,,,,2,6,,1,,,,,,,15,30,60,1,,1,1
+Net (weighted),weapon,SWADE,FALSE,1,Medieval,Ranged,low tech,,,,,,,,,,,,,,d4,8,50,"A successful hit means the target is Entangled (see page 98). Hardness 10, and vulnerable only to cutting attacks",2,,,,,,,,,,,,,,,3,6,12,1,,,
+Sling ,weapon,SWADE,FALSE,1,Medieval,Ranged,low tech,,,,,,,,,,,,,,d4,1,10,"Throwing, not shooting",1,,,TRUE,,1,4,,,,,,,,,4,8,16,1,,1,1
+Compound Bow,weapon,SWADE,FALSE,1,Modern,Ranged,low tech,,,,,,,,,,,,,,d6,3,200,,2,,,TRUE,,1,8,,1,,,,,,,12,24,48,1,,1,1
+Crossbow,weapon,SWADE,FALSE,1,Modern,Ranged,low tech,,,,,,,,,,,,,,d6,7,300,,2,,,,,2,6,,1,,,,,,,15,30,60,1,,1,1
+Flintlock Pistol,weapon,SWADE,FALSE,1,Modern,Ranged,Black Powder,,,,,,,,,,,,,,d4,3,150,Reload 3,1,,,,,2,6,1,,,,,,,,5,10,20,1,,1,1
+Brown Bess or Similar Muskets,weapon,SWADE,FALSE,1,Modern,Ranged,Black Powder,,,,,,,,,,,,,,d6,15,300,Reload 3,2,,,,,2,8,,,,,,,,,10,20,40,1,,1,1
+Blunderbuss,weapon,SWADE,FALSE,1,Modern,Ranged,Black Powder,,,,,,,,,,,,,,d6,12,300,"Treat as Shotgun, see page 105 Reload 3",2,,,,,2,8,,,,,,,,,10,20,40,1,,1,1
+Kentucky Rifle,weapon,SWADE,FALSE,1,Modern,Ranged,Black Powder,,,,,,,,,,,,,,d6,8,300,Reload 4. ,2,,,,,2,8,,2,,,,,,,15,30,60,1,,1,1
+Springfield Model 1861,weapon,SWADE,FALSE,1,Modern,Ranged,Black Powder,,,,,,,,,,,,,,d6,11,250,Reload 3,2,,,,,2,8,,,,,,,,,15,30,60,1,,1,1
+Derringer (.41),weapon,SWADE,FALSE,1,Modern,Ranged,Revolver,,,,,,,,,,,,,,d4,1,100,-2 to be noticed if hidden,1,,,,,2,4,,,,,,,,,3,6,12,1,,2,2
+Police Revolver(.38),weapon,SWADE,FALSE,1,Modern,Ranged,Revolver,,,,,,,,,,,,,,d4,2,150,,1,,,,,2,6,,,,,,,,,10,20,40,1,,6,6
+Colt Peacemaker (.45),weapon,SWADE,FALSE,1,Modern,Ranged,Revolver,,,,,,,,,,,,,,d4,4,200,,1,,,,,2,6,1,,,,,,,,12,24,48,1,,6,6
+Smith & Wesson (.357),weapon,SWADE,FALSE,1,Modern,Ranged,Revolver,,,,,,,,,,,,,,d4,5,250,,1,,,,,2,6,1,1,,,,,,,12,24,48,1,,6,6
+Colt 1911 (.45),weapon,SWADE,FALSE,1,Modern,Ranged,Semi-Automatic,,,,,,,,,,,,,,d4,4,200,,1,,,,,2,6,1,1,,,,,,,12,24,48,1,,7,7
+Desert Eagle (.50),weapon,SWADE,FALSE,1,Modern,Ranged,Semi-Automatic,,,,,,,,,,,,,,d6,8,300,,1,,,,,2,8,,1,,,,,,,15,30,60,1,,7,7
+Glock (9mm),weapon,SWADE,FALSE,1,Modern,Ranged,Semi-Automatic,,,,,,,,,,,,,,d4,3,200,,1,,,,,2,6,,1,,,,,,,12,24,48,1,,17,17
+Ruger (.22),weapon,SWADE,FALSE,1,Modern,Ranged,Semi-Automatic,,,,,,,,,,,,,,d4,2,100,,1,,,,,2,4,,,,,,,,,10,20,40,1,,9,9
+H&K MP5 (9mm),weapon,SWADE,FALSE,1,Modern,Ranged,Submachine Gun,,,,,,,,,,,,,,d6,10,300,,2,,,,,2,6,,1,,,,,,,12,24,48,3,,30,30
+Tommy Gun (.45),weapon,SWADE,FALSE,1,Modern,Ranged,Submachine Gun,,,,,,,,,,,,,,d6,13,350,May also use a 50 round drum. Increases weight by 2 lbs. and each drum costs $50,2,,,,,2,6,1,1,,,,,,,12,24,48,3,,20,20
+Uzi (9mm),weapon,SWADE,FALSE,1,Modern,Ranged,Submachine Gun,,,,,,,,,,,,,,d4,9,300,,2,,,,,2,6,,1,,,,,,,12,24,48,3,,32,32
+Double Barrel Shotgun,weapon,SWADE,FALSE,1,Modern,Ranged,Shotgun,,,,,,,,,,,,,,d6,11,150,,2,,,,,3,6,,,,,,,,,12,24,48,1,,2,2
+Pump Action Shotgun,weapon,SWADE,FALSE,1,Modern,Ranged,Shotgun,,,,,,,,,,,,,,d4,8,150,,2,,,,,3,6,,,,,,,,,12,24,48,1,,6,6
+Sawed-Off DB,weapon,SWADE,FALSE,1,Modern,Ranged,Shotgun,,,,,,,,,,,,,,d4,6,150,,2,,,,,3,6,,,,,,,,,5,10,20,1,,2,2
+Streetsweeper,weapon,SWADE,FALSE,1,Modern,Ranged,Shotgun,,,,,,,,,,,,,,d6,10,450,,2,,,,,3,6,,,,,,,,,12,24,48,1,,12,12
+Barrett (.50),weapon,SWADE,FALSE,1,Modern,Ranged ,Lever/Bolt Action Rifle,,,,,,,,,,,,,,d8,35,750,"Heavy Weapon, Snapfire. Barretts use a 10-shot removable magazine that weighs 2 lbs. when loaded. They are almost always fitted with a  scope.",2,,,,,2,10,,4,,,,,,,50,100,200,1,,10,10
+M1 Garand (.30-06),weapon,SWADE,FALSE,1,Modern,Ranged,Lever/Bolt Action Rifle,,,,,,,,,,,,,,d6,10,300,Standard US WWII infantry rifle,2,,,,,2,8,,2,,,,,,,24,48,96,1,,8,8
+Hunting Rifle (.308),weapon,SWADE,FALSE,1,Modern,Ranged,Lever/Bolt Action Rifle,,,,,,,,,,,,,,d6,8,350,Snapfire,2,,,,,2,8,,2,,,,,,,24,48,96,1,,5,5
+Sharps Big 50 (.50),weapon,SWADE,FALSE,1,Modern,Ranged,Lever/Bolt Action Rifle,,,,,,,,,,,,,,d8,11,400,Snapfire,2,,,,,2,10,,2,,,,,,,30,60,120,1,,1,1
+Spencer Carbine (.52),weapon,SWADE,FALSE,1,Modern,Ranged,Lever/Bolt Action Rifle,,,,,,,,,,,,,,d4,8,250,,2,,,,,2,8,,2,,,,,,,20,40,80,1,,7,7
+Winchester '73 (.44-40),weapon,SWADE,FALSE,1,Modern,Ranged,Lever/Bolt Action Rifle,,,,,,,,,,,,,,d6,10,300,,2,,,,,2,8,-1,2,,,,,,,24,48,96,1,,15,15
+AK47 (7.62mm),weapon,SWADE,FALSE,1,Modern,Ranged,Assault Rifle,,,,,,,,,,,,,,d6,10,450,,2,,,,,2,8,1,2,,,,,,,24,48,96,3,,30,30
+M-16 (5.56 mm),weapon,SWADE,FALSE,1,Modern,Ranged,Assault Rifle,,,,,,,,,,,,,,d6,8,400,Three Round Burst (page 67),2,,,,,2,8,,2,,,,,,,24,48,96,3,,30,30
+Steyr AUG (5.56mm),weapon,SWADE,FALSE,1,Modern,Ranged,Assault Rifle,,,,,,,,,,,,,,d6,8,400,Three Round Burst (page 67),2,,,,,2,8,,2,,,,,,,24,48,96,3,,30,30
+Browning Automatic Rifle (BAR) (.30-06),weapon,SWADE,FALSE,1,Modern,Ranged,Machine Gun,,,,,,,,,,,,,,d8,17,300,"Rate of fire 1-3, Reload 1",2,,,,,2,8,,2,,,,,,,20,40,60,3,,20,20
+Gatling (.45),weapon,SWADE,FALSE,1,Modern,Ranged,Machine Gun,,,,,,,,,,,,,,,170,500,Requires weapon mount. Reload 2,,,,,,2,8,,2,,,,,,,24,48,96,3,,100,100
+Minigun (7.62 mm),weapon,SWADE,FALSE,1,Modern,Ranged,Machine Gun,,,,,,,,,,,,,,d10,85,100000,"minimum rate of fire 3, requires backpack harness with ammo that weighs an additional 85 pounds when full (carries 4000 linked rounds)",2,,,,,2,8,1,2,,,,,,,30,60,120,5,,4000,4000
+M2 Browning (.40 Cal),weapon,SWADE,FALSE,1,Modern,Ranged,Machine Gun,,,,,,,,,,,,,,,84,1500,Heavy Weapon,,,,,,2,10,,4,,,,,,,50,100,200,3,,200,200
+M60 (7.62mm),weapon,SWADE,FALSE,1,Modern,Ranged,Machine Gun,,,,,,,,,,,,,,d8,33,6000,,2,,,,,2,8,1,2,,,,,,,30,60,120,3,,100,100
+MG42 (7.92mm),weapon,SWADE,FALSE,1,Modern,Ranged,Machine Gun,,,,,,,,,,,,,,d10,26,750,,2,,,,,2,8,1,2,,,,,,,30,60,120,4,,200,200
+SAW (5.56mm),weapon,SWADE,FALSE,1,Modern,Ranged,Machine Gun,,,,,,,,,,,,,,d8,20,4000,,2,,,,,2,8,,2,,,,,,,30,60,120,4,,200,200
+Laser Pistol,weapon,SWADE,FALSE,1,Futuristic,Ranged,,,,,,,,,,,,,,,d4,2,250,"Cauterize, Overcharge, No Recoil",1,,,,,2,6,,2,,,,,,,15,30,60,1,,50,50
+Laser SMG,weapon,SWADE,FALSE,1,Futuristic,Ranged,,,,,,,,,,,,,,,d4,4,500,"Cauterize, Overcharge, No Recoil",2,,,,,2,6,,2,,,,,,,15,30,60,4,,100,100
+Laser Rifle,weapon,SWADE,FALSE,1,Futuristic,Ranged,,,,,,,,,,,,,,,d6,8,700,"Cauterize, Overcharge, No Recoil",2,,,,,3,6,,2,,,,,,,30,60,120,3,,100,100
+Gatling Laser,weapon,SWADE,FALSE,1,Futuristic,Ranged,,,,,,,,,,,,,,,d8,20,1000,"Cauterize, Overcharge, No Recoil",2,,,,,3,6,4,2,,,,,,,50,100,200,4,,800,800
+Cannon,weapon,SWADE,FALSE,1,Modern,Special,,,,,,,,,,,,,,,,1200,10000,"See canister, Solid Shot, and Shrapnel for additional details. Heavy, Reload 8",,,,,,,,,,,,,,,,,,,,,1,1
+Canister,weapon,SWADE,FALSE,1,Modern,Special,,,,,,,,,,,,,,,,,50,"Detonates inside barrel of cannon and fires spray like a giant shotgun. Affects d6 targets in straight line up to 24"", or 2d6 if they're tightly packed. Compare shooting roll to every target at base TN of 4, adjusted for cover, Dodge, etc. ",,,,,,2,6,,,,,,,,,24,,,1,MBT,,
+Solid Shot,weapon,SWADE,FALSE,1,Modern,Special,,,,,,,,,,,,,,,,,50,"Heavy balls of iron, lead, or stone designed to batter walls or plow through ranks of troops. To fire, leader makes a shooting roll. If successful, roll a die. If even, it bounces to another victim behind and within 6"" of target - continue until the die roll is odd or no more targets",,,,,,2,6,1,4,,,,,,,50,100,200,1,,,
+Shrapnel,weapon,SWADE,FALSE,1,Modern,Special,,,,,,,,,,,,,,,,,50,Explosive shells filled with small metal balls that explode outward,,,,,,3,6,,,,,,,,,50,100,200,1,MBT,,
+Catapult,weapon,SWADE,FALSE,1,Modern,Special,,,,,,,,,,,,,,,,,10000,"heavy, reload time is 5 minutes with a crew of 4",,,,,,3,6,,4,,,,,,,24,48,96,,MBT,1,1
+Trebuchet,weapon,SWADE,FALSE,1,Modern,Special,,,,,,,,,,,,,,,,,50000,"heavy, reload time is 5 minutes with a crew of 4",,,,,,3,8,,4,,,,,,,24,48,96,,MBT,,
+Flamethrower,weapon,SWADE,FALSE,1,Modern,Special,,,,,,,,,,,,,,,d8,70,300,"Heavy, cone template, may be evaded, sets flammable targets on fire (see Fire, page 127)",2,,,,,3,6,,,,,,,,,,,,1,Cone template,10,10
+MK II (WW2 Pineapple),weapon,SWADE,FALSE,1,Modern,Special,Grenade,,,,,,,,,,,,,,,1,40,"Heavy, thrown, may be evaded (unless cooked)",1,,,,,3,6,,,,,,,,,4,8,16,,MBT,,
+Potato Masher (WW2),weapon,SWADE,FALSE,1,Modern,Special,Grenade,,,,,,,,,,,,,,,2,50,"Heavy, thrown, may be evaded (unless cooked)",1,,,,,3,6,-2,,,,,,,,5,10,20,,MBT,,
+Mk67,weapon,SWADE,FALSE,1,Modern,Special,Grenade,,,,,,,,,,,,,,,1,50,"Heavy, thrown, may be evaded (unless cooked)",1,,,,,3,6,,,,,,,,,5,10,20,,MBT,,
+Smoke Grenade,weapon,SWADE,FALSE,1,Modern,Special,Grenade,,,,,,,,,,,,,,,1,50,Creates an area of smoke in a LBT that obscures vision at -4,1,,,,,,,,,,,,,,,5,10,20,,LBT,,
+Stun Grenade,weapon,SWADE,FALSE,1,Modern,Special,Grenade,,,,,,,,,,,,,,,1,50,Targets must make a Vigor roll (at -2 with a raise) or be Stunned (see page 106),1,,,,,,,,,,,,,,,5,10,20,,LBT,,
+Anti-Personnel Mine,weapon,SWADE,FALSE,1,Modern,Special,Mine,,,,,,,,,,,,,,,10,100,Heavy,,,,,,2,6,2,,,,,,,,,,,,SBT,,
+Anti-Tank Mine,weapon,SWADE,FALSE,1,Modern,Special,Mine,,,,,,,,,,,,,,,20,200,"Heavy, AP 5 vs 1/2 the vehicle's Armor value (round up)",,,,,,4,6,,,,,,,,,,,,,MBT,,
+Bouncing Betty,weapon,SWADE,FALSE,1,Modern,Special,Mine,,,,,,,,,,,,,,,9,125,These deadly AP mines are designed to pop up into the air and rain shrapnel down from about head-height. Only full overhead cover offers an Armor bonus against such devices. Simply being prone offers no protection),,,,,,3,6,,,,,,,,,,,,,SBT,,
+Claymore Mine,weapon,SWADE,FALSE,1,Modern,Special,Mine,,,,,,,,,,,,,,,4,70,"Claymores fire a spray of deadly steel balls in a 60 degree frontal arc. Everyone within 12"" is automatically hit. Roll a die for all other targets up to 50'. Those who get an odd result are also hit",,,,,,3,6,,,,,,,,,12,50,,,Special,,
+TOW,weapon,SWADE,FALSE,1,Modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,207,60000,"Heavy, wire guided. Doesn't require lock, just point and shoot. Can't be jammed",,,,,,5,10,,34,,,,,,,75,150,300,1,MBT,,
+Hellfire,weapon,SWADE,FALSE,1,Modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,100,115000,"Heavy, laser guided",,,,,,5,10,,40,,,,,,,150,300,600,,MBT,,
+Sidewinder,weapon,SWADE,FALSE,1,Modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,188,600000,"Heavy, short range heat seeking",,,,,,4,8,,6,,,,,,,100,200,400,,SBT,,
+Sparrow,weapon,SWADE,FALSE,1,Modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,617,125000,"Heavy, medium range, radar guided from aircraft",,,,,,5,8,,6,,,,,,,150,300,600,,SBT,,
+AT-4,weapon,SWADE,FALSE,1,Modern,Special,Rocket Launcher/Torpedo,,,,,,,,,,,,,,,15,1500,"Heavy, modern anti tank weapon",,,,,,4,8,2,24,,,,,,,24,48,96,1,MBT,,
+Bazooka,weapon,SWADE,FALSE,1,Modern,Special,Rocket Launcher/Torpedo,,,,,,,,,,,,,,,12,500,"Heavy, snapfire, standard WWII anti tank weapon. Extra warheads are 9 lbs. and cost 50 (WW2 dollars)",,,,,,4,8,,8,,,,,,,24,48,96,1,MBT,,
+M203 40MM,weapon,SWADE,FALSE,1,Modern,Special,Rocket Launcher/Torpedo,,,,,,,,,,,,,,,3,1500,"Heavy, Snapfire, grenade launcher attached to bottom of assault rifle",,,,,,4,8,,,,,,,,,24,48,96,1,MBT,,
+M72 Law,weapon,SWADE,FALSE,1,Modern,Special,Rocket Launcher/Torpedo,,,,,,,,,,,,,,,5,750,"Heavy, snapfire, standard anti tank weapon in Vietnam",,,,,,4,8,2,22,,,,,,,24,48,96,1,MBT,,
+Panzerschreck,weapon,SWADE,FALSE,1,Modern,Special,Rocket Launcher/Torpedo,,,,,,,,,,,,,,,20,1000,"Heavy, snapfire, literally the tank terror rocket launcher used by the Germans in WW2",,,,,,4,8,,12,,,,,,,15,30,60,1,MBT,,
+Torpedo,weapon,SWADE,FALSE,1,Modern,Special,Rocket Launcher/Torpedo,,,,,,,,,,,,,,,3000,500000,,,,,,,8,10,,22,,,,,,,300,600,1200,1,LBT,,
+Med Machine Gun,weapon,SWADE,FALSE,1,Modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,750,,,,,,,2,8,1,2,,,,,,,30,60,120,3,,,
+Heavy Machine Gun,weapon,SWADE,FALSE,1,Modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,1000,,,,,,,2,10,,4,,,,,,,50,100,200,3,,,
+20mm Cannon,weapon,SWADE,FALSE,1,modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,50000,,,,,,,2,12,,4,,,,,,,50,100,200,4,,,
+Heavy Flamethrower,weapon,SWADE,FALSE,1,Modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,1000,"cone template or MBT up to 18"" distant",,,,,,3,8,,,,,,,,,,,,1,,,
+25mm Cannon,weapon,SWADE,FALSE,1,modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,75000,,,,,,,3,8,,4,,,,,,,50,100,200,3,,,
+30mm Cannon,weapon,SWADE,FALSE,1,Modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,200000,,,,,,,3,8,,6,,,,,,,50,100,200,3,,,
+40mm Cannon,weapon,SWADE,FALSE,1,modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,200000,,,,,,AP Rounds,4,8,,5,HE Rounds,3,8,,2,,75,150,300,4,MBT,,
+2 pd AT Gun,weapon,SWADE,FALSE,1,Modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,75000,,,,,,AP Rounds,4,8,,5,HE Rounds,3,6,,2,,75,150,300,1,MBT,,
+37mm AT Gun,weapon,SWADE,FALSE,1,modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,100000,,,,,,AP Rounds,4,8,,3,HE Rounds,4,6,,3,,50,100,200,1,MBT,,
+57mm AT Gun,weapon,SWADE,FALSE,1,Modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,150000,,,,,,AP Rounds,4,8,,5,HE Rounds,3,8,,3,,75,150,300,1,MBT,,
+75mm Tank Gun,weapon,SWADE,FALSE,1,modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,250000,,,,,,AP Rounds,4,10,,6,HE Rounds,3,8,,3,,75,150,300,1,MBT,,
+76mm Tank Gun,weapon,SWADE,FALSE,1,Modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,300000,,,,,,AP Rounds,4,10,,10,HE Rounds,3,8,,5,,75,150,300,1,MBT,,
+88mm Tank Gun,weapon,SWADE,FALSE,1,modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,500000,,,,,,AP Rounds,4,10,1,16,HE Rounds,4,8,,8,,100,200,400,1,MBT,,
+120mm Tank Gun,weapon,SWADE,FALSE,1,Modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,800000,,,,,,AP Rounds,5,10,,31,HE Rounds,4,8,,17,,100,200,400,1,MBT,,
+125mm Tank Gun,weapon,SWADE,FALSE,1,modern,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,1000000,,,,,,AP Rounds,5,10,,30,HE Rounds,4,8,,15,,100,200,400,1,MBT,,
+Gatling Laser,weapon,SWADE,FALSE,1,Futuristic,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,1000,,,,,,,3,6,4,4,,,,,,,50,100,200,4,,,
+Heavy Laser,weapon,SWADE,FALSE,1,Futuristic,Special,Vehicle-Mounted,,,,,,,,,,,,,,,,1000000,,,,,,,4,10,,30,,,,,,,100,200,400,1,,,
+Bicycle,vehicle,SWADE,FALSE,1,Modern,Ground,Civilian,-1,1,16,4,1,,,,,,,,,,,250,50% chance shot strikes rider instead. Double's rider's pace and running die result,,,,,,,,,,,,,,,,,,,,,,
+Carriage,vehicle,SWADE,FALSE,1,Modern,Ground,Civilian,3,-2,16,6,1,,,,,,,,,,,1000,"Passengers available up to 3 persons. Can increase comfort for up to 2000 extra. Pulled by one Horse, see page 184. Pace on the tabletop is 12 and it may run",,,,,,,,,,,,,,,,,,,,,,
+Early Car,vehicle,SWADE,FALSE,1,Modern,Ground,Civilian,3,-1,40,7,1,,,,,,,,,,,1000,Up to 3 passengers. Model Ts and the like,,,,,,,,,,,,,,,,,,,,,,
+Street Bike,vehicle,SWADE,FALSE,1,Modern,Ground,Civilian,1,1,120,8,1,,,,,,,,,,,3000,"motorbike designed for urban use, can have 1 additional passenger",,,,,,,,,,,,,,,,,,,,,,
+Dirt Bike,vehicle,SWADE,FALSE,1,Modern,Ground,Civilian,0,1,80,7,1,,,,,,,,,,,2000,designed for off road use with excellent shocks. Treat as 4WD when off road.,,,,,,,,,,,,,,,,,,,,,,
+Compact Car,vehicle,SWADE,FALSE,1,Modern,Ground,Civilian,4,1,120,10,1,,2,,,,,,,,,5000,Honda civic or similar. Can have up to 3 passengers,,,,,,,,,,,,,,,,,,,,,,
+Mid-Sized Car,vehicle,SWADE,FALSE,1,Modern,Ground,Civilian,4,0,120,11,1,,2,,,,,,,,,30000,"Air bags, luxury features, up to 4 passengers",,,,,,,,,,,,,,,,,,,,,,
+Minivan,vehicle,SWADE,FALSE,1,Modern,Ground,Civilian,4,0,90,12,1,,2,,,,,,,,,25000,"Typical family mini-van. Air bags, some luxury features, up to 7 passengers",,,,,,,,,,,,,,,,,,,,,,
+SUV,vehicle,SWADE,FALSE,1,Modern,Ground,Civilian,5,0,120,14,1,,2,,,,,,,,,50000,"Luxury features, 7 passengers, AWD",,,,,,,,,,,,,,,,,,,,,,
+Sports Car,vehicle,SWADE,FALSE,1,Modern,Ground,Civilian,4,2,160,10,1,,2,,,,,,,,,15000,Mustang or similar stock sports cars. Up to 300k for some models - GM should change cost based on model,,,,,,,,,,,,,,,,,,,,,,
+Semi-Truck,vehicle,SWADE,FALSE,1,Modern,Ground,Civilian,9,0,75,14,1,,2,,,,,,,,,200000,"Trailer is size 7, toughness 14(2). Handling with trailer attached is -2",,,,,,,,,,,,,,,,,,,,,,
+Jeep,vehicle,SWADE,FALSE,1,Modern,Ground,WW2 Military,4,1,65,10,2,,2,,,,,,,,,1000,"4WD, Driver+Gunman+3 passengers. Weapons: Heavy MG (front pintle mount)",,,,,,,,,,,,,,,,,,,,,,
+M4 Sherman,vehicle,SWADE,FALSE,1,Modern,Ground,WW2 Military,8,-1,30,24,5,,8,,,,,,,,,45000,"Heavy armor, tracked. Weapons: 75mm Tank gun (turret, stabilizer), medium MG(fixed front), Heavy MG(pintle mount on turret)",,,,,,,,,,,,,,,,,,,,,,
+M5A1 Stuart,vehicle,SWADE,FALSE,1,Modern,Ground,WW2 Military,7,0,36,21,4,,7,,,,,,,,,30000,"Heavy armor, Tracked. Weapons: 37mm tank gun (turret, stabilizer), Medium MG(front fixed), Heavy MG(pintle mount on turret)",,,,,,,,,,,,,,,,,,,,,,
+T-34/76,vehicle,SWADE,FALSE,1,Modern,Ground,WW2 Military,7,-1,35,24,4,,8,,,,,,,,,30000,"Heavy armor, Sloped Armor (front only), Tracked. Weapons: 76mm Tank Gun (turret), Medium MG(Front Fixed and in Turret)",,,,,,,,,,,,,,,,,,,,,,
+Pz IVJ,vehicle,SWADE,FALSE,1,Modern,Ground,WW2 Military,7,-1,25,26,5,,10,,,,,,,,,45000,"Heavy armor, Tracked. Weapons (75mm gun (turret), Medium MG(front fixed and in turret)",,,,,,,,,,,,,,,,,,,,,,
+PzVI Tiger II,vehicle,SWADE,FALSE,1,Modern,Ground,WW2 Military,8,-2,25,34,5,,16,,,,,,,,,120000,"Heavy Armor, Tracked. Weapons 88mm tank gun(turret), medium mg (front fixed and in Turret)",,,,,,,,,,,,,,,,,,,,,,
+M1A1 Abrams,vehicle,SWADE,FALSE,1,Modern,Ground,Modern Military,9,-1,40,57,4,,37,,,,,,,,,4000000,"Heavy Armor, Night Vision, Tracked Weapons: 120mm tank gun (Imp Stabilizer), Medium MG (Front Fixed and in Turret), Heavy MG (Pintle Mount on Turret).",,,,,,,,,,,,,,,,,,,,,,
+M2 Bradley,vehicle,SWADE,FALSE,1,Modern,Ground,Modern Military,7,0,40,22,3,,6,,,,,,,,,3000000,"7 passengers, Heavy Armor, Night Vision, Tracked. Weapons: 25mm Autocannon (Imp Stabilizer),
+Medium MG (In Turret), TOW Launcher.",,,,,,,,,,,,,,,,,,,,,,
+T-72 MBT,vehicle,SWADE,FALSE,1,Modern,Ground,Modern Military,9,-1,50,43,3,,25,,,,,,,,,1000000,"Heavy Armor, Tracked. Weapons: 125mm tank gun, Medium MG (In Turret), Heavy MG(Pintle Mount on Turret).",,,,,,,,,,,,,,,,,,,,,,
+T-80 MBT,vehicle,SWADE,FALSE,1,Modern,Ground,Modern Military,8,-1,43,52,3,,32,,,,,,,,,2200000,"Heavy Armor, Night Vision, Tracked. Weapons: 125mm tank gun (Improved Stabilizer), Medium MG (In Turret), Heavy MG (Pintle Mount on Turret).",,,,,,,,,,,,,,,,,,,,,,
+BTR 70 APC,vehicle,SWADE,FALSE,1,Modern,Ground,Modern Military,6,-1,49,20,3,,5,,,,,,,,,700000,"Amphibious, Four-Wheel Drive, Heavy Armor. Weapons: Heavy MG (Turret), Medium MG (Turret)",,,,,,,,,,,,,,,,,,,,,,
+Hover Tank,vehicle,SWADE,FALSE,1,Futuristic,Ground,Futuristic Military,7,0,45,38,4,,3,,,,,,,,,12000000,"Heavy Armor, Hover, Night Vision. Weapons: Heavy Laser (Turret, Improved Stabilizer), Gatling Laser (Fixed Front, Reaction Fire).",,,,,,,,,,,,,,,,,,,,,,
+Hover APC,vehicle,SWADE,FALSE,1,Futuristic,Ground,Futuristic Military,7,0,75,26,2,,10,,,,,,,,,75000,"14 Passengers, Heavy Armor, Hover. Weapons: Gatling Laser (Fixed Front, Reaction Fire).",,,,,,,,,,,,,,,,,,,,,,
+Biplane,vehicle,SWADE,FALSE,1,Modern,Aircraft,Civilian,4,1,125,12,1,,1,,,,,,,,,150000,,,,,,,,,,,,,,,,,,,,,,,
+Cessna Skyhawk,vehicle,SWADE,FALSE,1,Modern,Aircraft,Civilian,5,1,140,12,1,,2,,,,,,,,,150000,3 passengers,,,,,,,,,,,,,,,,,,,,,,
+Helicopter,vehicle,SWADE,FALSE,1,Modern,Aircraft,Civilian,7,0,130,12,1,,3,,,,,,,,,500000,3 passengers,,,,,,,,,,,,,,,,,,,,,,
+Learjet,vehicle,SWADE,FALSE,1,Modern,Aircraft,Civilian,8,2,540,16,2,,2,,,,,,,,,20000000,10 passengers,,,,,,,,,,,,,,,,,,,,,,
+Space Shuttle,vehicle,SWADE,FALSE,1,Modern,Aircraft,Civilian,13,-1,17000,20,1,,4,,,,,,,,,250000000,40 passengers,,,,,,,,,,,,,,,,,,,,,,
+B17 Flying Fortress,vehicle,SWADE,FALSE,1,Modern,Aircraft,WW2 Military,10,-2,115,19,10,,2,,,,,,,,,250000,"Heavy MG (Fixed front), 2× Linked Heavy MG (Top Turret), 2× Linked Heavy, MG (Ball Turret), Heavy MG (Fixed Left), Heavy MG (Fixed Right), Bombs.",,,,,,,,,,,,,,,,,,,,,,
+BF-109,vehicle,SWADE,FALSE,1,Modern,Aircraft,WW2 Military,6,1,380,13,1,,2,,,,,,,,,35000,"20mm Cannon (Fixed Front), 2× Linked Heavy MG (Fixed Front).",,,,,,,,,,,,,,,,,,,,,,
+P-51 Mustang,vehicle,SWADE,FALSE,1,Modern,Aircraft,WW2 Military,7,1,437,14,1,,2,,,,,,,,,50000,6× Heavy MG (Fixed Front),,,,,,,,,,,,,,,,,,,,,,
+Japanese Zero,vehicle,SWADE,FALSE,1,Modern,Aircraft,WW2 Military,6,1,350,12,1,,2,,,,,,,,,30000,"2× Linked Medium MGs (Fixed Front), 2× Linked 20mm Cannons (Fixed Front)",,,,,,,,,,,,,,,,,,,,,,
+Spitfire Mk IIA,vehicle,SWADE,FALSE,1,Modern,Aircraft,WW2 Military,6,1,360,14,1,,1,,,,,,,,,40000,8× Linked Medium MGs (Fixed Front).,,,,,,,,,,,,,,,,,,,,,,
+AH-64 Apache,vehicle,SWADE,FALSE,1,Modern,Aircraft,Modern Military,8,0,225,20,2,,4,,,,,,,,,35000000,"Helicopter, Night Vision. Weapons: 30mm Cannon (Fixed Front), 16× Hellfire Missiles",,,,,,,,,,,,,,,,,,,,,,
+AV-8B Harrier,vehicle,SWADE,FALSE,1,Modern,Aircraft,Modern Military,7,1,630,17,1,,3,,,,,,,,,28000000,"–1 Handling when in VTOL mode. Weapons: 25mm Cannon (Fixed Front), 2× Sidewinder Missiles, Bombs",,,,,,,,,,,,,,,,,,,,,,
+F-15 Eagle,vehicle,SWADE,FALSE,1,Modern,Aircraft,Modern Military,9,2,1875,18,1,,4,,,,,,,,,30000000,"Night Vision. Weapons: 20mm Cannon (Fixed Front), 4× Sidewinder Missiles, 4× Sparrow Missiles, Bombs.",,,,,,,,,,,,,,,,,,,,,,
+SU-27,vehicle,SWADE,FALSE,1,Modern,Aircraft,Modern Military,9,1,1550,16,1,,4,,,,,,,,,30000000,"Night Vision. Weapons: 30mm Cannon (Fixed Front), 4× Sidewinder Missiles (Soviet equivalent).",,,,,,,,,,,,,,,,,,,,,,
+UH-1 (Huey),vehicle,SWADE,FALSE,1,Modern,Aircraft,Modern Military,7,2,120,14,4,,2,,,,,,,,,25000000,"12 Passengers, Helicopter. Weapons: Medium MG (Fixed Left or Right).",,,,,,,,,,,,,,,,,,,,,,
+Galleon,vehicle,SWADE,FALSE,1,Modern,Watercraft,,14,-2,9,20,20,,4,,,,,,,,,300000,"80 passengers, Heavy Armor. Weapons: 16× to 46× Cannon (Fixed Left and Right).",,,,,,,,,,,,,,,,,,,,,,
+Galley,vehicle,SWADE,FALSE,1,Modern,Watercraft,,13,-1,20,20,20,,4,,,,,,,,,150000,"100 passengers, Heavy Armor. Has both oars and sails. Weapons: Catapult (Fixed Front).",,,,,,,,,,,,,,,,,,,,,,
+Hydrofoil,vehicle,SWADE,FALSE,1,Modern,Watercraft,,10,0,70,15,1,,3,,,,,,,,,400000,9 passengers,,,,,,,,,,,,,,,,,,,,,,
+"Patrol Boat, River",vehicle,SWADE,FALSE,1,Modern,Watercraft,,7,1,32,15,4,,4,,,,,,,,,700000,"Heavy Armor. Weapons: 2× Linked Heavy MG (Front Pintle Mount), 2× Medium (Left and Right), Heavy MG (Stern).",,,,,,,,,,,,,,,,,,,,,,
+PT Boat (WW2),vehicle,SWADE,FALSE,1,Modern,Watercraft,WW2 Military,12,1,40,14,10,,2,,,,,,,,,250000,"Heavy Armor. Weapons: 50 cal MG (Front Pintle Mount), Heavy MG (Rear Pintle Mount), 4× torpedo tubes (Fixed Forward).",,,,,,,,,,,,,,,,,,,,,,
+Rowboat,vehicle,SWADE,FALSE,1,Modern,Watercraft,,0,-2,5,8,1,,1,,,,,,,,,500,3 passengers,,,,,,,,,,,,,,,,,,,,,,
+Speed Boat,vehicle,SWADE,FALSE,1,Modern,Watercraft,,4,1,90,10,1,,1,,,,,,,,,60000,3 passengers,,,,,,,,,,,,,,,,,,,,,,
+Small Yacht,vehicle,SWADE,FALSE,1,Modern,Watercraft,,8,0,35,14,1,,2,,,,,,,,,500000,9 passengers,,,,,,,,,,,,,,,,,,,,,,
