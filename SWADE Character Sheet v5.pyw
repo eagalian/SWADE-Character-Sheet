@@ -1363,14 +1363,43 @@ def equipment_tab():
     equip=tk.Frame(main)
     equip.grid(row=1,column=0)
     tk.Label(main,text='Equipment Codex\nUse this page to view equipment stats and add them to the character sheet.',font='Helvetica').grid(row=0,column=0)
-    equipment_types=list(mainarmory.keys())
-    tk.Label(equip,text='What kind of equipment?').grid(row=1,column=0)
-    choice=tk.StringVar()
-    choice.set(equipment_types[0])
-    tk.OptionMenu(equip,choice,*equipment_types).grid(row=1,column=1)
-    subframea=tk.Frame(equip)
-    subframea.grid(row=2,column=0,columnspan=3)
-    tk.Button(equip,text='Go',command=lambda:get_equipment(subframea,choice.get())).grid(row=1,column=2)
+    def equipmentpage(equip):
+
+        tk.Label(equip,text='equip',font='helvetica',bd=3).grid(row=0,column=0)
+        equip_canvas=tk.Canvas(equip, borderwidth=0,width=1500, height =500)
+        equip_subframe=tk.Frame(equip_canvas,bd=1,relief='sunken')
+        equip_scroll=tk.Scrollbar(equip,orient='vertical',command=equip_canvas.yview)
+        equip_canvas.configure(yscrollcommand=equip_scroll.set)
+        equip_scroll.grid(row=1,column=1,sticky='nesw')
+        equip_canvas.grid(row=1,column=0,sticky='nesw')
+        equip_id=equip_canvas.create_window((0,0), window=equip_subframe)
+        #equip_subframe.pack(fill='both',expand=1)
+        def onFrameConfigure(canvas):
+            canvas.configure(scrollregion=canvas.bbox("all"))
+        #def onCanvasConfigure(canvas,identifier):
+    
+            #canvas.itemconfigure(identifier,width=canvas.winfo_width())
+        #equip_canvas.bind('<Configure>',lambda event,canvas=canvas:onCanvasConfigure(equip_canvas,equip_id))
+        equip_subframe.bind('<Configure>',lambda event,canvas=canvas:onFrameConfigure(equip_canvas))
+
+
+        with open('savage-worlds-core-armory.json','r') as f:
+            armory=json.load(f)
+
+        getkeys=list(armory.keys())
+        print(getkeys)
+        i=0
+        j=0
+        for x in getkeys:
+            j=0
+            if armory[x]['item type']=='gear':
+                print(armory[x])
+                for k in list(armory[x].keys()):
+                    tk.Label(equip_subframe, text=k).grid(row=i,column=j)
+                    tk.Label(equip_subframe, text=armory[x][k],wraplength=200).grid(row=i+1,column=j)
+                    j+=1
+                i+=2
+    equipmentpage(equip)        
 
 def get_equipment(frame, mode='Weapons'):
     for widget in frame.winfo_children():
