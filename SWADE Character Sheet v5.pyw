@@ -1366,7 +1366,7 @@ def equipment_tab():
     def equipmentpage(equip):
 
         tk.Label(equip,text='equip',font='helvetica',bd=3).grid(row=0,column=0)
-        equip_canvas=tk.Canvas(equip, borderwidth=0,width=1500, height =500)
+        equip_canvas=tk.Canvas(equip, borderwidth=0, height =500)
         equip_subframe=tk.Frame(equip_canvas,bd=1,relief='sunken')
         equip_scroll=tk.Scrollbar(equip,orient='vertical',command=equip_canvas.yview)
         equip_canvas.configure(yscrollcommand=equip_scroll.set)
@@ -1387,76 +1387,30 @@ def equipment_tab():
             armory=json.load(f)
 
         getkeys=list(armory.keys())
-        print(getkeys)
+        
         i=0
         j=0
+        labels=[]
+        
         for x in getkeys:
-            j=0
             if armory[x]['item type']=='gear':
-                print(armory[x])
-                for k in list(armory[x].keys()):
-                    tk.Label(equip_subframe, text=k).grid(row=i,column=j)
-                    tk.Label(equip_subframe, text=armory[x][k],wraplength=200).grid(row=i+1,column=j)
-                    j+=1
-                i+=2
+                labels.append(tk.Label(equip_subframe, text=armory[x]['name']))
+                labels[i].grid(row=i,column=j)
+                labels[i].bind("<Button-1>",lambda event,j=int(x):item_data(str(j)))
+                    
+                i+=1
     equipmentpage(equip)        
 
-def get_equipment(frame, mode='Weapons'):
-    for widget in frame.winfo_children():
-        widget.destroy()
-    
-    tk.Label(frame,text='What are you looking for?').grid(row=0,column=0)
-    
-    
-        
-    combat=tk.StringVar()
-    combat_styles=list(mainarmory[mode].keys())
-    combat.set(combat_styles[0])
-    tk.OptionMenu(frame,combat,*combat_styles).grid(row=0,column=1)
-    subframeb=tk.Frame(frame)
-    subframeb.grid(row=2,column=0,columnspan=3)
-    tk.Button(frame,text='Go',command=lambda:get_weapons(subframeb,mode,combat.get())).grid(row=0,column=2)
-
-def get_weapons(frame,mode='Weapon',style='Melee'):
-    for widget in frame.winfo_children():
-        widget.destroy()
-    if mode=='Gear':
-        tk.Label(frame,text=style+' currently installed:').grid(row=0,column=0)
-    if mode=='Armor':
-        tk.Label(frame,text=style+' currently installed:\n(Shields are counted as Melee Weapons)').grid(row=0,column=0)
-    if mode=='Vehicles':
-        tk.Label(frame,text=style+' currently installed:\n(Horses and other living mounts are counted as Gear)').grid(row=0,column=0)
-    if mode=='Weapons' and style=='Melee':
-        tk.Label(frame,text='Melee weapons currently installed:').grid(row=0,column=0)
-    if mode=='Weapons' and style=='Ranged':
-        tk.Label(frame,text='Ranged weapons currently installed:').grid(row=0,column=0)
-    if mode=='Weapons' and style=='Special':
-        tk.Label(frame,text='Special weapons currently installed:').grid(row=0,column=0)
-    avail_weapons=list(mainarmory[mode][style].keys())
-    weapon_choice=tk.StringVar()
-    weapon_choice.set(avail_weapons[0])
-    
-    tk.OptionMenu(frame,weapon_choice,*avail_weapons).grid(row=0,column=1)
-    subframec=tk.Frame(frame)
-    subframec.grid(row=2,column=0, columnspan=3)
-    tk.Button(frame,text='View',command=lambda:get_weapon_info(subframec,mode,style,weapon_choice.get())).grid(row=0,column=2)
-
-def get_weapon_info (frame,mode='Weapons',style='Melee',item='Axe, Hand'):
-    for widget in frame.winfo_children():
-        widget.destroy()
-    data=mainarmory[mode][style][item]
-    keys=list(data.keys())
-    string=data['display']
-    tk.Label(frame,text=string).grid(row=2,column=0,columnspan=3)
-    if mode=='Weapons':
-        tk.Button(frame,text='Add to inventory',command=lambda:install({item:data},mainplayer['Gear']['Weapons'][style])).grid(row=2,column=4)
-    if mode=='Gear':
-        tk.Button(frame,text='Add to inventory',command=lambda:install({item:data},mainplayer['Gear']['Inventory'])).grid(row=2,column=4)
-    if mode=='Armor':
-        tk.Button(frame,text='Add to inventory',command=lambda:install({item:data},mainplayer['Gear']['Armor'])).grid(row=2,column=4)
-    if mode=='Vehicles':
-        tk.Button(frame,text='Add to inventory',command=lambda:install({item:data},mainplayer['Vehicles'])).grid(row=2,column=4)
-
+def item_data(j):
+    itemwin=tk.Toplevel(main)
+    with open('savage-worlds-core-armory.json','r') as f:
+            armory=json.load(f)
+            item=armory[j]
+    i=0
+    for x in list(item.keys()):
+        tk.Label(itemwin,text=f'{x}: ',anchor='nw').grid(row=i,column=0,sticky='nesw')
+        tk.Label(itemwin,text=f'{item[x]}',wraplength=250,anchor='w',justify='left').grid(row=i,column=1,sticky='nesw')
+        i+=1
 def fullrest():
     incap('w',0,buttons)
     incap('f',0,buttons)
